@@ -66,43 +66,39 @@
   {
     "document_id": "PAT-004",
     "document_type": "patent",
-    "title": "Computer Implemented Methods for Interacting with Semantic / Question-Answering Systems",
-    "publication_number": "US 11,989,507 B2",
-    "authors": [
-      "William Tunstall-Pedoe",
-      "See application file for complete search history."
-    ],
-    "assignee": "Unlikely Artificial Intelligence Limited",
-    "publication_date": "May 21, 2024",
+    "title": "Automated System and Methodology for Feature Extraction",
+    "publication_number": "AU 2022206780 B2",
+    "authors": [],
+    "assignee": "Pictometry International Corp.",
+    "publication_date": null,
     "source": "Patent 4.pdf",
     "filename": "Patent 4.pdf",
-    "abstract": "Related U.S. Application Data Methods are provided, such as a method of interacting with",
-    "num_pages": 31,
-    "raw_char_count": 121356,
+    "abstract": "(12) STANDARD PATENT \n(11) Application No. AU 2022206780 B2 \n(19) AUSTRALIAN PATENT OFFICE \n(54) \nTitle \nAUTOMATED SYSTEM AND METHODOLOGY FOR FEATURE EXTRACTION \n(51) \nInternational Patent Classification(s) \nG06T 17/05 (2011.01) \nG06V 10/778 (2022.01) \nG01B 13/20 (2006.01) \nG06V 20/13 (2022.0 1) \nG01C 11/02 (2006.01) \nG06V 20/17 (2022.0 1) \nG06V 10/40 (2022.01) \n(21) \nApplication No: \n(22) \nDate of Filing: \n2022.07.21 \n(43) \nPublication Date: \n2022.08.18 \n(43) \nPublication Journal Date: \n2022.08.18 \n(44) \nAccepted Journal Date: \n2024.05.02 \n(62) \nDivisional of: \n(71) \nApplicant(s) \nPictometry",
+    "num_pages": 54,
+    "raw_char_count": 90771,
     "extraction_method": "native",
     "is_ocr": false,
     "ocr_quality": "UNKNOWN",
     "extra": {
-      "is_scanned": true
+      "is_scanned": false
     }
   },
   {
     "document_id": "PAT-005",
     "document_type": "patent",
-    "title": "Multi-Segment Text Search Using Machine Learning Model for Text Similarity",
-    "publication_number": "US 12,230,049 B2",
+    "title": "Construction Method, Computing Device, and Storage Medium for Constructing Patent Knowledge Database",
+    "publication_number": "US 11,714,787 B2",
     "authors": [
-      "Bryant Lee",
-      "San Francisco",
-      "CA"
+      "Longhui Zhang",
+      "Fujian"
     ],
-    "assignee": "Cognition IP Technology Inc.",
+    "assignee": "ZFusion Technology Co., Ltd.",
     "publication_date": null,
     "source": "Patent 5.pdf",
     "filename": "Patent 5.pdf",
-    "abstract": "(60) Provisional application No. 62/787,640, filed on Jan. Systems and methods may be provided for performing a\n2, 2019, provisional application No. 62/780,582, filed search on an input text block. The input text block may be\n\non Dee. 17, 2018. split into a plurality of input text segments. A text similarity\nalgorithm may be used to find similar stored text segments",
-    "num_pages": 31,
-    "raw_char_count": 62713,
+    "abstract": "(12)\n\nUnited States Patent\nZhang et al.\n\nUS011714787B2\n\nUS 11,714,787 B2\nAug. 1, 2023\n\n(10) Patent\n(45) Date of Patent:\n\n(54)\n\n(71)\n\n(72)\n\n(73)\n\n(*)\n\n(21)\n\n(22)\n(65)\n\n(63)\n\n(30)\n\n(51)\n\n(62)\n\nCONSTRUCTION METHOD, DEVICE,\nCOMPUTING DEVICE, AND STORAGE\nMEDIUM FOR CONSTRUCTING PATENT\nKNOWLEDGE DATABASE\n\nApplicant: ZFusion Technology Co., Ltd.\nXiamen, Fujian (CN)\n\nInventors: Longhui Zhang, Fujian (CN); Lei Li,\n\nFujian (CN)\nAssignee: ZFusion Technology Co., Ltd.\nXiamen, Fujian (CN)\n\nNotice: Subject to any disclaimer, the term of this\npatent is extended or adjusted under 35\nS.C. 154(b) by 123 days.\nA",
+    "num_pages": 28,
+    "raw_char_count": 101955,
     "extraction_method": "native",
     "is_ocr": false,
     "ocr_quality": "UNKNOWN",
@@ -207,25 +203,21 @@
   {
     "document_id": "PAT-010",
     "document_type": "patent",
-    "title": "Patent Mapping & Automated Patent Claim Scope Concept Mapping",
-    "publication_number": "US 12,505,111 B2",
-    "authors": [
-      "Steven W. Lundberg",
-      "Edina",
-      "MN"
-    ],
-    "assignee": "Black Hills IP Holdings, LLC",
+    "title": "Digital Information Infrastructure and Method for Security Designated Data and with Granular Data Stores",
+    "publication_number": "US 9,734,169 B2",
+    "authors": [],
+    "assignee": "Digital Doors, Inc.",
     "publication_date": null,
     "source": "Patent 10.pdf",
     "filename": "Patent 10.pdf",
-    "abstract": "(12)\n\nUnited States Patent\nLundberg\n\nUS012505111B2\n\nUS 12,505,111 B2\n*Dec. 23, 2025\n\n(10) Patent No.:\n(45) Date of Patent:\n\n(54)\n(71)\n\n(72)\n(73)\n\n(*)\n\n(21)\n(22)\n(65)\n\n(63)\n\nG1)\n\n(52)\n\n(58)\n\nPATENT MAPPING\n\nApplicant: Black Hills IP Holdings, LLC,\nMinneapolis, MN (US)\n\nInventor: Steven W. Lundberg, Edina, MN (US)\n\nAssignee: Black Hills IP Holdings, LLC,\nMinneapolis, MN (US)\n\nNotice: Subject to any disclaimer, the term of this\npatent is extended or adjusted under 35\nU.S.C. 154(b) by 95 days.\nThis patent is subject to a terminal dis-\nclaimer.\n\nAppl. No.: 18/372,030\n\nFiled: Sep. 22, 2023\n\nPrior Pu",
-    "num_pages": 31,
-    "raw_char_count": 123775,
+    "abstract": "| HAO HA \nTA MARIA DE MA TAHAN \nUS009734169B2 \n( 12 ) United States Patent \nRedlich et al . \n( 10 ) Patent No \n. : \nUS 9 , 734 , 169 B2 \n( 45 ) Date of Patent : \n* Aug . 15 , 2017 \n( 54 ) DIGITAL INFORMATION \nINFRASTRUCTURE AND METHOD FOR \nSECURITY DESIGNATED DATA AND WITH \nGRANULAR DATA STORES \n( 58 ) Field of Classification Search \nCPC . . . . . . GO6Q 10 / 10 ; G06Q 10 / 06 ; G06Q 10 / 107 ; \nGO6Q 50 / 18 ; GO6F 17 / 30289 ; \n( Continued ) \n( 56 ) \nReferences Cited \nU . S . PATENT DOCUMENTS \n( 71 ) Applicant : Digital Doors , Inc . , Miami Beach , FL \n( US ) \n( 72 ) \nInventors : Ron M . Red",
+    "num_pages": 127,
+    "raw_char_count": 334936,
     "extraction_method": "native",
     "is_ocr": false,
     "ocr_quality": "UNKNOWN",
     "extra": {
-      "is_scanned": true
+      "is_scanned": false
     }
   },
   {
