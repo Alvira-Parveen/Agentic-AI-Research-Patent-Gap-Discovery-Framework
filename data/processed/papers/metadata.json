@@ -19,6 +19,9 @@
     "abstract": "or cross- \ncutting categories such as inspection and maintenance, which can be \nexpressed through heterogeneous terminology and applied in diverse \ncontexts.\nIn other cases, such as distinguishing between a wheeled robot and \nan autonomous vehicle, the technological function can only be deter­\nmined through detailed content-level analysis of the patent. Combined \nwith the volume of documents involved, these requirements make \nexhaustive manual classification impractical for constructing complete \nand statistically robust matrices.\nBy leveraging semantic representations and clustering mechanisms, \nthe proposed framework supports the identification of functional re­\nlationships that are not captured by simple term co-occurrence. This \nFig. 4. Technological intersection analysis between the robot type (columns) and the functional application (rows).\nG. Giuntelli et al. \nWorld Patent Information 85 (2026) 102454\n\nenables a more systematic exploration of technological intersections, \nfacilitating the analysis of convergence patterns and the identification of \nemerging application areas.\n4.4.2. Technology acceleration analysis\nThe dynamic analysis of technological trajectories combines i",
     "num_pages": 20,
     "raw_char_count": 107143,
+    "extraction_method": "native",
+    "is_ocr": false,
+    "ocr_quality": "UNKNOWN",
     "extra": {
       "is_scanned": false
     }
@@ -42,6 +45,9 @@
     "abstract": "Patents contain rich technical knowledge that\ncan inspire innovative product ideas, yet ac-\ncessing and interpreting this information re-\nmains a challenge. This work explores the use\nof Large Language Models (LLMs) and au-\ntonomous agents to mine and generate product\nconcepts from a given patent. In this work, we\ndesign Agent Ideate, a framework for automat-\nically generating product-based business ideas\nfrom patents. We experimented with open-\nsource LLMs and agent-based architectures\nacross three domains: Computer Science, Nat-\nural Language Processing, and Material Chem-\nistry. Evaluation results show that the agentic\napproach consistently outperformed standalone\nLLMs in terms of idea quality, relevance, and\nnovelty. These findings suggest that combining\nLLMs with agentic workflows can significantly\nenhance the innovation pipeline by unlocking\nthe untapped potential of business idea genera-\ntion from patent data.\nIntroduction\nWith the rapid advancement of large language mod-\nels (LLMs), there is growing interest in leveraging\nthese models for tasks such as scientific discov-\nery and innovation support. However, generating\nviable and actionable product ideas from patents re-\nqui",
     "num_pages": 8,
     "raw_char_count": 25080,
+    "extraction_method": "native",
+    "is_ocr": false,
+    "ocr_quality": "UNKNOWN",
     "extra": {
       "is_scanned": false
     }
@@ -66,6 +72,9 @@
     "abstract": "The rapid advancement of scientific progress\nrequires innovative tools that can accelerate\nknowledge discovery.\nAlthough recent AI\nmethods, particularly large language models\n(LLMs), have shown promise in tasks such as\nhypothesis generation and experimental design,\nthey fall short of replicating the collaborative\nnature of real-world scientific practices, where\ndiverse experts work together in teams to tackle\ncomplex problems. To address the limitations,\nwe propose an LLM-based multi-agent system,\ni.e., Virtual Scientists (VIRSCI), designed to\nmimic the teamwork inherent in scientific re-\nsearch. VIRSCI organizes a team of agents\nto collaboratively generate, evaluate, and re-\nfine research ideas. Through comprehensive\nexperiments, we demonstrate that this multi-\nagent approach outperforms the state-of-the-\nart method in producing novel scientific ideas.\nWe further investigate the collaboration mecha-\nnisms that contribute to its tendency to produce\nideas with higher novelty, offering valuable in-\nsights to guide future research and illuminating\npathways toward building a robust system for\nautonomous scientific discovery. The code is\navailable at https://github.com/open-sci\nencelab/",
     "num_pages": 40,
     "raw_char_count": 152446,
+    "extraction_method": "native",
+    "is_ocr": false,
+    "ocr_quality": "UNKNOWN",
     "extra": {
       "is_scanned": false
     }
@@ -89,6 +98,9 @@
     "abstract": "The rapid growth of scientific techniques and knowledge is reflected in the exponential increase in\nnew patents filed annually. While these patents drive innovation, they also present significant burden\nfor researchers and engineers, especially newcomers. To avoid the tedious work of navigating a\nvast and complex landscape to identify trends and breakthroughs, researchers urgently need efficient\ntools to summarize, evaluate, and contextualize patents, revealing their innovative contributions and\nunderlying scientific principles. To address this need, we present EvoPat, a multi-LLM-based patent\nagent designed to assist users in analyzing patents through Retrieval-Augmented Generation (RAG)\n[1] and advanced search strategies. EvoPat leverages multiple Large Language Models (LLMs), each\nperforming specialized roles such as planning, identifying innovations, and conducting comparative\nevaluations. The system integrates data from local databases, including patents, literature, product\ncatalogous, and company repositories, and online searches to provide up-to-date insights. The ability\nto collect information not included in original database automatically is also implemented. Through\next",
     "num_pages": 15,
     "raw_char_count": 56148,
+    "extraction_method": "native",
+    "is_ocr": false,
+    "ocr_quality": "UNKNOWN",
     "extra": {
       "is_scanned": false
     }
@@ -109,6 +121,9 @@
     "abstract": "Can AI Examine Novelty of Patents?: Novelty Evaluation Based on the\nCorrespondence between Patent Claim and Prior Art\nHayato IKOMA and Teruko MITAMURA\nLanguage Technology Institute, SCS\nCarnegie Mellon University\nikomahayato@jcom.zaq.ne.jp\nAbstract\nAssessing the novelty of patent claims is a criti-\ncal yet challenging task traditionally performed\nby patent examiners. While advancements in\nNLP have enabled progress in various patent-\nrelated tasks, novelty assessment remains unex-\nplored. This paper introduces a novel challenge\nby evaluating the ability of large language mod-\nels (LLMs) to asse",
     "num_pages": 11,
     "raw_char_count": 42206,
+    "extraction_method": "native",
+    "is_ocr": false,
+    "ocr_quality": "UNKNOWN",
     "extra": {
       "is_scanned": false
     }
@@ -131,6 +146,9 @@
     "abstract": "Graph-based Retrieval-Augmented Generation (RAG) has proven\neffective in integrating external knowledge into large language\nmodels (LLMs), improving their factual accuracy, adaptability, in-\nterpretability, and trustworthiness. A number of graph-based RAG\nmethods have been proposed in the literature. However, these meth-\nods have not been systematically and comprehensively compared\nunder the same experimental settings. In this paper, we first sum-\nmarize a unified framework to incorporate all graph-based RAG\nmethods from a high-level perspective. We then extensively com-\npare representative graph-based RAG methods over a range of\nquesting-answering (QA) datasets - from specific questions to ab-\nstract questions - and examine the effectiveness of all methods,\nproviding a thorough analysis of graph-based RAG approaches.\nAs a byproduct of our experimental analysis, we are also able to\nidentify new variants of the graph-based RAG methods over spe-\ncific QA and abstract QA tasks respectively, by combining existing\ntechniques, which outperform the state-of-the-art methods. Finally,\nbased on these findings, we offer promising research opportunities.\nWe believe that a deeper understanding ",
     "num_pages": 34,
     "raw_char_count": 163315,
+    "extraction_method": "native",
+    "is_ocr": false,
+    "ocr_quality": "UNKNOWN",
     "extra": {
       "is_scanned": false
     }
@@ -155,6 +173,9 @@
     "abstract": "Exploring Design of Multi-Agent LLM Dialogues for Research Ideation*\nKeisuke Ueda1, 2 Wataru Hirota3 Takuto Asakura3 Takahiro Omi3\nKosuke Takahashi3 Kosuke Arima3 Tatsuya Ishigaki1\n1Artificial Intelligence Research Center, AIST, 2EPFL, 3Stockmark,\nkeisuke.ueda@epfl.ch, ishigaki.tatsuya@aist.go.jp,\n{wataru.hirota, takuto.asakura, takahiro.omi, kosuke.takahashi, kosuke.arima}@stockmark.co.jp\nAbstract\nLarge language models (LLMs) are increas-\ningly used to support creative tasks such as\nresearch idea generation. While recent work\nhas shown that structured dialogues between\nLLMs can improve the no",
     "num_pages": 16,
     "raw_char_count": 45510,
+    "extraction_method": "native",
+    "is_ocr": false,
+    "ocr_quality": "UNKNOWN",
     "extra": {
       "is_scanned": false
     }
@@ -179,6 +200,9 @@
     "abstract": "With the acceleration of technological innovation, efficient retrieval and \nclassification of patent literature have become essential for intellectual property \nmanagement and enterprise R&D. Traditional keyword- and rule-based retrieval \nmethods often fail to address complex query intents or capture semantic associations \nacross technical domains, resulting in incomplete and low-relevance results. This study \npresents an automated patent retrieval framework integrating Large Language Models \n(LLMs) with Retrieval-Augmented Generation (RAG) technology. The system \ncomprises three components: (1) a preprocessing module for patent data \nstandardization, (2) a high-efficiency vector retrieval engine leveraging LLM-\ngenerated embeddings, and (3) a RAG-enhanced query module that combines external \ndocument retrieval with context-aware response generation. Evaluations were \nconducted on the Google Patents dataset (2006-2024), containing millions of global \npatent records with metadata such as filing date, domain, and status. The proposed gpt-\n3.5-turbo-0125+RAG configuration achieved 80.5% semantic matching accuracy and \n92.1% recall, surpassing baseline LLM methods by 28 percentage poin",
     "num_pages": 7,
     "raw_char_count": 24010,
+    "extraction_method": "native",
+    "is_ocr": false,
+    "ocr_quality": "UNKNOWN",
     "extra": {
       "is_scanned": false
     }
@@ -201,6 +225,9 @@
     "abstract": "Research on Evaluation Methods for Patent Novelty\nSearch Systems and Empirical Analysis\nShu Zhang, LiSha Zhang, Kai Duan, XinKai Sun\nAugust 2025\nKeywords: Patent novelty search; System evaluation; Retrieval performance; Multi-\ndimensional analysis; Evaluation framework\nAbstract\nPatent novelty search systems are critical to IP protection and innovation assess-\nment; their retrieval accuracy directly impacts patent quality. We propose a compre-\nhensive evaluation methodology that builds high-quality, reproducible datasets from\nexaminer citations and X-type citations extracted from technically co",
     "num_pages": 10,
     "raw_char_count": 17198,
+    "extraction_method": "native",
+    "is_ocr": false,
+    "ocr_quality": "UNKNOWN",
     "extra": {
       "is_scanned": false
     }
@@ -223,6 +250,9 @@
     "abstract": "ToC: Tree-of-Claims Search with Multi-Agent Language Models\nShuyang Yu1*, Jianan Liang2, Hui Hu2\n1Columbia University\n2AIGROW\nsy3309@columbia.edu,liangjianan@aigrow.cn,huhui@aigrow.cn\nAbstract\nOptimizing patent claims is a critical yet challenging task,\ndemanding careful balance between maximizing novelty and\npreserving legal scope. Manual claim drafting is labor-\nintensive, costly, and inherently inconsistent, while conven-\ntional Large Language Models (LLMs) often lack the struc-\ntured, iterative reasoning essential for precise claim refine-\nment. To address these challenges, we introduce Tr",
     "num_pages": 11,
     "raw_char_count": 45295,
+    "extraction_method": "native",
+    "is_ocr": false,
+    "ocr_quality": "UNKNOWN",
     "extra": {
       "is_scanned": false
     }
@@ -244,6 +274,9 @@
     "abstract": "Current AI-assisted innovation systems typically apply a single ideation methodology (such as TRIZ or Design \nThinking) using sequential prompt-based workflows that do not preserve intermediate reasoning structure. As a result, \ninsights generated across methodologies remain fragmented, limiting traceability, synthesis, and systematic evaluation \nof novelty. We present IdeaForge, a knowledge graph-grounded multi-agent framework for innovation analysis and \npatent claim generation. IdeaForge integrates multiple innovation methodologies (TRIZ, Design Thinking, and \nSCAMPER) through specialist agents operating over a persistent FalkorDB knowledge graph. Each agent contributes \nstructured entities and relationships representing contradictions, inventive principles, user needs, transformations, \nanalogies, and candidate claims. \nThe central contribution of IdeaForge is a cross-methodology convergence mechanism implemented through graph-\nbased claim linkage. Claims independently supported by multiple methodologies are connected using \nCONVERGENT relationships, enabling identification of high-confidence innovation candidates through graph \ntraversal. A downstream patent drafting agent gen",
     "num_pages": 14,
     "raw_char_count": 38780,
+    "extraction_method": "native",
+    "is_ocr": false,
+    "ocr_quality": "UNKNOWN",
     "extra": {
       "is_scanned": false
     }
@@ -268,6 +301,9 @@
     "abstract": "AgentSwift: Efficient LLM Agent Design via Value-Guided Hierarchical Search\nYu Li1, Lehui Li3, Zhihao Wu2, Qingmin Liao1, Jianye Hao2, Kun Shao2, Fengli Xu1*\n1Tsinghua University\n2Huawei Noah's Ark Lab\n3Shandong University\nliyu24@mails.tsinghua.edu.cn, {fenglixu, liaoqm}@tsinghua.edu.cn, {shaokun2, haojianye}@huawei.com,\n202200300096@mail.sdu.edu.cn\nAbstract\nLarge language model (LLM) agents have demonstrated\nstrong capabilities across diverse domains, yet automated\nagent design remains a significant challenge. Current auto-\nmated agent design approaches are often constrained by lim-\nited sear",
     "num_pages": 9,
     "raw_char_count": 42025,
+    "extraction_method": "native",
+    "is_ocr": false,
+    "ocr_quality": "UNKNOWN",
     "extra": {
       "is_scanned": false
     }
@@ -292,6 +328,9 @@
     "abstract": "Novelty assessment is a cornerstone of technological innovation\nand intellectual property protection, profoundly influencing na-\ntional technology strategies and economic development. Tradi-\ntional evaluation models, which rely on domain experts, face sig-\nnificant challenges, including subjectivity, inconsistency, and low\nefficiency. These issues are exacerbated by the surging volume\nof global patent applications. While generative AI technologies,\nparticularly Large Language Models (LLMs), offer promising av-\nenues for automation, their prevalent use of implicit reasoning\noften leads to \"hallucinations\" and weak discrimination capabilities,\nrendering them unsuitable for the logically rigorous task of patent\nnovelty assessment. To address this gap, this paper introduces TCL-\nMFSNE (Temporal-Contrastive Learning Multi-Agent Framework\nwith Byzantine Consensus for Scientific Novelty Evaluation), an\nadvanced multi-agent framework designed to systematically en-\nhance the accuracy, robustness, and interpretability of evaluations.\nThe core of TCL-MFSNE rests on three pillars: (1) Explicit Chain-\nof-Thought (CoT) Reasoning, which guides the model to generate\ndetailed, transparent reasoning",
     "num_pages": 6,
     "raw_char_count": 34091,
+    "extraction_method": "native",
+    "is_ocr": false,
+    "ocr_quality": "UNKNOWN",
     "extra": {
       "is_scanned": false
     }
@@ -313,6 +352,9 @@
     "abstract": "Existing patent examination approaches face fundamental limitations: they struggle with comprehen-\nsive prior art coverage due to maximum similarity scoring without considering all claim elements,\nprovide limited ranked retrieval through binary classification without confidence scoring, and incur\nsubstantial computational overhead while generating generic outputs that miss claim-specific details.\nTo address these challenges, we introduce Integrated Patent Prior Art Search with Claim-Aware\nRetrieval and Novelty Assessment (IPAS-CARNA), a novel three-stage pipeline combining enhanced\nclaim-document matching, continuous novelty assessment, and claim-aware summarization. Our\napproach models element-wise claim coverage through adaptive chunking and weighted aggregation,\nintegrates continuous novelty scoring with confidence assessment, and introduces claim-aware sum-\nmarization with dynamic length control. Extensive experiments on CLEF-IP 2013, USPTO examination\nrecords, and HUPD validation sets demonstrate significant improvements: MAP@100 of 0.342 with\n14.8% improvement in retrieval recall, 18.2% improvement in NDCG@10 for novelty ranking, technical\naccuracy above 0.85, and ROUGE-L sco",
     "num_pages": 21,
     "raw_char_count": 66879,
+    "extraction_method": "native",
+    "is_ocr": false,
+    "ocr_quality": "UNKNOWN",
     "extra": {
       "is_scanned": false
     }
@@ -332,6 +374,9 @@
     "abstract": "Patentability assessment is the most critical stage of the patent registration process. For an \ninvention to be granted a patent, it must meet the patentability criteria of novelty, inven-\ntive step, and industrial applicability. Evaluating the novelty and inventive step requires a \ncomparison of patent texts in terms of their technical scope. This comparison is conducted \nby experts from authorized patent offices and communicated to applicants through offi-\ncial reports. Under the EP and PCT conventions, patentability evaluations are expressed in \nsearch reports using the categories X, Y, and A. Due to the lengthy and complex structure \nof patent texts, as well as the specialized nature of novelty and inventive step compari-\nsons, patentability assessment is a challenging and time-consuming process. Consequently, \npatent registration timelines are extended, and inventions are often submitted prematurely, \nbefore reaching a patentable level of development. The aim of this study is to address the \npatentability assessment problem from a unique perspective, distinguishing it from other \nsemantic similarity tasks, by proposing a semantic similarity model specifically focused on \npaten",
     "num_pages": 40,
     "raw_char_count": 114014,
+    "extraction_method": "native",
+    "is_ocr": false,
+    "ocr_quality": "UNKNOWN",
     "extra": {
       "is_scanned": false
     }
@@ -339,23 +384,23 @@
   {
     "document_id": "PAP-016",
     "document_type": "paper",
-    "title": "AgentSwift: Efficient LLM Agent Design via Value-Guided Hierarchical Search Yu Li1, Lehui Li3, Zhihao Wu2, Qingmin Liao1, Jianye Hao2, Kun Shao2, Fengli Xu1* 1Tsinghua University",
+    "title": "Towards Automated Patent Workflows:",
     "publication_number": "arXiv-16",
     "authors": [
-      "Yu Li",
-      "Lehui Li",
-      "Zhihao Wu",
-      "Qingmin Liao",
-      "Jianye Hao",
-      "Kun Shao"
+      "Sakhinana Sagar Srinivas",
+      "Vijay Sri Vaikunth",
+      "Venkataramana Runkana"
     ],
-    "assignee": "Yu Li",
-    "publication_date": "2022",
+    "assignee": "Sakhinana Sagar Srinivas",
+    "publication_date": "2025",
     "source": "16.pdf",
     "filename": "16.pdf",
-    "abstract": "AgentSwift: Efficient LLM Agent Design via Value-Guided Hierarchical Search\nYu Li1, Lehui Li3, Zhihao Wu2, Qingmin Liao1, Jianye Hao2, Kun Shao2, Fengli Xu1*\n1Tsinghua University\n2Huawei Noah's Ark Lab\n3Shandong University\nliyu24@mails.tsinghua.edu.cn, {fenglixu, liaoqm}@tsinghua.edu.cn, {shaokun2, haojianye}@huawei.com,\n202200300096@mail.sdu.edu.cn\nAbstract\nLarge language model (LLM) agents have demonstrated\nstrong capabilities across diverse domains, yet automated\nagent design remains a significant challenge. Current auto-\nmated agent design approaches are often constrained by lim-\nited sear",
-    "num_pages": 9,
-    "raw_char_count": 42025,
+    "abstract": "Towards Automated Patent Workflows:\nAI-Orchestrated Multi-Agent Framework for\nIntellectual Property Management and Analysis\nSakhinana Sagar Srinivas1, Vijay Sri Vaikunth2, Venkataramana Runkana1\nTCS Research1, IIT-Palakkad2\nsagar.sakhinana@tcs.com, 112101060@smail.iitpkd.ac.in, venkat.runkana@tcs.com\nAbstract\n\"Patents are the currency of innovation, and like any currency, they need to be\nmanaged and protected\" (Gavin Potenza). Patents, as legal documents that secure\nintellectual property rights, play a critical role in technological innovation. The\ngrowing complexity of patent documents and th",
+    "num_pages": 16,
+    "raw_char_count": 72453,
+    "extraction_method": "native",
+    "is_ocr": false,
+    "ocr_quality": "UNKNOWN",
     "extra": {
       "is_scanned": false
     }
@@ -379,6 +424,9 @@
     "abstract": "Intellectual Property (IP) management involves strategically pro-\ntecting and utilizing intellectual assets to enhance organizational\ninnovation, competitiveness, and value creation. Patent matching is\na crucial task in intellectual property management, which facilitates\nthe organization and utilization of patents. Existing models often\nrely on the emergent capabilities of Large Language Models (LLMs)\nand leverage them to identify related patents directly. However,\nthese methods usually depend on matching keywords and over-\nlook the hierarchical classification and categorical relationships of\npatents. In this paper, we propose MemGraph, a method that aug-\nments the patent matching capabilities of LLMs by incorporating a\nmemory graph derived from their parametric memory. Specifically,\nMemGraph prompts LLMs to traverse their memory to identify rele-\nvant entities within patents, followed by attributing these entities to\ncorresponding ontologies. After traversing the memory graph, we\nutilize extracted entities and ontologies to improve the capability\nof LLM in comprehending the semantics of patents. Experimental\nresults on the PatentMatch dataset demonstrate the effectiveness\nof MemGr",
     "num_pages": 11,
     "raw_char_count": 61101,
+    "extraction_method": "native",
+    "is_ocr": false,
+    "ocr_quality": "UNKNOWN",
     "extra": {
       "is_scanned": false
     }
@@ -403,6 +451,9 @@
     "abstract": "Processing large and heterogeneous numbers of ideas submitted to \ncrowdsourcing contests is a regular challenge for idea evaluators. \nThe aim of this study is to investigate a potential use case for AI- \nbased innovation management and to extend the knowledge of \nusing automated novelty detection in idea evaluation processes. AI- \nbased language models can automatically allocate short texts \naccording to their semantic similarity in an embedded space. We \nrepresent the semantic content of crowdsourced ideas with the \nthree contemporary text embeddings - Doc2Vec, SBERT, and GPT- \n3-based Ada Similarity - and compute their semantic distance to \ndifferent reference sets using different novelty detection algo­\nrithms. We then compare the algorithm-generated scores with \nhuman novelty assessments to validate them. While selected \nnovelty scores based on text embeddings correlate with humans, \nour results show that scores based on SBERT embeddings best \nmatch human novelty assessments. We also find that AI-based \nnovelty detection approaches perform better for ideas below the \nmedian word count and when compared to a set of existing solu­\ntions, suggesting that the chosen language model ",
     "num_pages": 29,
     "raw_char_count": 91381,
+    "extraction_method": "native",
+    "is_ocr": false,
+    "ocr_quality": "UNKNOWN",
     "extra": {
       "is_scanned": false
     }
@@ -424,6 +475,9 @@
     "abstract": "Technology knowledge elements play an important role in technology innovation. How-\never, there is still challenges about their extraction and evaluation. Traditional methods \nexhibit limitations in precisely linking key technologies with functions, and they usually \nfocus on measuring the overall novelty of patent documents rather than individual technol-\nogy details, leading to poor interpretability and practicality of research outcomes. In this \nwork, we present a framework that extracts technology knowledge triples and evaluates the \nnovelty of triples based on deep learning model. This framework first identifies key sen-\ntences that reflect innovation from patent claims and then extracts technology knowledge \nelements from these sentences. A novelty index is then designed to evaluate the novelty of \nthese technology knowledge elements based on the probability of their occurrence and the \nsimilarity to existing knowledge. The experimental results demonstrate the effectiveness \nof the proposed method. The extracted technology knowledge elements can use to con-\nstruct an innovation knowledge graph, which provides practical applications in engineering \nknowledge retrieval, design ",
     "num_pages": 26,
     "raw_char_count": 72828,
+    "extraction_method": "native",
+    "is_ocr": false,
+    "ocr_quality": "UNKNOWN",
     "extra": {
       "is_scanned": false
     }
@@ -448,6 +502,9 @@
     "abstract": "Research Paper \nRetrieval-Augmented Generation Systems for Intellectual Property via \nSynthetic Multi-Angle Fine-tuning \nRuntao Rena, Jian Maa , Jianxi Luob \n\na Department of the Information Systems, City University of Hong Kong, Kowloon Tong, Hong Kong \nb Department of Systems Engineering, City University of Hong Kong, Kowloon Tong, Hong Kong \nA R T I C L E I N F O \nKeywords: \nGenerative AI \nLarge Language Model \nRetrieval-augmented Generation \nIntellectual Property \nPatent \nFine-tuning \n\nA B S T R A C T \nRetrieval-Augmented Generation (RAG) systems in the Intellectual Property (IP) field oft",
     "num_pages": 14,
     "raw_char_count": 56067,
+    "extraction_method": "native",
+    "is_ocr": false,
+    "ocr_quality": "UNKNOWN",
     "extra": {
       "is_scanned": false
     }
