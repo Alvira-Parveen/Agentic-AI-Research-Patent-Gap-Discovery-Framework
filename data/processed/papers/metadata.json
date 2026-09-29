@@ -3,17 +3,13 @@
     "document_id": "PAP-001",
     "document_type": "paper",
     "title": "Patent intelligence in the age of AI: Unlocking strategic insights through granular classification",
-    "publication_number": "arXiv-1",
+    "publication_number": "Giuntelli et al., 2026",
     "authors": [
-      "Guido Giuntelli a",
-      "Christian Spreafico a",
-      "Andrea Precorvi b",
-      "Davide Russo a",
-      "a University of Bergamo",
-      "Viale Marconi"
+      "Giuntelli",
+      "et al."
     ],
-    "assignee": "Guido Giuntelli a",
-    "publication_date": "2015",
+    "assignee": "Giuntelli",
+    "publication_date": "2026",
     "source": "1.pdf",
     "filename": "1.pdf",
     "abstract": "or cross- \ncutting categories such as inspection and maintenance, which can be \nexpressed through heterogeneous terminology and applied in diverse \ncontexts.\nIn other cases, such as distinguishing between a wheeled robot and \nan autonomous vehicle, the technological function can only be deter­\nmined through detailed content-level analysis of the patent. Combined \nwith the volume of documents involved, these requirements make \nexhaustive manual classification impractical for constructing complete \nand statistically robust matrices.\nBy leveraging semantic representations and clustering mechanisms, \nthe proposed framework supports the identification of functional re­\nlationships that are not captured by simple term co-occurrence. This \nFig. 4. Technological intersection analysis between the robot type (columns) and the functional application (rows).\nG. Giuntelli et al. \nWorld Patent Information 85 (2026) 102454\n\nenables a more systematic exploration of technological intersections, \nfacilitating the analysis of convergence patterns and the identification of \nemerging application areas.\n4.4.2. Technology acceleration analysis\nThe dynamic analysis of technological trajectories combines i",
@@ -30,15 +26,12 @@
     "document_id": "PAP-002",
     "document_type": "paper",
     "title": "Agent Ideate: A Framework for Product Idea Generation from Patents Using Agentic AI",
-    "publication_number": "arXiv-2",
+    "publication_number": "Kanumolu et al., 2025",
     "authors": [
-      "Using Agentic AI",
-      "Gopichand Kanumolu",
-      "Ashok Urlana",
-      "Charaka Vinayak Kumar",
-      "Bala Mallikarjunarao Garlapati"
+      "Kanumolu",
+      "et al."
     ],
-    "assignee": "Using Agentic AI",
+    "assignee": "Kanumolu",
     "publication_date": "2025",
     "source": "2.pdf",
     "filename": "2.pdf",
@@ -56,16 +49,12 @@
     "document_id": "PAP-003",
     "document_type": "paper",
     "title": "Many Heads Are Better Than One: Improved Scientific Idea Generation by A LLM-Based Multi-Agent System",
-    "publication_number": "arXiv-3",
+    "publication_number": "Su et al., 2025",
     "authors": [
-      "by A LLM-Based Multi-Agent System",
-      "Haoyang Su",
-      "Renqi Chen",
-      "Shixiang Tang",
-      "Zhenfei Yin",
-      "Xinzhe Zheng"
+      "Su",
+      "et al."
     ],
-    "assignee": "by A LLM-Based Multi-Agent System",
+    "assignee": "Su",
     "publication_date": "2025",
     "source": "3.pdf",
     "filename": "3.pdf",
@@ -82,16 +71,13 @@
   {
     "document_id": "PAP-004",
     "document_type": "paper",
-    "title": "EVOPAT: A MULTI-LLM-BASED PATENTS SUMMARIZATION AND ANALYSIS AGENT",
-    "publication_number": "arXiv-4",
+    "title": "EVOPAT: A Multi-LLM-Based Patents Summarization and Analysis Framework",
+    "publication_number": "Wang et al., 2024",
     "authors": [
-      "Suyuan Wang",
-      "Xueqian Yin",
-      "Menghao Wang",
-      "Ruofeng Guo & Kai Nan",
-      "SynMatAI Tech Inc"
+      "Wang",
+      "et al."
     ],
-    "assignee": "Suyuan Wang",
+    "assignee": "Wang",
     "publication_date": "2024",
     "source": "4.pdf",
     "filename": "4.pdf",
@@ -108,13 +94,13 @@
   {
     "document_id": "PAP-005",
     "document_type": "paper",
-    "title": "Can AI Examine Novelty of Patents?: Novelty Evaluation Based on the Correspondence between Patent Claim and Prior Art Hayato IKOMA and Teruko MITAMURA",
-    "publication_number": "arXiv-5",
+    "title": "Can AI Examine Novelty of Patents?: Novelty Evaluation Based on Correspondence between Patent Claim and Prior Art",
+    "publication_number": "Ikoma & Mitamura, 2025",
     "authors": [
-      "Language Technology Institute",
-      "Carnegie Mellon University"
+      "Ikoma",
+      "Mitamura"
     ],
-    "assignee": "Language Technology Institute",
+    "assignee": "Ikoma",
     "publication_date": "2025",
     "source": "5.pdf",
     "filename": "5.pdf",
@@ -131,15 +117,13 @@
   {
     "document_id": "PAP-006",
     "document_type": "paper",
-    "title": "In-depth Analysis of Graph-based RAG in a Unified Framework Yingli Zhou",
-    "publication_number": "arXiv-6",
+    "title": "In-depth Analysis of Graph-based RAG in a Unified Framework",
+    "publication_number": "Zhou et al., 2025",
     "authors": [
-      "Yingli Zhou",
-      "The Chinese University of Hong",
-      "Yaodong Su",
-      "The Chinese University of Hong"
+      "Zhou",
+      "et al."
     ],
-    "assignee": "Yingli Zhou",
+    "assignee": "Zhou",
     "publication_date": "2025",
     "source": "6.pdf",
     "filename": "6.pdf",
@@ -156,17 +140,13 @@
   {
     "document_id": "PAP-007",
     "document_type": "paper",
-    "title": "Exploring Design of Multi-Agent LLM Dialogues for Research Ideation* Keisuke Ueda1, 2 Wataru Hirota3 Takuto Asakura3 Takahiro Omi3 Kosuke Takahashi3 Kosuke Arima3 Tatsuya Ishigaki1",
-    "publication_number": "arXiv-7",
+    "title": "Exploring Design of Multi-Agent LLM Dialogues for Research Ideation",
+    "publication_number": "Ueda et al., 2025",
     "authors": [
-      "Keisuke Ueda",
-      "Wataru Hirota",
-      "Takuto Asakura",
-      "Takahiro Omi",
-      "Kosuke Takahashi",
-      "Kosuke Arima"
+      "Ueda",
+      "et al."
     ],
-    "assignee": "Keisuke Ueda",
+    "assignee": "Ueda",
     "publication_date": "2025",
     "source": "7.pdf",
     "filename": "7.pdf",
@@ -184,17 +164,13 @@
     "document_id": "PAP-008",
     "document_type": "paper",
     "title": "An automatic patent literature retrieval system based on LLM-RAG",
-    "publication_number": "arXiv-8",
+    "publication_number": "Ding et al., 2025",
     "authors": [
-      "Yao Ding",
-      "Yuqing Wu",
-      "Ziyang Ding",
-      "Belarusian State University",
-      "Uber Technologies",
-      "School of Humanities and Sciences"
+      "Ding",
+      "et al."
     ],
-    "assignee": "Yao Ding",
-    "publication_date": "2018",
+    "assignee": "Ding",
+    "publication_date": "2025",
     "source": "8.pdf",
     "filename": "8.pdf",
     "abstract": "With the acceleration of technological innovation, efficient retrieval and \nclassification of patent literature have become essential for intellectual property \nmanagement and enterprise R&D. Traditional keyword- and rule-based retrieval \nmethods often fail to address complex query intents or capture semantic associations \nacross technical domains, resulting in incomplete and low-relevance results. This study \npresents an automated patent retrieval framework integrating Large Language Models \n(LLMs) with Retrieval-Augmented Generation (RAG) technology. The system \ncomprises three components: (1) a preprocessing module for patent data \nstandardization, (2) a high-efficiency vector retrieval engine leveraging LLM-\ngenerated embeddings, and (3) a RAG-enhanced query module that combines external \ndocument retrieval with context-aware response generation. Evaluations were \nconducted on the Google Patents dataset (2006-2024), containing millions of global \npatent records with metadata such as filing date, domain, and status. The proposed gpt-\n3.5-turbo-0125+RAG configuration achieved 80.5% semantic matching accuracy and \n92.1% recall, surpassing baseline LLM methods by 28 percentage poin",
@@ -211,14 +187,12 @@
     "document_id": "PAP-009",
     "document_type": "paper",
     "title": "Research on Evaluation Methods for Patent Novelty Search Systems and Empirical Analysis",
-    "publication_number": "arXiv-9",
+    "publication_number": "Zhang et al., 2025",
     "authors": [
-      "Shu Zhang",
-      "LiSha Zhang",
-      "Kai Duan",
-      "XinKai Sun"
+      "Zhang",
+      "et al."
     ],
-    "assignee": "Shu Zhang",
+    "assignee": "Zhang",
     "publication_date": "2025",
     "source": "9.pdf",
     "filename": "9.pdf",
@@ -235,16 +209,14 @@
   {
     "document_id": "PAP-010",
     "document_type": "paper",
-    "title": "ToC: Tree-of-Claims Search with Multi-Agent Language Models Shuyang Yu1*, Jianan Liang2, Hui Hu2",
-    "publication_number": "arXiv-10",
+    "title": "ToC: Tree-of-Claims Search with Multi-Agent Language Models",
+    "publication_number": "Yu et al., 2026",
     "authors": [
-      "Shuyang Yu",
-      "Jianan Liang",
-      "Hui Hu",
-      "Columbia University"
+      "Yu",
+      "et al."
     ],
-    "assignee": "Shuyang Yu",
-    "publication_date": "2025",
+    "assignee": "Yu",
+    "publication_date": "2026",
     "source": "10.pdf",
     "filename": "10.pdf",
     "abstract": "ToC: Tree-of-Claims Search with Multi-Agent Language Models\nShuyang Yu1*, Jianan Liang2, Hui Hu2\n1Columbia University\n2AIGROW\nsy3309@columbia.edu,liangjianan@aigrow.cn,huhui@aigrow.cn\nAbstract\nOptimizing patent claims is a critical yet challenging task,\ndemanding careful balance between maximizing novelty and\npreserving legal scope. Manual claim drafting is labor-\nintensive, costly, and inherently inconsistent, while conven-\ntional Large Language Models (LLMs) often lack the struc-\ntured, iterative reasoning essential for precise claim refine-\nment. To address these challenges, we introduce Tr",
@@ -260,15 +232,13 @@
   {
     "document_id": "PAP-011",
     "document_type": "paper",
-    "title": "IdeaForge: A Knowledge Graph-Grounded Multi-Agent Framework for Cross-Methodology Innovation Analysis and Patent Claim Generation",
-    "publication_number": "arXiv-11",
+    "title": "IdeaForge: A Knowledge Graph-Grounded Multi-Agent Framework for Cross-Methodology Innovation Analysis",
+    "publication_number": "Bose, 2026",
     "authors": [
-      "Patent Claim Generation",
-      "Joy Bose",
-      "Independent Researcher"
+      "Bose"
     ],
-    "assignee": "Patent Claim Generation",
-    "publication_date": "2025",
+    "assignee": "Bose",
+    "publication_date": "2026",
     "source": "11.pdf",
     "filename": "11.pdf",
     "abstract": "Current AI-assisted innovation systems typically apply a single ideation methodology (such as TRIZ or Design \nThinking) using sequential prompt-based workflows that do not preserve intermediate reasoning structure. As a result, \ninsights generated across methodologies remain fragmented, limiting traceability, synthesis, and systematic evaluation \nof novelty. We present IdeaForge, a knowledge graph-grounded multi-agent framework for innovation analysis and \npatent claim generation. IdeaForge integrates multiple innovation methodologies (TRIZ, Design Thinking, and \nSCAMPER) through specialist agents operating over a persistent FalkorDB knowledge graph. Each agent contributes \nstructured entities and relationships representing contradictions, inventive principles, user needs, transformations, \nanalogies, and candidate claims. \nThe central contribution of IdeaForge is a cross-methodology convergence mechanism implemented through graph-\nbased claim linkage. Claims independently supported by multiple methodologies are connected using \nCONVERGENT relationships, enabling identification of high-confidence innovation candidates through graph \ntraversal. A downstream patent drafting agent gen",
@@ -284,18 +254,14 @@
   {
     "document_id": "PAP-012",
     "document_type": "paper",
-    "title": "AgentSwift: Efficient LLM Agent Design via Value-Guided Hierarchical Search Yu Li1, Lehui Li3, Zhihao Wu2, Qingmin Liao1, Jianye Hao2, Kun Shao2, Fengli Xu1* 1Tsinghua University",
-    "publication_number": "arXiv-12",
+    "title": "AgentSwift: Efficient LLM Agent Design via Value-Guided Hierarchical Search",
+    "publication_number": "Li et al., 2026",
     "authors": [
-      "Yu Li",
-      "Lehui Li",
-      "Zhihao Wu",
-      "Qingmin Liao",
-      "Jianye Hao",
-      "Kun Shao"
+      "Li",
+      "et al."
     ],
-    "assignee": "Yu Li",
-    "publication_date": "2022",
+    "assignee": "Li",
+    "publication_date": "2026",
     "source": "12.pdf",
     "filename": "12.pdf",
     "abstract": "AgentSwift: Efficient LLM Agent Design via Value-Guided Hierarchical Search\nYu Li1, Lehui Li3, Zhihao Wu2, Qingmin Liao1, Jianye Hao2, Kun Shao2, Fengli Xu1*\n1Tsinghua University\n2Huawei Noah's Ark Lab\n3Shandong University\nliyu24@mails.tsinghua.edu.cn, {fenglixu, liaoqm}@tsinghua.edu.cn, {shaokun2, haojianye}@huawei.com,\n202200300096@mail.sdu.edu.cn\nAbstract\nLarge language model (LLM) agents have demonstrated\nstrong capabilities across diverse domains, yet automated\nagent design remains a significant challenge. Current auto-\nmated agent design approaches are often constrained by lim-\nited sear",
@@ -311,17 +277,13 @@
   {
     "document_id": "PAP-013",
     "document_type": "paper",
-    "title": "TCLMA: A Two-dimension Contrastive Learning based Multiagent Framework for Scientific Novelty Evaluation Lin Zheng",
-    "publication_number": "arXiv-13",
+    "title": "TCLMA: A Two-dimension Contrastive Learning based Multiagent Framework for Scientific Novelty Evaluation",
+    "publication_number": "Zheng et al., 2025",
     "authors": [
-      "Lin Zheng",
-      "Department of Information Systems",
-      "School of Business",
-      "City University of Hong Kong",
-      "Hong Kong",
-      "Qingyu Xu∗"
+      "Zheng",
+      "et al."
     ],
-    "assignee": "Lin Zheng",
+    "assignee": "Zheng",
     "publication_date": "2025",
     "source": "13.pdf",
     "filename": "13.pdf",
@@ -338,14 +300,13 @@
   {
     "document_id": "PAP-014",
     "document_type": "paper",
-    "title": "Not peer-reviewed version Integrated Patent Prior Art Search with",
-    "publication_number": "arXiv-14",
+    "title": "Integrated Patent Prior Art Search with Claim-Aware Retrieval and Novelty Assessment",
+    "publication_number": "Han & Qu, 2026",
     "authors": [
-      "Claim-Aware Retrieval and Novelty",
-      "Xudong Han and Xiaoyi Qu",
-      "Posted Date:"
+      "Han",
+      "Qu"
     ],
-    "assignee": "Claim-Aware Retrieval and Novelty",
+    "assignee": "Han",
     "publication_date": "2026",
     "source": "14.pdf",
     "filename": "14.pdf",
@@ -362,12 +323,13 @@
   {
     "document_id": "PAP-015",
     "document_type": "paper",
-    "title": "Scientometrics (2025) 130:5401-5440",
-    "publication_number": "arXiv-15",
+    "title": "A novel patentability detection model based on Siamese network",
+    "publication_number": "Kayakökü & Tüfekci, 2025",
     "authors": [
-      "· Aslıhan Tüfekci"
+      "Kayakökü",
+      "Tüfekci"
     ],
-    "assignee": "· Aslıhan Tüfekci",
+    "assignee": "Kayakökü",
     "publication_date": "2025",
     "source": "15.pdf",
     "filename": "15.pdf",
@@ -384,15 +346,14 @@
   {
     "document_id": "PAP-016",
     "document_type": "paper",
-    "title": "Towards Automated Patent Workflows:",
-    "publication_number": "arXiv-16",
+    "title": "Towards Automated Patent Workflows: Multi-agent optimization patterns",
+    "publication_number": "Li et al., 2026",
     "authors": [
-      "Sakhinana Sagar Srinivas",
-      "Vijay Sri Vaikunth",
-      "Venkataramana Runkana"
+      "Li",
+      "et al."
     ],
-    "assignee": "Sakhinana Sagar Srinivas",
-    "publication_date": "2025",
+    "assignee": "Li",
+    "publication_date": "2026",
     "source": "16.pdf",
     "filename": "16.pdf",
     "abstract": "Towards Automated Patent Workflows:\nAI-Orchestrated Multi-Agent Framework for\nIntellectual Property Management and Analysis\nSakhinana Sagar Srinivas1, Vijay Sri Vaikunth2, Venkataramana Runkana1\nTCS Research1, IIT-Palakkad2\nsagar.sakhinana@tcs.com, 112101060@smail.iitpkd.ac.in, venkat.runkana@tcs.com\nAbstract\n\"Patents are the currency of innovation, and like any currency, they need to be\nmanaged and protected\" (Gavin Potenza). Patents, as legal documents that secure\nintellectual property rights, play a critical role in technological innovation. The\ngrowing complexity of patent documents and th",
@@ -408,16 +369,13 @@
   {
     "document_id": "PAP-017",
     "document_type": "paper",
-    "title": "Enhancing the Patent Matching Capability of Large Language Models via the Memory Graph",
-    "publication_number": "arXiv-17",
+    "title": "Enhancing the Patent Matching Capability of Large Language Models via Memory Graph",
+    "publication_number": "Xiong et al., 2025",
     "authors": [
-      "Models via the Memory Graph",
-      "Qiushi Xiong∗",
-      "Northeastern University",
-      "Zhipeng Xu∗",
-      "Northeastern University"
+      "Xiong",
+      "et al."
     ],
-    "assignee": "Models via the Memory Graph",
+    "assignee": "Xiong",
     "publication_date": "2025",
     "source": "17.pdf",
     "filename": "17.pdf",
@@ -434,17 +392,13 @@
   {
     "document_id": "PAP-018",
     "document_type": "paper",
-    "title": "Innovation Organization & Management",
-    "publication_number": "arXiv-18",
+    "title": "Innovation Organization & Management: AI-based novelty detection in crowdsourced idea spaces",
+    "publication_number": "Just et al., 2024",
     "authors": [
-      "Julian Just",
-      "Thomas Ströhle",
-      "Johann Füller & Katja Hutter",
-      "To cite this article: Julian Just",
-      "Thomas Ströhle",
-      "Johann Füller & Katja Hutter ("
+      "Just",
+      "et al."
     ],
-    "assignee": "Julian Just",
+    "assignee": "Just",
     "publication_date": "2024",
     "source": "18.pdf",
     "filename": "18.pdf",
@@ -461,14 +415,13 @@
   {
     "document_id": "PAP-019",
     "document_type": "paper",
-    "title": "Scientometrics (2024) 129:7417-7442",
-    "publication_number": "arXiv-19",
+    "title": "An extraction and novelty evaluation framework for technology knowledge elements of patents",
+    "publication_number": "Wei et al., 2024",
     "authors": [
-      "· Danyu Feng",
-      "· Shiling Song",
-      "· Cai Zhang"
+      "Wei",
+      "et al."
     ],
-    "assignee": "· Danyu Feng",
+    "assignee": "Wei",
     "publication_date": "2024",
     "source": "19.pdf",
     "filename": "19.pdf",
@@ -485,17 +438,13 @@
   {
     "document_id": "PAP-020",
     "document_type": "paper",
-    "title": "Research Paper Retrieval-Augmented Generation Systems for Intellectual Property via Synthetic Multi-Angle Fine-tuning",
-    "publication_number": "arXiv-20",
+    "title": "Research Paper Retrieval-Augmented Generation Systems for Intellectual Property",
+    "publication_number": "Ren et al., 2025",
     "authors": [
-      "Synthetic Multi-Angle Fine-tuning",
-      "Runtao Rena",
-      "Jian Maa",
-      "Jianxi Luob",
-      "City University of Hong Kong",
-      "Kowloon Tong"
+      "Ren",
+      "et al."
     ],
-    "assignee": "Synthetic Multi-Angle Fine-tuning",
+    "assignee": "Ren",
     "publication_date": "2025",
     "source": "20.pdf",
     "filename": "20.pdf",

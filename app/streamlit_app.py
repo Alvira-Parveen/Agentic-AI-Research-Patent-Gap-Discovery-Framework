@@ -384,15 +384,52 @@ if FULL_MODE:
 
     # TAB 5: CORPUS MAPPING
     with tabs[4]:
-        st.subheader("PBL-3 Knowledge Corpus Reference (20 Patents & 20 Research Papers)")
-        st.markdown("Detailed breakdown of the 40 foundational documents from `PBL-3_Report.pdf`.")
+        st.subheader("📚 PBL-3 Knowledge Corpus (20 Patents & 20 Research Papers)")
+        st.markdown("Structured mapping of the 40 foundational documents ingested and indexed into FAISS.")
+
+        papers, patents = load_corpus_metadata()
+
+        col1, col2 = st.columns(2)
+        with col1:
+            st.metric("Total Research Papers", len(papers))
+        with col2:
+            st.metric("Total Patents", len(patents))
+
+        tab_pat, tab_pap = st.tabs(["📜 20 Patents", "📄 20 Research Papers"])
+
+        with tab_pat:
+            if patents:
+                patent_data = []
+                for p in patents:
+                    patent_data.append({
+                        "ID": p["document_id"],
+                        "Publication No.": p.get("publication_number", "N/A"),
+                        "Title": p["title"],
+                        "Assignee": p.get("assignee") or "N/A",
+                        "Pages": p.get("num_pages", "N/A"),
+                        "File": p.get("source", "N/A")
+                    })
+                st.dataframe(pd.DataFrame(patent_data), use_container_width=True, hide_index=True)
+
+        with tab_pap:
+            if papers:
+                paper_data = []
+                for p in papers:
+                    paper_data.append({
+                        "ID": p["document_id"],
+                        "Citation": p.get("publication_number", "N/A"),
+                        "Title": p["title"],
+                        "Year": p.get("publication_date", "N/A"),
+                        "Pages": p.get("num_pages", "N/A"),
+                        "File": p.get("source", "N/A")
+                    })
+                st.dataframe(pd.DataFrame(paper_data), use_container_width=True, hide_index=True)
 
         map_path = PROJECT_ROOT / "docs" / "literature_mapping.md"
         if map_path.exists():
-            with open(map_path, "r", encoding="utf-8") as f:
-                st.markdown(f.read())
-        else:
-            st.info("Literature mapping file located at docs/literature_mapping.md.")
+            with st.expander("📖 View Full Literature Mapping & Architectural Roles"):
+                with open(map_path, "r", encoding="utf-8") as f:
+                    st.markdown(f.read())
 
 
 # ============================================================
@@ -466,7 +503,7 @@ else:
 
     # TAB 2: CORPUS & DOCUMENTS
     with tabs[1]:
-        st.subheader("📚 Research Corpus Overview")
+        st.subheader("📚 Research Corpus Overview (20 Patents & 20 Papers)")
 
         papers, patents = load_corpus_metadata()
 
@@ -476,30 +513,35 @@ else:
         with col2:
             st.metric("Patents", len(patents))
 
-        if papers:
-            st.markdown("### 📄 Research Papers")
-            paper_data = []
-            for p in papers:
-                paper_data.append({
-                    "ID": p["document_id"],
-                    "Title": p["title"][:70] + "..." if len(p["title"]) > 70 else p["title"],
-                    "Year": p.get("publication_date", "N/A"),
-                    "Pages": p.get("num_pages", "N/A"),
-                    "Chars": p.get("raw_char_count", 0)
-                })
-            st.dataframe(pd.DataFrame(paper_data), use_container_width=True, hide_index=True)
+        tab_pat, tab_pap = st.tabs(["📜 20 Patents", "📄 20 Research Papers"])
 
-        if patents:
-            st.markdown("### 📜 Patents")
-            patent_data = []
-            for p in patents:
-                patent_data.append({
-                    "ID": p["document_id"],
-                    "Title": p["title"][:70] + "..." if len(p["title"]) > 70 else p["title"],
-                    "Pages": p.get("num_pages", "N/A"),
-                    "Chars": p.get("raw_char_count", 0)
-                })
-            st.dataframe(pd.DataFrame(patent_data), use_container_width=True, hide_index=True)
+        with tab_pat:
+            if patents:
+                patent_data = []
+                for p in patents:
+                    patent_data.append({
+                        "ID": p["document_id"],
+                        "Publication No.": p.get("publication_number", "N/A"),
+                        "Title": p["title"],
+                        "Assignee": p.get("assignee") or "N/A",
+                        "Pages": p.get("num_pages", "N/A"),
+                        "File": p.get("source", "N/A")
+                    })
+                st.dataframe(pd.DataFrame(patent_data), use_container_width=True, hide_index=True)
+
+        with tab_pap:
+            if papers:
+                paper_data = []
+                for p in papers:
+                    paper_data.append({
+                        "ID": p["document_id"],
+                        "Citation": p.get("publication_number", "N/A"),
+                        "Title": p["title"],
+                        "Year": p.get("publication_date", "N/A"),
+                        "Pages": p.get("num_pages", "N/A"),
+                        "File": p.get("source", "N/A")
+                    })
+                st.dataframe(pd.DataFrame(paper_data), use_container_width=True, hide_index=True)
 
         # Corpus mapping
         map_path = PROJECT_ROOT / "docs" / "literature_mapping.md"

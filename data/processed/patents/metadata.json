@@ -2,10 +2,10 @@
   {
     "document_id": "PAT-001",
     "document_type": "patent",
-    "title": "Patent Document Patent 1",
-    "publication_number": "US010902042B2",
+    "title": "Claim Reference Generation & Intrinsic Evidence Hyperlinking",
+    "publication_number": "US 10,902,042 B2",
     "authors": [],
-    "assignee": null,
+    "assignee": "Black Hills IP Holdings, LLC",
     "publication_date": null,
     "source": "Patent 1.pdf",
     "filename": "Patent 1.pdf",
@@ -22,10 +22,10 @@
   {
     "document_id": "PAT-002",
     "document_type": "patent",
-    "title": "Patent Document Patent 2",
-    "publication_number": "US011321312B2",
+    "title": "Vector-Based Contextual Text Searching",
+    "publication_number": "US 11,321,312 B2",
     "authors": [],
-    "assignee": null,
+    "assignee": "ALEX - Alternative Experts, LLC",
     "publication_date": null,
     "source": "Patent 2.pdf",
     "filename": "Patent 2.pdf",
@@ -42,14 +42,14 @@
   {
     "document_id": "PAT-003",
     "document_type": "patent",
-    "title": "(71) (72)",
-    "publication_number": "US011816578B2",
+    "title": "Novelty Detection Using Deep Learning Neural Network",
+    "publication_number": "US 11,816,578 B2",
     "authors": [
       "Andre S. Yoon",
       "Santa Clara",
       "CA"
     ],
-    "assignee": "MakinaRocks Co., Ltd., Seoul",
+    "assignee": "MakinaRocks Co., Ltd.",
     "publication_date": null,
     "source": "Patent 3.pdf",
     "filename": "Patent 3.pdf",
@@ -66,13 +66,13 @@
   {
     "document_id": "PAT-004",
     "document_type": "patent",
-    "title": "COMPUTER IMPLEMENTED METHODS",
-    "publication_number": "US011989507B2",
+    "title": "Computer Implemented Methods for Interacting with Semantic / Question-Answering Systems",
+    "publication_number": "US 11,989,507 B2",
     "authors": [
       "William Tunstall-Pedoe",
       "See application file for complete search history."
     ],
-    "assignee": "UNLIKELY ARTIFICIAL CPC eevee GO6F 40/20",
+    "assignee": "Unlikely Artificial Intelligence Limited",
     "publication_date": "May 21, 2024",
     "source": "Patent 4.pdf",
     "filename": "Patent 4.pdf",
@@ -89,14 +89,14 @@
   {
     "document_id": "PAT-005",
     "document_type": "patent",
-    "title": "MULTI-SEGMENT TEXT SEARCH USING G06V 30/413 (2022.01) MACHINE LEARNING MODEL FOR TEXT G06V 30/414 (2022.01) SIMILARITY G06V 30/418 (2022.01) GO6F 16/93 (2019.01)",
-    "publication_number": "US012230049B2",
+    "title": "Multi-Segment Text Search Using Machine Learning Model for Text Similarity",
+    "publication_number": "US 12,230,049 B2",
     "authors": [
       "Bryant Lee",
       "San Francisco",
       "CA"
     ],
-    "assignee": "Cognition IP Technology Ine., San",
+    "assignee": "Cognition IP Technology Inc.",
     "publication_date": null,
     "source": "Patent 5.pdf",
     "filename": "Patent 5.pdf",
@@ -113,14 +113,14 @@
   {
     "document_id": "PAT-006",
     "document_type": "patent",
-    "title": "(71) (72)",
-    "publication_number": "US012339875B1",
+    "title": "Machine Learning Architecture for Contextual Data Retrieval",
+    "publication_number": "US 12,339,875 B1",
     "authors": [
       "David Veillon",
       "Longmont",
       "CO"
     ],
-    "assignee": "AskTuring.AI Inc., La Jolla, CA",
+    "assignee": "AskTuring.AI Inc.",
     "publication_date": null,
     "source": "Patent 6.pdf",
     "filename": "Patent 6.pdf",
@@ -137,14 +137,14 @@
   {
     "document_id": "PAT-007",
     "document_type": "patent",
-    "title": "Patent Document Patent 7",
-    "publication_number": "US012339880B2",
+    "title": "Automated Patent Claim Scope Concept Mapping",
+    "publication_number": "US 12,339,880 B2",
     "authors": [
       "Steven W. Lundberg",
       "Edina",
       "MN"
     ],
-    "assignee": "Black Hills IP Holdings, LLC,",
+    "assignee": "Black Hills IP Holdings, LLC",
     "publication_date": null,
     "source": "Patent 7.pdf",
     "filename": "Patent 7.pdf",
@@ -161,14 +161,14 @@
   {
     "document_id": "PAT-008",
     "document_type": "patent",
-    "title": "(71) (72)",
-    "publication_number": "US012373506B1",
+    "title": "Personalized Retrieval-Augmented Generation System",
+    "publication_number": "US 12,373,506 B1",
     "authors": [
       "Anthony Penta",
       "Bellevue",
       "WA"
     ],
-    "assignee": "Dropbox, Ine., San Francisco, CA",
+    "assignee": "Dropbox, Inc.",
     "publication_date": null,
     "source": "Patent 8.pdf",
     "filename": "Patent 8.pdf",
@@ -185,12 +185,12 @@
   {
     "document_id": "PAT-009",
     "document_type": "patent",
-    "title": "(71) (72)",
-    "publication_number": "US 12,461,922 B",
+    "title": "Platform for Semantic Search and Dynamic Reclassification",
+    "publication_number": "US 12,461,922 B1",
     "authors": [
       "Assignee:"
     ],
-    "assignee": "Inventors:",
+    "assignee": "Reveal Networks, Inc.",
     "publication_date": null,
     "source": "Patent 9.pdf",
     "filename": "Patent 9.pdf",
@@ -207,14 +207,14 @@
   {
     "document_id": "PAT-010",
     "document_type": "patent",
-    "title": "(71) (72)",
-    "publication_number": "US012505111B2",
+    "title": "Patent Mapping & Automated Patent Claim Scope Concept Mapping",
+    "publication_number": "US 12,505,111 B2",
     "authors": [
       "Steven W. Lundberg",
       "Edina",
       "MN"
     ],
-    "assignee": "Black Hills IP Holdings, LLC,",
+    "assignee": "Black Hills IP Holdings, LLC",
     "publication_date": null,
     "source": "Patent 10.pdf",
     "filename": "Patent 10.pdf",
@@ -231,14 +231,14 @@
   {
     "document_id": "PAT-011",
     "document_type": "patent",
-    "title": "(71) (72)",
-    "publication_number": "US012561314B2",
+    "title": "Retrieval-Augmented Generation (RAG) System Optimization",
+    "publication_number": "US 12,561,314 B2",
     "authors": [
       "Eliot P. Brenner",
       "Westfield",
       "NJ"
     ],
-    "assignee": "Goldman Sachs & Co. LLC, New",
+    "assignee": "Goldman Sachs & Co. LLC",
     "publication_date": null,
     "source": "Patent 11.pdf",
     "filename": "Patent 11.pdf",
@@ -255,14 +255,14 @@
   {
     "document_id": "PAT-012",
     "document_type": "patent",
-    "title": "METHOD AND SYSTEM FOR OPTIMIZING (56) References Cited USE OF RETRIEVAL AUGMENTED GENERATION PIPELINES IN GENERATIVE U.S. PATENT DOCUMENTS ARTIFICIAL INTELLIGENCE . APPLICATIONS 5410475 A * 4/1995 Lu ",
-    "publication_number": "US012602412B2",
+    "title": "Method and System for Optimizing Use of Retrieval Augmented Generation Pipelines in Generative AI",
+    "publication_number": "US 12,602,412 B2",
     "authors": [
       "Vijay Madisetti",
       "Alpharetta",
       "GA"
     ],
-    "assignee": "Vijay Madisetti, Alpharetta, GA",
+    "assignee": "Vijay Madisetti",
     "publication_date": "Apr. 14, 2026",
     "source": "Patent 12.pdf",
     "filename": "Patent 12.pdf",
@@ -279,13 +279,13 @@
   {
     "document_id": "PAT-013",
     "document_type": "patent",
-    "title": "METHODS AND SYSTEMS OF HANDLING PATENT CLAMS",
-    "publication_number": "US 20170075877A1",
+    "title": "Methods and Systems of Handling Patent Claims",
+    "publication_number": "US 2017/0075877 A1",
     "authors": [
       "Marie-Therese LEPELTIER",
       "Cannes"
     ],
-    "assignee": "Marie-Therese LEPELTIER, Cannes",
+    "assignee": "Marie-Therese Lepeltier",
     "publication_date": "Mar. 16, 2017",
     "source": "Patent 13.pdf",
     "filename": "Patent 13.pdf",
@@ -302,10 +302,10 @@
   {
     "document_id": "PAT-014",
     "document_type": "patent",
-    "title": "Patent Document Patent 14",
-    "publication_number": "US 20200050638A1",
+    "title": "Systems and Methods for Analyzing the Validity or Infringement of Patent Claims",
+    "publication_number": "US 2020/0050638 A1",
     "authors": [],
-    "assignee": null,
+    "assignee": "Parker Douglas Hancock",
     "publication_date": null,
     "source": "Patent 14.pdf",
     "filename": "Patent 14.pdf",
@@ -322,10 +322,10 @@
   {
     "document_id": "PAT-015",
     "document_type": "patent",
-    "title": "Patent Document Patent 15",
-    "publication_number": "US 20220343444A1",
+    "title": "Artificial Intelligence, Machine Learning, and Predictive Analytics for Patent and Non-Patent Documents",
+    "publication_number": "US 2022/0343444 A1",
     "authors": [],
-    "assignee": null,
+    "assignee": "DataNovo, Inc.",
     "publication_date": null,
     "source": "Patent 15.pdf",
     "filename": "Patent 15.pdf",
@@ -342,14 +342,14 @@
   {
     "document_id": "PAT-016",
     "document_type": "patent",
-    "title": "(71) (72)",
+    "title": "Enhanced Search Result Generation Using Multi-Document Summarization",
     "publication_number": "US 2024/0281487 A1",
     "authors": [
       "Rahil Bathwal",
       "San Francisco",
       "CA"
     ],
-    "assignee": "Snowflake Inc., Bozeman, MT",
+    "assignee": "Snowflake Inc.",
     "publication_date": "Aug. 22, 2024",
     "source": "Patent 16.pdf",
     "filename": "Patent 16.pdf",
@@ -366,14 +366,14 @@
   {
     "document_id": "PAT-017",
     "document_type": "patent",
-    "title": "MULTI-SEGMENT TEXT SEARCH USING (60) Provisional application No. 62/780,582, filed on Dee. MACHINE LEARNING MODEL FOR TEXT 17, 2018, provisional application No. 62/787,640, SIMILARITY filed on Jan. 2,",
-    "publication_number": "US 2025/0259470 A",
+    "title": "Multi-Segment Text Search Using Machine Learning Model for Prior Art",
+    "publication_number": "US 2025/0259470 A1",
     "authors": [
       "Bryant Lee",
       "San Francisco",
       "CA"
     ],
-    "assignee": "Cognition IP Technology Ine., San Publication Classification",
+    "assignee": "Cognition IP Technology Inc.",
     "publication_date": "Aug. 14, 2025",
     "source": "Patent 17.pdf",
     "filename": "Patent 17.pdf",
@@ -390,14 +390,14 @@
   {
     "document_id": "PAT-018",
     "document_type": "patent",
-    "title": "PATENT MAPPING GO6F 16/38 (2019.01) GO6F 16/903 (2019.01)",
-    "publication_number": "US 2025/0335515 A",
+    "title": "Patent Mapping & White Space Discovery",
+    "publication_number": "US 2025/0335515 A1",
     "authors": [
       "Steven W. Lundberg",
       "Edina",
       "MN"
     ],
-    "assignee": "Black Hills IP Holdings, LLC, G06F 16/951",
+    "assignee": "Black Hills IP Holdings, LLC",
     "publication_date": "Oct. 30, 2025",
     "source": "Patent 18.pdf",
     "filename": "Patent 18.pdf",
@@ -414,12 +414,12 @@
   {
     "document_id": "PAT-019",
     "document_type": "patent",
-    "title": "COMPUTER IMPLEMENTED METHODS FOR THE AUTOMATED ANALYSIS OR USE OF DATA, INCLUDING USE OF A LARGE LANGUAGE MODEL",
-    "publication_number": "US 20260080164A1",
+    "title": "Computer Implemented Methods for the Automated Analysis or Use of Data, Including Use of Large Language Models",
+    "publication_number": "US 2026/0080164 A1",
     "authors": [
       "William TUNSTALL-PEDOE"
     ],
-    "assignee": "UNLIKELY ARTIFICIAL",
+    "assignee": "Unlikely Artificial Intelligence Limited",
     "publication_date": "Mar. 19, 2026",
     "source": "Patent 19.pdf",
     "filename": "Patent 19.pdf",
@@ -436,14 +436,14 @@
   {
     "document_id": "PAT-020",
     "document_type": "patent",
-    "title": "AUGMENTED QUESTION AND ANSWER Publication Classification (Q&A) WITH LARGE LANGUAGE MODELS",
-    "publication_number": "US 20260105258A1",
+    "title": "Augmented Question and Answer (Q&A) with Large Language Models",
+    "publication_number": "US 2026/0105258 A1",
     "authors": [
       "Manish Marwah",
       "Pleasanton",
       "CA"
     ],
-    "assignee": "MICRO FOCUS LLC, Wilmington, G06F 40/30",
+    "assignee": "Micro Focus LLC",
     "publication_date": "Apr. 16, 2026",
     "source": "Patent 20.pdf",
     "filename": "Patent 20.pdf",

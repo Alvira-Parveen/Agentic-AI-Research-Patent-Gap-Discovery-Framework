@@ -7,13 +7,13 @@
     "llm_provider": "mock",
     "model_name": "gpt-4o-mini",
     "temperature": 0.2,
-    "execution_timestamp": "2026-09-29T21:45:48.936053+00:00",
+    "execution_timestamp": "2026-09-29T21:56:52.544781+00:00",
     "test_cases_file": "test_cases.json",
     "ground_truth_qualification": "Retrieval metrics are provisional retrieval diagnostics evaluated against developer-curated targets (N=20). They represent software integration diagnostics, NOT validated performance or proof of model superiority. Agreement against human labels reports N/A until independent human annotation is completed."
   },
-  "num_cases_evaluated": 2,
+  "num_cases_evaluated": 5,
   "single_llm": {
-    "avg_latency_seconds": 0.0001,
+    "avg_latency_seconds": 0.0002,
     "avg_precision@3": null,
     "avg_recall@3": null,
     "avg_f1@3": null,
@@ -24,25 +24,25 @@
     "provisional_agreement_developer": 0.0
   },
   "rag": {
-    "avg_latency_seconds": 0.0187,
-    "avg_precision@3_provisional": 0.5,
-    "avg_recall@3_provisional": 0.3667,
-    "avg_f1@3_provisional": 0.4166,
-    "mean_reciprocal_rank_provisional": 0.6666,
+    "avg_latency_seconds": 0.0189,
+    "avg_precision@3_provisional": 0.5333,
+    "avg_recall@3_provisional": 0.4033,
+    "avg_f1@3_provisional": 0.4547,
+    "mean_reciprocal_rank_provisional": 0.6667,
     "avg_grounding_ratio": 1.0,
     "novelty_agreement_human": null,
-    "provisional_agreement_developer": 0.5,
+    "provisional_agreement_developer": 0.3333,
     "avg_gaps_discovered": 0.0
   },
   "multi_agent_rag": {
-    "avg_latency_seconds": 0.1121,
-    "avg_precision@3_provisional": 0.5,
-    "avg_recall@3_provisional": 0.3667,
-    "avg_f1@3_provisional": 0.4166,
-    "mean_reciprocal_rank_provisional": 0.75,
-    "avg_grounding_ratio": 0.6072,
+    "avg_latency_seconds": 0.1015,
+    "avg_precision@3_provisional": 0.5333,
+    "avg_recall@3_provisional": 0.43,
+    "avg_f1@3_provisional": 0.4714,
+    "mean_reciprocal_rank_provisional": 0.7333,
+    "avg_grounding_ratio": 0.5857,
     "novelty_agreement_human": null,
-    "provisional_agreement_developer": 0.5,
+    "provisional_agreement_developer": 0.6667,
     "avg_gaps_discovered": 1.0
   },
   "provisional_targets_disclaimer": "NOTE: Retrieval metrics are provisional retrieval diagnostics evaluated against developer-curated targets (N=20), which serve as a software integration diagnostic rather than an independently verified gold standard. These metrics must NOT be interpreted as validated accuracy, research performance, or proof of model superiority. Agreement against human novelty annotations is marked N/A until independent double-blind annotations are collected.",
@@ -54,7 +54,7 @@
       "annotation_status": "provisional_developer_curated",
       "human_verified": false,
       "single_llm": {
-        "latency_seconds": 0.0001,
+        "latency_seconds": 0.0004,
         "novelty_score": null,
         "novelty_level": "Unassessed (Parametric baseline)",
         "precision@3": null,
@@ -63,7 +63,7 @@
         "citation_note": "Parametric generation \u2014 no retrieved citations"
       },
       "rag": {
-        "latency_seconds": 0.0178,
+        "latency_seconds": 0.0367,
         "novelty_score": 0.6447,
         "novelty_level": "Moderate",
         "precision@3_provisional": 0.3333,
@@ -73,7 +73,7 @@
         "citation_grounding": 1.0
       },
       "multi_agent_rag": {
-        "latency_seconds": 0.1065,
+        "latency_seconds": 0.1036,
         "novelty_score": 0.7183,
         "novelty_level": "High",
         "precision@3_provisional": 0.3333,
@@ -100,7 +100,7 @@
         "citation_note": "Parametric generation \u2014 no retrieved citations"
       },
       "rag": {
-        "latency_seconds": 0.0197,
+        "latency_seconds": 0.0158,
         "novelty_score": 0.1881,
         "novelty_level": "Low",
         "precision@3_provisional": 0.6667,
@@ -110,12 +110,123 @@
         "citation_grounding": 1.0
       },
       "multi_agent_rag": {
-        "latency_seconds": 0.1177,
+        "latency_seconds": 0.0974,
         "novelty_score": 0.5476,
         "novelty_level": "Moderate",
         "precision@3_provisional": 0.6667,
         "recall@3_provisional": 0.4,
         "f1@3_provisional": 0.5,
+        "mrr_provisional": 1.0,
+        "citation_grounding": 0.5,
+        "gaps_count": 1
+      }
+    },
+    {
+      "case_id": "TC-003",
+      "title": "Cross-Methodology Innovation Reasoning with Dynamic Knowledge Graphs",
+      "domain": "Agentic AI & Knowledge Representation",
+      "annotation_status": "provisional_developer_curated",
+      "human_verified": false,
+      "single_llm": {
+        "latency_seconds": 0.0001,
+        "novelty_score": null,
+        "novelty_level": "Unassessed (Parametric baseline)",
+        "precision@3": null,
+        "recall@3": null,
+        "citation_grounding": 0.0,
+        "citation_note": "Parametric generation \u2014 no retrieved citations"
+      },
+      "rag": {
+        "latency_seconds": 0.0146,
+        "novelty_score": 0.2614,
+        "novelty_level": "Low",
+        "precision@3_provisional": 1.0,
+        "recall@3_provisional": 0.75,
+        "f1@3_provisional": 0.8571,
+        "mrr_provisional": 1.0,
+        "citation_grounding": 1.0
+      },
+      "multi_agent_rag": {
+        "latency_seconds": 0.1084,
+        "novelty_score": 0.5772,
+        "novelty_level": "Moderate",
+        "precision@3_provisional": 1.0,
+        "recall@3_provisional": 0.75,
+        "f1@3_provisional": 0.8571,
+        "mrr_provisional": 1.0,
+        "citation_grounding": 0.5,
+        "gaps_count": 1
+      }
+    },
+    {
+      "case_id": "TC-004",
+      "title": "Retrieval-Augmented Generation for Intellectual Property with Synthetic Query Fine-Tuning",
+      "domain": "Information Retrieval & NLP",
+      "annotation_status": "provisional_developer_curated",
+      "human_verified": false,
+      "single_llm": {
+        "latency_seconds": 0.0001,
+        "novelty_score": null,
+        "novelty_level": "Unassessed (Parametric baseline)",
+        "precision@3": null,
+        "recall@3": null,
+        "citation_grounding": 0.0,
+        "citation_note": "Parametric generation \u2014 no retrieved citations"
+      },
+      "rag": {
+        "latency_seconds": 0.0152,
+        "novelty_score": 0.2385,
+        "novelty_level": "Low",
+        "precision@3_provisional": 0.3333,
+        "recall@3_provisional": 0.2,
+        "f1@3_provisional": 0.25,
+        "mrr_provisional": 0.5,
+        "citation_grounding": 1.0
+      },
+      "multi_agent_rag": {
+        "latency_seconds": 0.0924,
+        "novelty_score": 0.4696,
+        "novelty_level": "Moderate",
+        "precision@3_provisional": 0.0,
+        "recall@3_provisional": 0.0,
+        "f1@3_provisional": 0.0,
+        "mrr_provisional": 0.1667,
+        "citation_grounding": 0.7143,
+        "gaps_count": 1
+      }
+    },
+    {
+      "case_id": "TC-005",
+      "title": "Contrastive Learning Multi-Agent System for Scientific Idea Novelty Evaluation",
+      "domain": "Machine Learning & Meta-Science",
+      "annotation_status": "provisional_developer_curated",
+      "human_verified": false,
+      "single_llm": {
+        "latency_seconds": 0.0001,
+        "novelty_score": null,
+        "novelty_level": "Unassessed (Parametric baseline)",
+        "precision@3": null,
+        "recall@3": null,
+        "citation_grounding": 0.0,
+        "citation_note": "Parametric generation \u2014 no retrieved citations"
+      },
+      "rag": {
+        "latency_seconds": 0.0121,
+        "novelty_score": 0.4423,
+        "novelty_level": "Moderate",
+        "precision@3_provisional": 0.3333,
+        "recall@3_provisional": 0.3333,
+        "f1@3_provisional": 0.3333,
+        "mrr_provisional": 0.5,
+        "citation_grounding": 1.0
+      },
+      "multi_agent_rag": {
+        "latency_seconds": 0.1059,
+        "novelty_score": 0.4811,
+        "novelty_level": "Moderate",
+        "precision@3_provisional": 0.6667,
+        "recall@3_provisional": 0.6667,
+        "f1@3_provisional": 0.6667,
         "mrr_provisional": 1.0,
         "citation_grounding": 0.5,
         "gaps_count": 1

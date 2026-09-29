@@ -8,6 +8,30 @@ from src.utils.ids import generate_document_id
 from src.utils.logging import logger
 
 
+CURATED_PAPER_METADATA = {
+    "1.pdf": {"title": "Patent intelligence in the age of AI: Unlocking strategic insights through granular classification", "citation": "Giuntelli et al., 2026", "authors": ["Giuntelli", "et al."], "year": "2026"},
+    "2.pdf": {"title": "Agent Ideate: A Framework for Product Idea Generation from Patents Using Agentic AI", "citation": "Kanumolu et al., 2025", "authors": ["Kanumolu", "et al."], "year": "2025"},
+    "3.pdf": {"title": "Many Heads Are Better Than One: Improved Scientific Idea Generation by A LLM-Based Multi-Agent System", "citation": "Su et al., 2025", "authors": ["Su", "et al."], "year": "2025"},
+    "4.pdf": {"title": "EVOPAT: A Multi-LLM-Based Patents Summarization and Analysis Framework", "citation": "Wang et al., 2024", "authors": ["Wang", "et al."], "year": "2024"},
+    "5.pdf": {"title": "Can AI Examine Novelty of Patents?: Novelty Evaluation Based on Correspondence between Patent Claim and Prior Art", "citation": "Ikoma & Mitamura, 2025", "authors": ["Ikoma", "Mitamura"], "year": "2025"},
+    "6.pdf": {"title": "In-depth Analysis of Graph-based RAG in a Unified Framework", "citation": "Zhou et al., 2025", "authors": ["Zhou", "et al."], "year": "2025"},
+    "7.pdf": {"title": "Exploring Design of Multi-Agent LLM Dialogues for Research Ideation", "citation": "Ueda et al., 2025", "authors": ["Ueda", "et al."], "year": "2025"},
+    "8.pdf": {"title": "An automatic patent literature retrieval system based on LLM-RAG", "citation": "Ding et al., 2025", "authors": ["Ding", "et al."], "year": "2025"},
+    "9.pdf": {"title": "Research on Evaluation Methods for Patent Novelty Search Systems and Empirical Analysis", "citation": "Zhang et al., 2025", "authors": ["Zhang", "et al."], "year": "2025"},
+    "10.pdf": {"title": "ToC: Tree-of-Claims Search with Multi-Agent Language Models", "citation": "Yu et al., 2026", "authors": ["Yu", "et al."], "year": "2026"},
+    "11.pdf": {"title": "IdeaForge: A Knowledge Graph-Grounded Multi-Agent Framework for Cross-Methodology Innovation Analysis", "citation": "Bose, 2026", "authors": ["Bose"], "year": "2026"},
+    "12.pdf": {"title": "AgentSwift: Efficient LLM Agent Design via Value-Guided Hierarchical Search", "citation": "Li et al., 2026", "authors": ["Li", "et al."], "year": "2026"},
+    "13.pdf": {"title": "TCLMA: A Two-dimension Contrastive Learning based Multiagent Framework for Scientific Novelty Evaluation", "citation": "Zheng et al., 2025", "authors": ["Zheng", "et al."], "year": "2025"},
+    "14.pdf": {"title": "Integrated Patent Prior Art Search with Claim-Aware Retrieval and Novelty Assessment", "citation": "Han & Qu, 2026", "authors": ["Han", "Qu"], "year": "2026"},
+    "15.pdf": {"title": "A novel patentability detection model based on Siamese network", "citation": "Kayakökü & Tüfekci, 2025", "authors": ["Kayakökü", "Tüfekci"], "year": "2025"},
+    "16.pdf": {"title": "Towards Automated Patent Workflows: Multi-agent optimization patterns", "citation": "Li et al., 2026", "authors": ["Li", "et al."], "year": "2026"},
+    "17.pdf": {"title": "Enhancing the Patent Matching Capability of Large Language Models via Memory Graph", "citation": "Xiong et al., 2025", "authors": ["Xiong", "et al."], "year": "2025"},
+    "18.pdf": {"title": "Innovation Organization & Management: AI-based novelty detection in crowdsourced idea spaces", "citation": "Just et al., 2024", "authors": ["Just", "et al."], "year": "2024"},
+    "19.pdf": {"title": "An extraction and novelty evaluation framework for technology knowledge elements of patents", "citation": "Wei et al., 2024", "authors": ["Wei", "et al."], "year": "2024"},
+    "20.pdf": {"title": "Research Paper Retrieval-Augmented Generation Systems for Intellectual Property", "citation": "Ren et al., 2025", "authors": ["Ren", "et al."], "year": "2025"}
+}
+
+
 class PaperLoader:
     def __init__(self, loader: Optional[PDFLoader] = None):
         self.loader = loader or PDFLoader()
@@ -19,17 +43,19 @@ class PaperLoader:
         front_page = pages[0] if pages else ""
 
         doc_id = generate_document_id("paper", index)
+        curated = CURATED_PAPER_METADATA.get(path.name, {})
 
-        title = self._extract_title(front_page, path.stem)
-        authors = self._extract_authors(front_page)
-        date = self._extract_date(full_text)
+        title = curated.get("title") or self._extract_title(front_page, path.stem)
+        authors = curated.get("authors") or self._extract_authors(front_page)
+        date = curated.get("year") or self._extract_date(full_text)
+        pub_citation = curated.get("citation") or f"arXiv-{path.stem}"
         sections = self._extract_sections(pages, full_text)
 
         metadata = DocumentMetadata(
             document_id=doc_id,
             document_type=DocumentType.PAPER,
             title=title,
-            publication_number=f"arXiv-{path.stem}",
+            publication_number=pub_citation,
             authors=authors,
             assignee=authors[0] if authors else "Academic Institution",
             publication_date=date,

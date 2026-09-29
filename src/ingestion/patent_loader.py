@@ -8,6 +8,30 @@ from src.utils.ids import generate_document_id
 from src.utils.logging import logger
 
 
+CURATED_PATENT_METADATA = {
+    "Patent 1.pdf": {"title": "Claim Reference Generation & Intrinsic Evidence Hyperlinking", "publication_number": "US 10,902,042 B2", "assignee": "Black Hills IP Holdings, LLC"},
+    "Patent 2.pdf": {"title": "Vector-Based Contextual Text Searching", "publication_number": "US 11,321,312 B2", "assignee": "ALEX - Alternative Experts, LLC"},
+    "Patent 3.pdf": {"title": "Novelty Detection Using Deep Learning Neural Network", "publication_number": "US 11,816,578 B2", "assignee": "MakinaRocks Co., Ltd."},
+    "Patent 4.pdf": {"title": "Computer Implemented Methods for Interacting with Semantic / Question-Answering Systems", "publication_number": "US 11,989,507 B2", "assignee": "Unlikely Artificial Intelligence Limited"},
+    "Patent 5.pdf": {"title": "Multi-Segment Text Search Using Machine Learning Model for Text Similarity", "publication_number": "US 12,230,049 B2", "assignee": "Cognition IP Technology Inc."},
+    "Patent 6.pdf": {"title": "Machine Learning Architecture for Contextual Data Retrieval", "publication_number": "US 12,339,875 B1", "assignee": "AskTuring.AI Inc."},
+    "Patent 7.pdf": {"title": "Automated Patent Claim Scope Concept Mapping", "publication_number": "US 12,339,880 B2", "assignee": "Black Hills IP Holdings, LLC"},
+    "Patent 8.pdf": {"title": "Personalized Retrieval-Augmented Generation System", "publication_number": "US 12,373,506 B1", "assignee": "Dropbox, Inc."},
+    "Patent 9.pdf": {"title": "Platform for Semantic Search and Dynamic Reclassification", "publication_number": "US 12,461,922 B1", "assignee": "Reveal Networks, Inc."},
+    "Patent 10.pdf": {"title": "Patent Mapping & Automated Patent Claim Scope Concept Mapping", "publication_number": "US 12,505,111 B2", "assignee": "Black Hills IP Holdings, LLC"},
+    "Patent 11.pdf": {"title": "Retrieval-Augmented Generation (RAG) System Optimization", "publication_number": "US 12,561,314 B2", "assignee": "Goldman Sachs & Co. LLC"},
+    "Patent 12.pdf": {"title": "Method and System for Optimizing Use of Retrieval Augmented Generation Pipelines in Generative AI", "publication_number": "US 12,602,412 B2", "assignee": "Vijay Madisetti"},
+    "Patent 13.pdf": {"title": "Methods and Systems of Handling Patent Claims", "publication_number": "US 2017/0075877 A1", "assignee": "Marie-Therese Lepeltier"},
+    "Patent 14.pdf": {"title": "Systems and Methods for Analyzing the Validity or Infringement of Patent Claims", "publication_number": "US 2020/0050638 A1", "assignee": "Parker Douglas Hancock"},
+    "Patent 15.pdf": {"title": "Artificial Intelligence, Machine Learning, and Predictive Analytics for Patent and Non-Patent Documents", "publication_number": "US 2022/0343444 A1", "assignee": "DataNovo, Inc."},
+    "Patent 16.pdf": {"title": "Enhanced Search Result Generation Using Multi-Document Summarization", "publication_number": "US 2024/0281487 A1", "assignee": "Snowflake Inc."},
+    "Patent 17.pdf": {"title": "Multi-Segment Text Search Using Machine Learning Model for Prior Art", "publication_number": "US 2025/0259470 A1", "assignee": "Cognition IP Technology Inc."},
+    "Patent 18.pdf": {"title": "Patent Mapping & White Space Discovery", "publication_number": "US 2025/0335515 A1", "assignee": "Black Hills IP Holdings, LLC"},
+    "Patent 19.pdf": {"title": "Computer Implemented Methods for the Automated Analysis or Use of Data, Including Use of Large Language Models", "publication_number": "US 2026/0080164 A1", "assignee": "Unlikely Artificial Intelligence Limited"},
+    "Patent 20.pdf": {"title": "Augmented Question and Answer (Q&A) with Large Language Models", "publication_number": "US 2026/0105258 A1", "assignee": "Micro Focus LLC"}
+}
+
+
 class PatentLoader:
     def __init__(self, loader: Optional[PDFLoader] = None):
         self.loader = loader or PDFLoader()
@@ -20,14 +44,16 @@ class PatentLoader:
         doc_id = generate_document_id("patent", index)
         front_page = pages[0] if pages else ""
 
+        curated = CURATED_PATENT_METADATA.get(path.name, {})
+
         # Extract Publication Number
-        pub_num = self._extract_patent_number(front_page, path.stem)
+        pub_num = curated.get("publication_number") or self._extract_patent_number(front_page, path.stem)
 
         # Extract Title
-        title = self._extract_title(front_page, path.stem)
+        title = curated.get("title") or self._extract_title(front_page, path.stem)
 
         # Extract Assignee / Applicant
-        assignee = self._extract_assignee(front_page)
+        assignee = curated.get("assignee") or self._extract_assignee(front_page)
 
         # Extract Inventors
         inventors = self._extract_inventors(front_page)
