@@ -1,0 +1,66 @@
+# Literature and Patent Corpus Mapping (PBL-3)
+
+This document establishes the systematic mapping between the 20 research papers, 20 patent references, and the architectural modules of the **AI-Based Patent & Research Gap Discovery Framework**.
+
+---
+
+## 1. Research Papers Corpus Mapping (20 Papers)
+
+| Ref ID | Title & Citation | Key Focus & Methodology | Relevant System Module | Architectural Justification & Contribution |
+|---|---|---|---|---|
+| **PAP-001** | *Patent intelligence in the age of AI: Unlocking strategic insights through granular classification* (Giuntelli et al., 2026) | Granular semantic classification, patent intelligence, competitive white-space analysis | Module 13 (Technical Feature Comparison) & Module 15 (Gap Discovery) | Demonstrates how semantic representations map technology–application matrices and locate white spaces. |
+| **PAP-002** | *Agent Ideate: A Framework for Product Idea Generation from Patents Using Agentic AI* (Kanumolu et al., 2025) | Agentic AI workflow for generating product ideas from patent claims | Module 1 (Input Processing) & Module 10 (Retrieval Agent) | Justifies using multi-agent decomposition to unpack complex patent claims into actionable technical concepts. |
+| **PAP-003** | *Many Heads Are Better Than One: Improved Scientific Idea Generation by A LLM-Based Multi-Agent System* (Su et al., 2025) | Collaborative LLM agents generating and peer-reviewing scientific concepts | Module 14 (Multi-Agent LangGraph Workflow) | Provides empirical evidence from the authors' study on multi-agent collaborative critique versus single-prompt LLM ideation. |
+| **PAP-004** | *EvoPat: A Multi-LLM-Based Patents Summarization and Analysis Agent* (Wang et al., 2024) | Five specialized patent analysis agents using FAISS and BGE-M3 for multi-document synthesis | Module 11 (Patent Analysis Agent) & Module 16 (Report Agent) | Informs the design of the Patent Agent to evaluate technical problems, solutions, and claims independently. |
+| **PAP-005** | *Can AI Examine Novelty of Patents?: Novelty Evaluation Based on Correspondence between Patent Claim and Prior Art* (Ikoma & Mitamura, 2025) | Direct mapping of patent claims to prior-art disclosure using fine-grained correspondence | Module 14 (Novelty Agent - Claim Coverage) | Establishes benchmark principles for assessing whether individual claim elements are disclosed in prior art. |
+| **PAP-006** | *In-depth Analysis of Graph-based RAG in a Unified Framework* (Zhou et al., 2025) | Retrieval-Augmented Generation evaluation across entity graphs and vector chunks | Module 9 (RAG Pipeline) & Module 7 (Retrieval) | Analyzes RAG failure modes (hallucination, missing evidence) and informs strict evidence-grounding prompts. |
+| **PAP-007** | *Exploring Design of Multi-Agent LLM Dialogues for Research Ideation* (Ueda et al., 2025) | Structured multi-agent dialogue topologies (ideation, critique, revision) | Module 14 (Multi-Agent System) | Inspires the sequential refinement pipeline: Retrieval → Patent/Research Analysis → Novelty → Gap → Report. |
+| **PAP-008** | *An automatic patent literature retrieval system based on LLM-RAG* (Ding et al., 2025) | Dense vector retrieval with FAISS and LLM context synthesis achieving 92% recall | Module 6 (Vector Store) & Module 7 (Semantic Retrieval) | Validates FAISS + Sentence Transformers for high-recall patent prior-art document retrieval. |
+| **PAP-009** | *Research on Evaluation Methods for Patent Novelty Search Systems and Empirical Analysis* (Zhang et al., 2025) | Precision@k, Recall@k, and citation overlap metrics for novelty search | Module 10 (Evaluation Framework) | Provides standard formulas for Precision@k, Recall@k, and Mean Reciprocal Rank (MRR) implemented in our benchmark. |
+| **PAP-010** | *ToC: Tree-of-Claims Search with Multi-Agent Language Models* (Yu et al., 2026) | Tree search over patent claim hierarchies to balance broad scope vs novel elements | Module 4 (Document Chunking) & Module 11 (Patent Agent) | Supports preserving claim boundaries and treating independent claims as primary novelty anchors. |
+| **PAP-011** | *IdeaForge: A Knowledge Graph-Grounded Multi-Agent Framework for Cross-Methodology Innovation Analysis* (Bose, 2026) | Cross-methodology ideation and patent claim generation using specialized agents | Module 15 (Gap Discovery Agent) | Guides identifying underrepresented intersections across distinct technical domains and prior art. |
+| **PAP-012** | *AgentSwift: Efficient LLM Agent Design via Value-Guided Hierarchical Search* (Li et al., 2026) | Optimal agent routing, state design, and latency-accuracy trade-offs | Module 14 (LangGraph State Architecture) | Informs concise, structured agent state transitions to minimize token waste and latency. |
+| **PAP-013** | *TCLMA: A Two-dimension Contrastive Learning based Multiagent Framework for Scientific Novelty Evaluation* (Zheng et al., 2025) | Multi-agent scientific novelty scoring comparing against published literature | Module 12 (Research Analysis Agent) & Module 14 (Novelty Agent) | Highlights the necessity of contrasting the proposed idea against academic research as well as patents. |
+| **PAP-014** | *Integrated Patent Prior Art Search with Claim-Aware Retrieval and Novelty Assessment* (Han & Qu, 2026) | Dual-stage claim-aware retrieval and continuous novelty estimation | Module 8 (Retrieval) & Module 14 (Novelty Assessment) | Directly inspires our continuous multi-factor novelty scoring formula combining semantic and claim coverage. |
+| **PAP-015** | *A novel patentability detection model based on Siamese network* (Kayakökü & Tüfekci, 2025) | Metric learning for semantic similarity in patentability analysis | Module 5 (Embedding Model) | Supports using normalized cosine distance on dense embeddings for initial similarity ranking. |
+| **PAP-016** | *AgentSwift: Multi-agent optimization patterns* (Li et al., 2026) | Error handling and fallback behaviors in multi-agent pipelines | Module 14 (Error Handling & Robustness) | Guides graceful degradation when individual agent calls encounter unexpected inputs or API limits. |
+| **PAP-017** | *Enhancing Patent Matching Capability of LLMs via Memory Graph* (Xiong et al., 2025) | Structural feature alignment for patent-to-patent matching | Module 13 (Technical Feature Comparison) | Supports structured feature extraction (inputs, methods, outputs) to enable apples-to-apples comparison. |
+| **PAP-018** | *AI-based novelty detection in crowdsourced idea spaces* (Just et al., 2024) | Empirical evaluation of SBERT embeddings matching human novelty judgments | Module 5 (Embedding Model) & Module 12 (Novelty Evaluation) | Proves that Sentence-BERT representations closely align with human perceptions of idea novelty. |
+| **PAP-019** | *An extraction and novelty evaluation framework for technology knowledge elements of patents* (Wei et al., 2024) | Element-level extraction (subject, action, object) and novelty evaluation | Module 1 (Feature Extraction) | Justifies breaking user ideas and patents into discrete technical elements rather than monolithic paragraphs. |
+| **PAP-020** | *Retrieval-Augmented Generation Systems for Intellectual Property via Synthetic Multi-Angle Fine-tuning* (Ren et al., 2025) | Multi-perspective query formulation and RAG for IP search | Module 10 (Retrieval Agent) | Supports query expansion and domain-aware retrieval filtering across patent and academic corpora. |
+
+---
+
+## 2. Patent Corpus Mapping (20 Patents)
+
+| Ref ID | Patent No. / Pub No. | Title & Assignee | Core Technology Disclosed | Relevant System Module |
+|---|---|---|---|---|
+| **PAT-001** | US 10,902,042 B2 | Claim Reference Generation (Black Hills IP) | Automatic claim parsing, claim dependency mapping, and antecedent basis validation | Module 4 (Chunking) & Module 11 (Patent Agent) |
+| **PAT-002** | US 11,321,312 B2 | Vector-Based Contextual Text Searching | Vector space indexing, nearest neighbor search, contextual ranking | Module 6 (Vector Store) & Module 7 (Retrieval) |
+| **PAT-003** | US 11,816,578 B2 | Novelty Detection Using Deep Learning (MakinaRocks) | Deep learning anomaly and novelty detection based on feature reconstruction loss | Module 14 (Novelty Agent) |
+| **PAT-004** | US 11,989,507 B2 | Computer Implemented Methods for Automated Data Analysis Using LLMs (Unlikely AI) | LLM-based structured reasoning, knowledge extraction, semantic fact verification | Module 8 (Feature Extraction) & Module 16 (Report Agent) |
+| **PAT-005** | US 12,230,049 B2 | Multi-Segment Text Search Using ML for Text Similarity (Cognition IP) | Segment-by-segment similarity matching for legal and patent claim analysis | Module 13 (Feature Comparison) |
+| **PAT-006** | US 12,339,875 B1 | Contextual Retrieval and Semantic Synthesis (AskTuring.AI) | Contextual document retrieval and grounded question answering | Module 9 (RAG Pipeline) |
+| **PAT-007** | US 12,339,880 B2 | Automated Claim Scope Mapping (Black Hills IP) | Mapping claim language against specification and prior-art documents | Module 11 (Patent Agent) |
+| **PAT-008** | US 12,373,506 B1 | Intelligent Document Search & Synthesis (Dropbox) | Embedding-based search, multi-document summarization, relevance ranking | Module 7 (Retrieval) & Module 10 (Retrieval Agent) |
+| **PAT-009** | US 12,461,922 B1 | Semantic Search & Knowledge Graph Grounding | Dense vector retrieval combined with entity relationship validation | Module 7 (Semantic Retrieval) |
+| **PAT-010** | US 12,505,111 B2 | Automated Prior Art Analysis & Classification (Black Hills IP) | Classification and prior-art correspondence for patent portfolios | Module 11 (Patent Agent) |
+| **PAT-011** | US 12,561,314 B2 | Retrieval Augmented Generation System Optimization | Dynamic context selection, token-efficient prompt construction for RAG | Module 9 (RAG Pipeline) |
+| **PAT-012** | US 12,602,412 B2 | Method and System for Optimizing Use of RAG Pipelines (Madisetti et al.) | Optimizing document chunking, indexing, and retrieval filters in RAG systems | Module 4 (Chunking) & Module 6 (FAISS Vector Store) |
+| **PAT-013** | US 2017/0075877 A1 | Methods and Systems of Handling Patent Claims | Automated parsing, claim hierarchy tracking, and scope boundary detection | Module 4 (Chunking) & Module 11 (Patent Agent) |
+| **PAT-014** | US 2020/0050638 A1 | Automated Patent Validity & Infringement Analysis | Comparing claim elements to prior-art disclosures for validity assessments | Module 14 (Novelty Agent) |
+| **PAT-015** | US 2022/0343444 A1 | Patent Mapping & White Space Discovery | Identifying under-patented technical white spaces using multidimensional clustering | Module 15 (Gap Discovery Agent) |
+| **PAT-016** | US 2024/0281487 A1 | RAG Using Multi-Document Evidence (Snowflake Inc.) | Grounding generative models across multiple enterprise documents with source tracing | Module 9 (RAG Pipeline) & Module 16 (Report Agent) |
+| **PAT-017** | US 2025/0259470 A1 | Multi-Segment Text Search for Prior Art (Cognition IP) | Multi-segment claim-to-prior-art matching with segment-level similarity scoring | Module 13 (Technical Feature Comparison) |
+| **PAT-018** | US 2025/0335515 A1 | Patent Mapping (Black Hills IP Holdings) | Automated landscape mapping, concept clustering, and whitespace identification | Module 15 (Gap Discovery Agent) |
+| **PAT-019** | US 2026/0080164 A1 | Automated Analysis of Data Using LLMs (Unlikely AI) | Multi-step reasoning and factual validation across complex technical specifications | Module 14 (Multi-Agent System) |
+| **PAT-020** | US 2026/0105258 A1 | Augmented Q&A with LLMs (Micro Focus LLC) | Citation-grounded Q&A, preventing hallucination by strict context attribution | Module 13 (Explainability & Hallucination Control) |
+
+---
+
+## 3. Methodological Synthesis
+
+The literature analysis reveals three crucial architectural takeaways:
+1. **Separation of Concerns**: In accordance with *EvoPat* (Wang 2024) and *TCLMA* (Zheng 2025), patent analysis and research analysis require separate specialized agents because patent claims demand legal element-by-element scrutiny, whereas research papers demand scientific methodology and empirical gap analysis.
+2. **Transparent vs Black-Box Novelty**: Following *Ikoma & Mitamura* (2025) and *Han & Qu* (2026), novelty cannot be simplified to `100 - similarity`. A scientifically defensible novelty score must decompose into semantic similarity, technical feature overlap, and claim coverage.
+3. **White-Space Gap Discovery**: Inspired by *Giuntelli et al.* (2026) and US Patents 12,230,049 and 2022/0343444, gaps emerge when comparing what patents have claimed versus what scientific literature has investigated, revealing under-commercialized or theoretically unexplored intersections.

@@ -1,0 +1,579 @@
+[
+  {
+    "case_id": "TC-001",
+    "idea_title": "Drone Multispectral Crop Disease Detection and Prescription",
+    "idea_description": "An AI system using drone-based multispectral imagery with convolutional neural networks to detect early fungal crop diseases and autonomously formulate variable-rate fungicide prescription maps.",
+    "domain": "Computer Vision & Smart Agriculture",
+    "technical_features": [
+      "Multispectral aerial imaging",
+      "Convolutional neural network disease classification",
+      "Automated variable-rate chemical prescription maps",
+      "GPS geotagged plant health index calculation"
+    ],
+    "relevant_patents": [
+      "PAT-003",
+      "PAT-015"
+    ],
+    "relevant_papers": [
+      "PAP-019"
+    ],
+    "human_assessment": "Moderate novelty; multispectral imaging and CNNs are known, but integration into autonomous variable-rate prescription maps represents an active application gap.",
+    "expected_novelty": "Moderate",
+    "expected_gap": "Variable-rate chemical prescription integration with drone flight telemetry.",
+    "notes": "Verified anchor test case for agricultural AI.",
+    "evidence": [
+      "[PAT-003, Description]"
+    ],
+    "annotation_status": "provisional_developer_curated",
+    "human_verified": false,
+    "human_novelty_score": null,
+    "human_gap_annotation": null
+  },
+  {
+    "case_id": "TC-002",
+    "idea_title": "Multi-Agent Patent Claim Scope Optimization with MCTS",
+    "idea_description": "A multi-agent LLM framework that models patent claim optimization as a tree search, utilizing Monte Carlo Tree Search to balance maximum claim breadth against invalidity prior-art risks.",
+    "domain": "Natural Language Processing & Legal Tech",
+    "technical_features": [
+      "Tree-of-claims search space representation",
+      "Monte Carlo Tree Search optimization",
+      "Multi-agent critique and revision loop",
+      "Prior-art boundary validation"
+    ],
+    "relevant_patents": [
+      "PAT-001",
+      "PAT-007",
+      "PAT-013"
+    ],
+    "relevant_papers": [
+      "PAP-010",
+      "PAP-007"
+    ],
+    "human_assessment": "Moderate novelty; closely relates to Tree-of-Claims (ToC) literature, representing prior art in PAP-010.",
+    "expected_novelty": "Moderate",
+    "expected_gap": "Automated antecedent basis self-correction during MCTS exploration.",
+    "notes": "Anchor case for legal NLP claim handling.",
+    "evidence": [
+      "[PAP-010, Abstract]",
+      "[PAT-001, Claim 1]"
+    ],
+    "annotation_status": "provisional_developer_curated",
+    "human_verified": false,
+    "human_novelty_score": null,
+    "human_gap_annotation": null
+  },
+  {
+    "case_id": "TC-003",
+    "idea_title": "Cross-Methodology Innovation Reasoning with Dynamic Knowledge Graphs",
+    "idea_description": "A system combining TRIZ, Design Thinking, and SCAMPER ideation methodologies orchestrated by LLM agents over an evolving knowledge graph to discover cross-domain technological white spaces.",
+    "domain": "Agentic AI & Knowledge Representation",
+    "technical_features": [
+      "Cross-methodology ideation framework",
+      "Dynamic knowledge graph construction",
+      "Multi-agent cooperative dialogue",
+      "White-space boundary extraction"
+    ],
+    "relevant_patents": [
+      "PAT-015",
+      "PAT-018"
+    ],
+    "relevant_papers": [
+      "PAP-011",
+      "PAP-003"
+    ],
+    "human_assessment": "Moderate novelty; IdeaForge (PAP-011) explores similar principles.",
+    "expected_novelty": "Moderate",
+    "expected_gap": "Quantitative convergence metrics across divergent ideation methodologies.",
+    "notes": "Anchor case for knowledge graph grounded ideation.",
+    "evidence": [
+      "[PAP-011, Abstract]"
+    ],
+    "annotation_status": "provisional_developer_curated",
+    "human_verified": false,
+    "human_novelty_score": null,
+    "human_gap_annotation": null
+  },
+  {
+    "case_id": "TC-004",
+    "idea_title": "Retrieval-Augmented Generation for Intellectual Property with Synthetic Query Fine-Tuning",
+    "idea_description": "A RAG architecture for patent Q&A that generates synthetic multi-perspective search queries to overcome technical jargon mismatch between patent claims and natural language queries.",
+    "domain": "Information Retrieval & NLP",
+    "technical_features": [
+      "Synthetic multi-angle query generation",
+      "Dense vector search with domain-adapted embeddings",
+      "Patent claim citation preservation",
+      "Hallucination suppression in IP questions"
+    ],
+    "relevant_patents": [
+      "PAT-011",
+      "PAT-012",
+      "PAT-020"
+    ],
+    "relevant_papers": [
+      "PAP-020",
+      "PAP-008"
+    ],
+    "human_assessment": "TODO",
+    "expected_novelty": "TODO",
+    "expected_gap": "TODO",
+    "notes": "Annotation pending human expert review.",
+    "evidence": [],
+    "annotation_status": "provisional_developer_curated",
+    "human_verified": false,
+    "human_novelty_score": null,
+    "human_gap_annotation": null
+  },
+  {
+    "case_id": "TC-005",
+    "idea_title": "Contrastive Learning Multi-Agent System for Scientific Idea Novelty Evaluation",
+    "idea_description": "A two-dimensional contrastive learning multi-agent framework that contrasts proposed research methodologies against temporal scientific citation graphs to score originality.",
+    "domain": "Machine Learning & Meta-Science",
+    "technical_features": [
+      "Two-dimensional contrastive representation learning",
+      "Multi-agent novelty assessment pipeline",
+      "Temporal citation graph grounding",
+      "Fine-grained contribution extraction"
+    ],
+    "relevant_patents": [
+      "PAT-003"
+    ],
+    "relevant_papers": [
+      "PAP-013",
+      "PAP-018"
+    ],
+    "human_assessment": "TODO",
+    "expected_novelty": "TODO",
+    "expected_gap": "TODO",
+    "notes": "Annotation pending human expert review.",
+    "evidence": [],
+    "annotation_status": "provisional_developer_curated",
+    "human_verified": false,
+    "human_novelty_score": null,
+    "human_gap_annotation": null
+  },
+  {
+    "case_id": "TC-006",
+    "idea_title": "Memory Graph Enhanced Patent Document Matching",
+    "idea_description": "A memory graph architecture that stores inter-patent citation dynamics and technical concept relationships to guide LLMs in automated patent-to-patent infringement and invalidity matching.",
+    "domain": "Information Retrieval & Legal AI",
+    "technical_features": [
+      "External memory graph of patent citations",
+      "Dynamic entity-relationship retrieval",
+      "Claim element alignment engine",
+      "Inter-patent similarity scoring"
+    ],
+    "relevant_patents": [
+      "PAT-005",
+      "PAT-017"
+    ],
+    "relevant_papers": [
+      "PAP-017",
+      "PAP-006"
+    ],
+    "human_assessment": "TODO",
+    "expected_novelty": "TODO",
+    "expected_gap": "TODO",
+    "notes": "Annotation pending human expert review.",
+    "evidence": [],
+    "annotation_status": "provisional_developer_curated",
+    "human_verified": false,
+    "human_novelty_score": null,
+    "human_gap_annotation": null
+  },
+  {
+    "case_id": "TC-007",
+    "idea_title": "Hierarchical Value-Guided Search for Optimal LLM Agent Team Design",
+    "idea_description": "An automated system that formulates LLM multi-agent team architecture discovery as a hierarchical search problem, using value estimators to select optimal communication topologies.",
+    "domain": "Agentic AI & Meta-Optimization",
+    "technical_features": [
+      "Hierarchical agent architecture search",
+      "Value-guided pruning function",
+      "Dynamic agent role allocation",
+      "Communication topology optimization"
+    ],
+    "relevant_patents": [
+      "PAT-004",
+      "PAT-019"
+    ],
+    "relevant_papers": [
+      "PAP-012",
+      "PAP-016"
+    ],
+    "human_assessment": "TODO",
+    "expected_novelty": "TODO",
+    "expected_gap": "TODO",
+    "notes": "Annotation pending human expert review.",
+    "evidence": [],
+    "annotation_status": "provisional_developer_curated",
+    "human_verified": false,
+    "human_novelty_score": null,
+    "human_gap_annotation": null
+  },
+  {
+    "case_id": "TC-008",
+    "idea_title": "Automated Patent White Space Discovery via Multidimensional Technological Clustering",
+    "idea_description": "A patent landscape mapping pipeline that computes semantic density across technological IPC/CPC classifications to automatically highlight low-density unpatented technology zones.",
+    "domain": "Patent Intelligence & Unsupervised Learning",
+    "technical_features": [
+      "Multidimensional IPC/CPC embedding projection",
+      "Density-based spatial clustering (HDBSCAN)",
+      "Automated white space boundary detection",
+      "Competitive patent portfolio trajectory tracking"
+    ],
+    "relevant_patents": [
+      "PAT-015",
+      "PAT-018"
+    ],
+    "relevant_papers": [
+      "PAP-001",
+      "PAP-004"
+    ],
+    "human_assessment": "TODO",
+    "expected_novelty": "TODO",
+    "expected_gap": "TODO",
+    "notes": "Annotation pending human expert review.",
+    "evidence": [],
+    "annotation_status": "provisional_developer_curated",
+    "human_verified": false,
+    "human_novelty_score": null,
+    "human_gap_annotation": null
+  },
+  {
+    "case_id": "TC-009",
+    "idea_title": "Segment-Level Claim-Aware Prior Art Retrieval System",
+    "idea_description": "A prior-art search engine that breaks patent claims into discrete limitation clauses and performs multi-segment contextual matching against technical specifications.",
+    "domain": "NLP & Patent Informatics",
+    "technical_features": [
+      "Clause-level claim segmentation",
+      "Multi-segment vector similarity aggregation",
+      "Hierarchical transformer representation",
+      "Continuous novelty estimation"
+    ],
+    "relevant_patents": [
+      "PAT-005",
+      "PAT-017"
+    ],
+    "relevant_papers": [
+      "PAP-014",
+      "PAP-005"
+    ],
+    "human_assessment": "TODO",
+    "expected_novelty": "TODO",
+    "expected_gap": "TODO",
+    "notes": "Annotation pending human expert review.",
+    "evidence": [],
+    "annotation_status": "provisional_developer_curated",
+    "human_verified": false,
+    "human_novelty_score": null,
+    "human_gap_annotation": null
+  },
+  {
+    "case_id": "TC-010",
+    "idea_title": "Self-Supervised Siamese Network for Patentability Detection",
+    "idea_description": "A Siamese deep learning neural network trained with contrastive loss to distinguish between granted patent claims and rejected office-action prior-art references.",
+    "domain": "Deep Metric Learning",
+    "technical_features": [
+      "Siamese twin transformer encoders",
+      "Contrastive margin loss function",
+      "Patentability classification thresholding",
+      "Office action rejection dataset calibration"
+    ],
+    "relevant_patents": [
+      "PAT-003"
+    ],
+    "relevant_papers": [
+      "PAP-015",
+      "PAP-005"
+    ],
+    "human_assessment": "TODO",
+    "expected_novelty": "TODO",
+    "expected_gap": "TODO",
+    "notes": "Annotation pending human expert review.",
+    "evidence": [],
+    "annotation_status": "provisional_developer_curated",
+    "human_verified": false,
+    "human_novelty_score": null,
+    "human_gap_annotation": null
+  },
+  {
+    "case_id": "TC-011",
+    "idea_title": "Real-Time AI Edge Pipeline for Robotic Weed Laser Eradication",
+    "idea_description": "An edge AI robotics system with high-speed cameras and tensor-accelerated microcontrollers for sub-centimeter weed identification and targeted laser ablation in organic farming.",
+    "domain": "Edge AI & Agricultural Robotics",
+    "technical_features": [
+      "Edge-deployed quantized YOLO model",
+      "Sub-centimeter stereo depth estimation",
+      "High-speed galvanometer laser steering",
+      "Real-time vegetation discrimination"
+    ],
+    "relevant_patents": [
+      "PAT-003"
+    ],
+    "relevant_papers": [
+      "PAP-019"
+    ],
+    "human_assessment": "TODO",
+    "expected_novelty": "TODO",
+    "expected_gap": "TODO",
+    "notes": "Annotation pending human expert review.",
+    "evidence": [],
+    "annotation_status": "provisional_developer_curated",
+    "human_verified": false,
+    "human_novelty_score": null,
+    "human_gap_annotation": null
+  },
+  {
+    "case_id": "TC-012",
+    "idea_title": "Multi-Document Grounded RAG with Provenance Attestation",
+    "idea_description": "An enterprise retrieval-augmented generation engine that embeds cryptographic watermarking and document chunk hashes into generated responses for tamper-proof compliance.",
+    "domain": "Information Security & RAG",
+    "technical_features": [
+      "Cryptographic provenance watermarking",
+      "Multi-document chunk hashing",
+      "Deterministic context attribution",
+      "Verification verification middleware"
+    ],
+    "relevant_patents": [
+      "PAT-016",
+      "PAT-020"
+    ],
+    "relevant_papers": [
+      "PAP-006",
+      "PAP-020"
+    ],
+    "human_assessment": "TODO",
+    "expected_novelty": "TODO",
+    "expected_gap": "TODO",
+    "notes": "Annotation pending human expert review.",
+    "evidence": [],
+    "annotation_status": "provisional_developer_curated",
+    "human_verified": false,
+    "human_novelty_score": null,
+    "human_gap_annotation": null
+  },
+  {
+    "case_id": "TC-013",
+    "idea_title": "Contextual Text Search with Dynamic Embedding Normalization",
+    "idea_description": "A high-performance vector retrieval indexing system that dynamically recalibrates vector norms based on document corpus frequency distributions to eliminate popularity bias.",
+    "domain": "Information Retrieval & Vector Databases",
+    "technical_features": [
+      "Dynamic L2 embedding recalibration",
+      "Inverse corpus frequency weighting",
+      "FAISS inner product integration",
+      "Sub-millisecond index query router"
+    ],
+    "relevant_patents": [
+      "PAT-002",
+      "PAT-008"
+    ],
+    "relevant_papers": [
+      "PAP-008"
+    ],
+    "human_assessment": "TODO",
+    "expected_novelty": "TODO",
+    "expected_gap": "TODO",
+    "notes": "Annotation pending human expert review.",
+    "evidence": [],
+    "annotation_status": "provisional_developer_curated",
+    "human_verified": false,
+    "human_novelty_score": null,
+    "human_gap_annotation": null
+  },
+  {
+    "case_id": "TC-014",
+    "idea_title": "Automated Patent Antecedent Basis and Claim Scope Verifier",
+    "idea_description": "A compiler-like static analysis engine that parses patent claim trees, checks antecedent basis conformity, and flags ambiguous noun phrase modifiers.",
+    "domain": "Formal Verification & Legal NLP",
+    "technical_features": [
+      "Claim syntax parse tree generation",
+      "Antecedent basis formal verification",
+      "Ambiguity detection heuristic",
+      "Automated claim amendment generator"
+    ],
+    "relevant_patents": [
+      "PAT-001",
+      "PAT-007",
+      "PAT-013"
+    ],
+    "relevant_papers": [
+      "PAP-010"
+    ],
+    "human_assessment": "TODO",
+    "expected_novelty": "TODO",
+    "expected_gap": "TODO",
+    "notes": "Annotation pending human expert review.",
+    "evidence": [],
+    "annotation_status": "provisional_developer_curated",
+    "human_verified": false,
+    "human_novelty_score": null,
+    "human_gap_annotation": null
+  },
+  {
+    "case_id": "TC-015",
+    "idea_title": "Multi-Agent Dialectical Debate for Automated Hypothesis Generation",
+    "idea_description": "An LLM multi-agent system where proposer and skeptic agents engage in structured dialectical debate to formulate falsifiable scientific hypotheses from sparse biomedical data.",
+    "domain": "Agentic AI & Scientific Discovery",
+    "technical_features": [
+      "Dialectical debate protocol",
+      "Falsifiability scoring module",
+      "Biomedical knowledge retrieval grounding",
+      "Multi-round hypothesis revision loop"
+    ],
+    "relevant_patents": [
+      "PAT-004",
+      "PAT-019"
+    ],
+    "relevant_papers": [
+      "PAP-003",
+      "PAP-007"
+    ],
+    "human_assessment": "TODO",
+    "expected_novelty": "TODO",
+    "expected_gap": "TODO",
+    "notes": "Annotation pending human expert review.",
+    "evidence": [],
+    "annotation_status": "provisional_developer_curated",
+    "human_verified": false,
+    "human_novelty_score": null,
+    "human_gap_annotation": null
+  },
+  {
+    "case_id": "TC-016",
+    "idea_title": "Quantum-Inspired Optimization for Vector Quantization in FAISS",
+    "idea_description": "Using quantum annealing algorithms to optimize codebook centers in inverted file vector quantization for billion-scale high-dimensional semantic search.",
+    "domain": "Quantum Computing & Vector Search",
+    "technical_features": [
+      "Quantum annealing centroid optimization",
+      "Inverted file index codebook learning",
+      "High-dimensional vector compression",
+      "Energy-efficient similarity lookup"
+    ],
+    "relevant_patents": [
+      "PAT-002"
+    ],
+    "relevant_papers": [
+      "PAP-008"
+    ],
+    "human_assessment": "TODO",
+    "expected_novelty": "TODO",
+    "expected_gap": "TODO",
+    "notes": "Annotation pending human expert review.",
+    "evidence": [],
+    "annotation_status": "provisional_developer_curated",
+    "human_verified": false,
+    "human_novelty_score": null,
+    "human_gap_annotation": null
+  },
+  {
+    "case_id": "TC-017",
+    "idea_title": "Federated Multi-Agent Framework for Cross-Hospital Rare Disease Ideation",
+    "idea_description": "A privacy-preserving multi-agent framework where specialized clinical diagnostic agents collaborate across hospital nodes without sharing raw patient EHR data.",
+    "domain": "Federated Learning & Healthcare AI",
+    "technical_features": [
+      "Federated parameter aggregation",
+      "Differential privacy noise injection",
+      "Multi-agent clinical diagnostic consensus",
+      "Rare pathology hypothesis synthesis"
+    ],
+    "relevant_patents": [
+      "PAT-004"
+    ],
+    "relevant_papers": [
+      "PAP-003",
+      "PAP-012"
+    ],
+    "human_assessment": "TODO",
+    "expected_novelty": "TODO",
+    "expected_gap": "TODO",
+    "notes": "Annotation pending human expert review.",
+    "evidence": [],
+    "annotation_status": "provisional_developer_curated",
+    "human_verified": false,
+    "human_novelty_score": null,
+    "human_gap_annotation": null
+  },
+  {
+    "case_id": "TC-018",
+    "idea_title": "Semantic Patent Validity and Infringement Risk Prediction Engine",
+    "idea_description": "A deep learning prediction framework that compares claim elements against full-text specifications to predict probability of 35 U.S.C. 102/103 rejections.",
+    "domain": "Legal Tech & Machine Learning",
+    "technical_features": [
+      "Claim-to-specification alignment matrix",
+      "Rejection probability regression head",
+      "Office action legal feature extractor",
+      "Patent validity score generation"
+    ],
+    "relevant_patents": [
+      "PAT-014"
+    ],
+    "relevant_papers": [
+      "PAP-005",
+      "PAP-009"
+    ],
+    "human_assessment": "TODO",
+    "expected_novelty": "TODO",
+    "expected_gap": "TODO",
+    "notes": "Annotation pending human expert review.",
+    "evidence": [],
+    "annotation_status": "provisional_developer_curated",
+    "human_verified": false,
+    "human_novelty_score": null,
+    "human_gap_annotation": null
+  },
+  {
+    "case_id": "TC-019",
+    "idea_title": "Automated Technology Knowledge Element Extraction using Transformer Triples",
+    "idea_description": "A fine-tuned sequence-to-sequence model that extracts subject-action-object technology knowledge elements from patent descriptions to assess fine-grained technical novelty.",
+    "domain": "Information Extraction & NLP",
+    "technical_features": [
+      "Subject-action-object triple extraction",
+      "Technology element graph construction",
+      "Triple-level novelty scoring",
+      "Domain knowledge element dictionary"
+    ],
+    "relevant_patents": [
+      "PAT-009"
+    ],
+    "relevant_papers": [
+      "PAP-019"
+    ],
+    "human_assessment": "TODO",
+    "expected_novelty": "TODO",
+    "expected_gap": "TODO",
+    "notes": "Annotation pending human expert review.",
+    "evidence": [],
+    "annotation_status": "provisional_developer_curated",
+    "human_verified": false,
+    "human_novelty_score": null,
+    "human_gap_annotation": null
+  },
+  {
+    "case_id": "TC-020",
+    "idea_title": "Contextual RAG Cache with Semantic Invalidity Invalidation",
+    "idea_description": "A caching layer for large language models that stores retrieved context vectors and dynamically purges cached entries when updated prior-art documents are indexed.",
+    "domain": "Systems & Database Optimization",
+    "technical_features": [
+      "Vector context cache storage",
+      "Dynamic cache invalidation engine",
+      "Semantic cache hit prediction",
+      "Low-latency response synthesizer"
+    ],
+    "relevant_patents": [
+      "PAT-011",
+      "PAT-012"
+    ],
+    "relevant_papers": [
+      "PAP-008",
+      "PAP-020"
+    ],
+    "human_assessment": "TODO",
+    "expected_novelty": "TODO",
+    "expected_gap": "TODO",
+    "notes": "Annotation pending human expert review.",
+    "evidence": [],
+    "annotation_status": "provisional_developer_curated",
+    "human_verified": false,
+    "human_novelty_score": null,
+    "human_gap_annotation": null
+  }
+]

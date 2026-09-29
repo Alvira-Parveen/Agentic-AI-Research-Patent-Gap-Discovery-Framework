@@ -1,0 +1,400 @@
+[
+  {
+    "document_id": "PAT-001",
+    "document_type": "patent",
+    "title": "Patent Document Patent 1",
+    "publication_number": "US010902042B2",
+    "authors": [],
+    "assignee": null,
+    "publication_date": null,
+    "source": "Patent 1.pdf",
+    "filename": "Patent 1.pdf",
+    "abstract": "In one embodiment , a method is illustrated as including \nreceiving a search query , the search query relating to a \npatent , retrieving data relating to a term contained in a claim \nlimitation in the patent , the data including at least one of \nintrinsic or extrinsic evidence associated with the term by a \nhyperlink , and displaying the claim limitation and the hyper \nlink . Further , a computer system is illustrated as including a \nreceiver to receive a search query , the search query relating \nto a patent , a retriever to retrieve data relating to a term \ncontained in a claim limitation in the patent , the data \nincluding at least one of intrinsic or extrinsic evidence \nassociated with the term by a hyperlink , and a display to \ndisplay the claim limitation and the hyperlink . \n20 Claims , 22 Drawing Sheets \n-502 \nDETERMINE \nSOURCE \nPATENT \n-504 \nACCESS PATENT \nAPPLICATION \nACCESS \nPROSECUTION \nHISTORY \n-508 \nShow marked up calmo : \nShow intrinsic reference Information : \nShow extrinsk reference Information - \n7101 Show calm version : \n712 0 As filed ( 09-01-2000 ) \n714 9 As of 1 response ( 10-14-2003 ) \nAt I \n( 04-06-2004 ) \nCOMPLE \nINTRINSIC \nEVIDENCE \nREFERENCES",
+    "num_pages": 39,
+    "raw_char_count": 141608,
+    "extra": {
+      "is_scanned": false
+    }
+  },
+  {
+    "document_id": "PAT-002",
+    "document_type": "patent",
+    "title": "Patent Document Patent 2",
+    "publication_number": "US011321312B2",
+    "authors": [],
+    "assignee": null,
+    "publication_date": null,
+    "source": "Patent 2.pdf",
+    "filename": "Patent 2.pdf",
+    "abstract": "US011321312B2 \n( 12 ) United States Patent \nZou et al . \n( 10 ) Patent No .: \nUS 11,321,312 B2 \n( 45 ) Date of Patent : \nMay 3 , 2022 \n( 56 ) \nReferences Cited \n( 54 ) VECTOR - BASED CONTEXTUAL TEXT \nSEARCHING \nU.S. PATENT DOCUMENTS \n( 71 ) Applicant : ALEX - Alternative Experts , LLC \n, \nChantilly , VA ( US ) \n6,976,207 B1 * 12/2005 Rujan \nG06K 9/6269 \n707 / 999.005 \n( 72 ) Inventors : Joel Chi Zou \n, Alexandria , VA ( US ) ; \nAaron Ennis Aldridge , Triangle , VA \n( US ) ; James Cesar Rosa , Arlington , \nVA ( US ) \n7,689,411 B2 \n3/2010 Sandor et al . \n7,788,251 B2 \n8/2010 Carlson et al . \n7,8",
+    "num_pages": 15,
+    "raw_char_count": 43025,
+    "extra": {
+      "is_scanned": false
+    }
+  },
+  {
+    "document_id": "PAT-003",
+    "document_type": "patent",
+    "title": "(71) (72)",
+    "publication_number": "US011816578B2",
+    "authors": [
+      "Andre S. Yoon",
+      "Santa Clara",
+      "CA"
+    ],
+    "assignee": "MakinaRocks Co., Ltd., Seoul",
+    "publication_date": null,
+    "source": "Patent 3.pdf",
+    "filename": "Patent 3.pdf",
+    "abstract": "(12)\n\nUnited States Patent\n\nYoon et al.\n\nUS011816578B2\n\nUS 11,816,578 B2\n*Nov. 14, 2023\n\n(10) Patent\n(45) Date of Patent:\n\n(54)\n\n(71)\n(72)\n\n(73)\n\n(*)\n\n21)\n(22)\n(65)\n\n(63)\n\n(51)\n\n(62)\n\n(58)\n\nNOVELTY DETECTION USING DEEP\nLEARNING NEURAL NETWORK\n\nApplicant: MakinaRocks Co., Ltd., Seoul (KR)\n\nInventors: Andre S. Yoon, Santa Clara, CA (US);\nSangwoo Shim, Seoul (KR); Yongsub\nLim, Santa Clara, CA (US); Ki Hyun\nKim, Yong-in (KR); Byungehan Kim,\nSeoul (KR); JeongWoo Choi, Seoul\n(KR); Jongseob Jeon, Gyeonggi-do\n(KR)\n\nAssignee: MakinaRocks Co., Ltd., Seoul (KR)\n\nNotice: Subject to any disclaimer, the ter",
+    "num_pages": 29,
+    "raw_char_count": 114845,
+    "extra": {
+      "is_scanned": true
+    }
+  },
+  {
+    "document_id": "PAT-004",
+    "document_type": "patent",
+    "title": "COMPUTER IMPLEMENTED METHODS",
+    "publication_number": "US011989507B2",
+    "authors": [
+      "William Tunstall-Pedoe",
+      "See application file for complete search history."
+    ],
+    "assignee": "UNLIKELY ARTIFICIAL CPC eevee GO6F 40/20",
+    "publication_date": "May 21, 2024",
+    "source": "Patent 4.pdf",
+    "filename": "Patent 4.pdf",
+    "abstract": "Related U.S. Application Data Methods are provided, such as a method of interacting with",
+    "num_pages": 31,
+    "raw_char_count": 121356,
+    "extra": {
+      "is_scanned": true
+    }
+  },
+  {
+    "document_id": "PAT-005",
+    "document_type": "patent",
+    "title": "MULTI-SEGMENT TEXT SEARCH USING G06V 30/413 (2022.01) MACHINE LEARNING MODEL FOR TEXT G06V 30/414 (2022.01) SIMILARITY G06V 30/418 (2022.01) GO6F 16/93 (2019.01)",
+    "publication_number": "US012230049B2",
+    "authors": [
+      "Bryant Lee",
+      "San Francisco",
+      "CA"
+    ],
+    "assignee": "Cognition IP Technology Ine., San",
+    "publication_date": null,
+    "source": "Patent 5.pdf",
+    "filename": "Patent 5.pdf",
+    "abstract": "(60) Provisional application No. 62/787,640, filed on Jan. Systems and methods may be provided for performing a\n2, 2019, provisional application No. 62/780,582, filed search on an input text block. The input text block may be\n\non Dee. 17, 2018. split into a plurality of input text segments. A text similarity\nalgorithm may be used to find similar stored text segments",
+    "num_pages": 31,
+    "raw_char_count": 62713,
+    "extra": {
+      "is_scanned": true
+    }
+  },
+  {
+    "document_id": "PAT-006",
+    "document_type": "patent",
+    "title": "(71) (72)",
+    "publication_number": "US012339875B1",
+    "authors": [
+      "David Veillon",
+      "Longmont",
+      "CO"
+    ],
+    "assignee": "AskTuring.AI Inc., La Jolla, CA",
+    "publication_date": null,
+    "source": "Patent 6.pdf",
+    "filename": "Patent 6.pdf",
+    "abstract": "(12)\n\nUnited States Patent\n\nVeillon et al.\n\nUS012339875B1\n\n(10) Patent No.:\n(45) Date of Patent:\n\nUS 12,339,875 B1\n*Jun. 24, 2025\n\n(54)\n\n(71)\n(72)\n\n(73)\n(*)\n\n(21)\n(22)\n\n(63)\n\nG1)\n\n(52)\n\n(58)\n\nMACHINE LEARNING ARCHITECTURE\nFOR CONTEXTUAL DATA RETRIEVAL\n\nApplicant: AskTuring.AI Inc., La Jolla, CA (US)\nInventors: David Veillon, Longmont, CO (US);\n\nTalha Jubair Siam, Dacca (BD); Eyal\nLeeder, San Diego, CA (US)\n\nAssignee: AskTuring.AI Inc. La Jolla, CA (US)\n\nNotice: Subject to any disclaimer, the term of this\npatent is extended or adjusted under 35\nUSC. 154(b) by 0 days.\nThis patent is subject to a",
+    "num_pages": 31,
+    "raw_char_count": 119648,
+    "extra": {
+      "is_scanned": true
+    }
+  },
+  {
+    "document_id": "PAT-007",
+    "document_type": "patent",
+    "title": "Patent Document Patent 7",
+    "publication_number": "US012339880B2",
+    "authors": [
+      "Steven W. Lundberg",
+      "Edina",
+      "MN"
+    ],
+    "assignee": "Black Hills IP Holdings, LLC,",
+    "publication_date": null,
+    "source": "Patent 7.pdf",
+    "filename": "Patent 7.pdf",
+    "abstract": "(12)\n\nUnited States Patent\nLundberg\n\nUS012339880B2\n\nUS 12,339,880 B2\n*Jun. 24, 2025\n\n(10) Patent\n(45) Date of Patent:\n\n(4)\n\n(71)\n\n(72)\n(73)\n\n(*)\n\n(21)\n(22)\n(65)\n\n(63)\n\n(51)\n\n(52)\n\n(8)\n\nAUTOMATED PATENT CLAIM SCOPE\nCONCEPT MAPPING\n\nApplicant: Black Hills IP Holdings, LLC,\nMinneapolis, MN (US)\n\nInventor: Steven W. Lundberg, Edina, MN (US)\n\nAssignee: Black Hills IP Holdings, LLC,\nMinneapolis, MN (US)\n\nNotice: Subject to any disclaimer, the term of this\n\npatent is extended or adjusted under 35\nUSC. 154(b) by 0 days.\n\nThis patent is subject to a terminal dis-\nclaimer.\n\nAppl. No.: 18/208,228\nFiled:",
+    "num_pages": 31,
+    "raw_char_count": 144397,
+    "extra": {
+      "is_scanned": true
+    }
+  },
+  {
+    "document_id": "PAT-008",
+    "document_type": "patent",
+    "title": "(71) (72)",
+    "publication_number": "US012373506B1",
+    "authors": [
+      "Anthony Penta",
+      "Bellevue",
+      "WA"
+    ],
+    "assignee": "Dropbox, Ine., San Francisco, CA",
+    "publication_date": null,
+    "source": "Patent 8.pdf",
+    "filename": "Patent 8.pdf",
+    "abstract": "a2) United States Patent\n\nPenta et al.\n\n(10) Patent N\n(45) Date of Patent:\n\nUS012373506B1\n\nUS 12,373,506 B1\nJul. 29, 2025\n\n(54)\n\n(71)\n(72)\n\n(73)\n(*)\n\n(21)\n\n(22)\n\n(60)\n\nG1)\n\n(52)\n\n(58)\n\nPERSONALIZED RETRIEVAL-AUGMENTED\nGENERATION SYSTEM\n\nApplicant: Dropbox, Ine., San Francisco, CA (US)\n\nInventors: Anthony Penta, Bellevue, WA (US);\nAshok Pancily Poothiyot, San\nFrancisco, CA (US); Geoff Hulten,\nLynnwood, WA (US); Ameya\nBhatawdekar, Issaquah, WA (US); Tim\nGasser, Austin, TX (US); Sateesh\nSrinivasan, Redwood City, CA (US);\nVasanth Krishna Namasivayam,\nDanville, CA (US)\n\nAssignee: Dropbox, Inc., San",
+    "num_pages": 28,
+    "raw_char_count": 135387,
+    "extra": {
+      "is_scanned": true
+    }
+  },
+  {
+    "document_id": "PAT-009",
+    "document_type": "patent",
+    "title": "(71) (72)",
+    "publication_number": "US 12,461,922 B",
+    "authors": [
+      "Assignee:"
+    ],
+    "assignee": "Inventors:",
+    "publication_date": null,
+    "source": "Patent 9.pdf",
+    "filename": "Patent 9.pdf",
+    "abstract": "a2) United States Patent\n\nSager et al.\n\nUS 12,461,922 BI\n*Nov. 4, 2025\n\nUS012461922B1\n\n(10) Patent No.:\n(45) Date of Patent:\n\n(54)\n\n(71)\n\n(72)\n\n(73)\n\n(*)\n\n(21)\n(22)\n\n(63)\n\nG1)\n\n(52)\n\nPLATFORM FOR SEMANTIC SEARCH AND\nDYNAMIC RECLASSIFICATION\n\nApplicant:\n\nInventors:\n\nAssignee:\n\nNotice:\n\nAppl. No\n\nFiled:\n\nReveal Networks, Inc., Menlo Park,\nCA (US)\n\nBrian M. Sager, Menlo Park, CA (US);\nWilliam Lee Kimberlin, Menlo Park,\nCA (US)\n\nReveal Networks, Inc., Menlo Park,\nCA (US)\n\nSubject to any disclaimer, the term of this\npatent is extended or adjusted under 35\nU.S.C. 154(b) by 0 days.\n\nThis patent is su",
+    "num_pages": 31,
+    "raw_char_count": 69602,
+    "extra": {
+      "is_scanned": true
+    }
+  },
+  {
+    "document_id": "PAT-010",
+    "document_type": "patent",
+    "title": "(71) (72)",
+    "publication_number": "US012505111B2",
+    "authors": [
+      "Steven W. Lundberg",
+      "Edina",
+      "MN"
+    ],
+    "assignee": "Black Hills IP Holdings, LLC,",
+    "publication_date": null,
+    "source": "Patent 10.pdf",
+    "filename": "Patent 10.pdf",
+    "abstract": "(12)\n\nUnited States Patent\nLundberg\n\nUS012505111B2\n\nUS 12,505,111 B2\n*Dec. 23, 2025\n\n(10) Patent No.:\n(45) Date of Patent:\n\n(54)\n(71)\n\n(72)\n(73)\n\n(*)\n\n(21)\n(22)\n(65)\n\n(63)\n\nG1)\n\n(52)\n\n(58)\n\nPATENT MAPPING\n\nApplicant: Black Hills IP Holdings, LLC,\nMinneapolis, MN (US)\n\nInventor: Steven W. Lundberg, Edina, MN (US)\n\nAssignee: Black Hills IP Holdings, LLC,\nMinneapolis, MN (US)\n\nNotice: Subject to any disclaimer, the term of this\npatent is extended or adjusted under 35\nU.S.C. 154(b) by 95 days.\nThis patent is subject to a terminal dis-\nclaimer.\n\nAppl. No.: 18/372,030\n\nFiled: Sep. 22, 2023\n\nPrior Pu",
+    "num_pages": 31,
+    "raw_char_count": 123775,
+    "extra": {
+      "is_scanned": true
+    }
+  },
+  {
+    "document_id": "PAT-011",
+    "document_type": "patent",
+    "title": "(71) (72)",
+    "publication_number": "US012561314B2",
+    "authors": [
+      "Eliot P. Brenner",
+      "Westfield",
+      "NJ"
+    ],
+    "assignee": "Goldman Sachs & Co. LLC, New",
+    "publication_date": null,
+    "source": "Patent 11.pdf",
+    "filename": "Patent 11.pdf",
+    "abstract": "(12)\n\nUnited States Patent\n\nBrenner et al.\n\nUS012561314B2\n\nUS 12,561,314 B2\nFeb. 24, 2026\n\n(10) Patent No.:\n(45) Date of Patent:\n\n(54)\n\n(71)\n\n(72)\n\n(73)\n\n(*)\n\n(21)\n\n(22)\n(65)\n\n(30)\n\nNov. 17, 2023\n\nG1)\n\n(52)\n\n(58)\n\nRETRIEVAL-AUGMENTED GENERATION\n(RAG) SYSTEM OPTIMIZATION\n\nApplicant: Goldman Sachs & Co. LLC, New\nYork, NY (US)\n\nInventors: Eliot P. Brenner, Westfield, NJ (US);\n\nDominic Seyler, Jersey City, NJ (US)\n\nGoldman Sachs & Co. LLC, New\nYork, NY (US)\n\nAssignee:\n\nNotice: Subject to any disclaimer, the term of this\n\npatent is extended or adjusted under 35\nUSC. 154(b) by 5 days.\nAppl. No.: 18/",
+    "num_pages": 25,
+    "raw_char_count": 111625,
+    "extra": {
+      "is_scanned": true
+    }
+  },
+  {
+    "document_id": "PAT-012",
+    "document_type": "patent",
+    "title": "METHOD AND SYSTEM FOR OPTIMIZING (56) References Cited USE OF RETRIEVAL AUGMENTED GENERATION PIPELINES IN GENERATIVE U.S. PATENT DOCUMENTS ARTIFICIAL INTELLIGENCE . APPLICATIONS 5410475 A * 4/1995 Lu ",
+    "publication_number": "US012602412B2",
+    "authors": [
+      "Vijay Madisetti",
+      "Alpharetta",
+      "GA"
+    ],
+    "assignee": "Vijay Madisetti, Alpharetta, GA",
+    "publication_date": "Apr. 14, 2026",
+    "source": "Patent 12.pdf",
+    "filename": "Patent 12.pdf",
+    "abstract": "Related U.S. Application Data Systems and methods of processing domain-specific content\noo in a generative Al system including receiving a prompt,",
+    "num_pages": 31,
+    "raw_char_count": 47615,
+    "extra": {
+      "is_scanned": true
+    }
+  },
+  {
+    "document_id": "PAT-013",
+    "document_type": "patent",
+    "title": "METHODS AND SYSTEMS OF HANDLING PATENT CLAMS",
+    "publication_number": "US 20170075877A1",
+    "authors": [
+      "Marie-Therese LEPELTIER",
+      "Cannes"
+    ],
+    "assignee": "Marie-Therese LEPELTIER, Cannes",
+    "publication_date": "Mar. 16, 2017",
+    "source": "Patent 13.pdf",
+    "filename": "Patent 13.pdf",
+    "abstract": "(19) United States \nUS 20170075877A1 \n(12) Patent Application Publication (10) Pub. No.: US 2017/0075877 A1 \nLEPELTER \n(43) Pub. Date: \nMar. 16, 2017 \n(54) METHODS AND SYSTEMS OF HANDLING \nPATENT CLAMS \n(71) Applicant: Marie-Therese LEPELTIER, Cannes \n(FR) \n(72) Inventor: Marie-Therese LEPELTIER, Cannes \n(FR) \n(21) Appl. No.: 14/855,449 \n(22) Filed: \nSep. 16, 2015 \nPublication Classification \n(51) Int. Cl. \nG06F 7/27 \n(2006.01) \n1OO \nreceiving file (s) \ne.g. patent claims) \nand optional additional \nparameters (IPC class, \n(Pre-processing) \n111. \nmodifying \n12O \n14O \nTimestamping \ne.g. trusted",
+    "num_pages": 52,
+    "raw_char_count": 319143,
+    "extra": {
+      "is_scanned": false
+    }
+  },
+  {
+    "document_id": "PAT-014",
+    "document_type": "patent",
+    "title": "Patent Document Patent 14",
+    "publication_number": "US 20200050638A1",
+    "authors": [],
+    "assignee": null,
+    "publication_date": null,
+    "source": "Patent 14.pdf",
+    "filename": "Patent 14.pdf",
+    "abstract": "INI \nUS 20200050638A1 \n( 19 ) United States \n( 12 ) Patent Application Publication ( 10 ) Pub . No .: US 2020/0050638 A1 \nHancock \n( 43 ) Pub . Date : \nFeb. 13 , 2020 \n( 54 ) SYSTEMS AND METHODS FOR ANALYZING \nTHE VALIDITY OR INFRINGMENT OF \nPATENT CLAIMS \n( 71 ) Applicant : Parker Douglas Hancock , Houston , \nTX ( US ) \n( 72 ) Inventor : Parker Douglas Hancock , Houston , \nTX ( US ) \n( 21 ) Appl . No .: 16 / 538,065 \nGOOF 16/901 \n( 2006.01 ) \nGOOF 16/903 \n( 2006.01 ) \n( 52 ) U.S. CI . \nCPC \nGO6F 16/90332 ( 2019.01 ) ; GO6F 17/277 \n( 2013.01 ) ; G06F 16/90344 ( 2019.01 ) ; G06F \n17/2795 ( 2013",
+    "num_pages": 39,
+    "raw_char_count": 170002,
+    "extra": {
+      "is_scanned": false
+    }
+  },
+  {
+    "document_id": "PAT-015",
+    "document_type": "patent",
+    "title": "Patent Document Patent 15",
+    "publication_number": "US 20220343444A1",
+    "authors": [],
+    "assignee": null,
+    "publication_date": null,
+    "source": "Patent 15.pdf",
+    "filename": "Patent 15.pdf",
+    "abstract": "US 20220343444A1 \nIN \n( 19 ) United States \n( 12 ) Patent Application Publication ( 10 ) Pub . No .: US 2022/0343444 A1 \nChan et al . \n( 43 ) Pub \n. Date : \nOct. 27 , 2022 \nPublication Classification \n( 54 ) ARTIFICIAL INTELLIGENCE \n, MACHINE \nLEARNING \n, AND PREDICTIVE ANALYTICS \nFOR PATENT AND NON - PATENT \nDOCUMENTS \n( 71 ) Applicant \n: DataNovo , Inc. , Pearland , TX ( US ) \n( 72 ) Inventors : Alex H. Chan \n, San Francisco , CA \n( US ) ; Oleksandr Loginov \n, Dublin \nCounty ( IE ) ; Eric Dew \n, San Francisco , \nCA ( US ) \n( 51 ) Int . Ci . \nG06Q 50/18 \n( 2006.01 ) \nGOON 20/00 \n( 2006.01 )",
+    "num_pages": 82,
+    "raw_char_count": 379198,
+    "extra": {
+      "is_scanned": false
+    }
+  },
+  {
+    "document_id": "PAT-016",
+    "document_type": "patent",
+    "title": "(71) (72)",
+    "publication_number": "US 2024/0281487 A1",
+    "authors": [
+      "Rahil Bathwal",
+      "San Francisco",
+      "CA"
+    ],
+    "assignee": "Snowflake Inc., Bozeman, MT",
+    "publication_date": "Aug. 22, 2024",
+    "source": "Patent 16.pdf",
+    "filename": "Patent 16.pdf",
+    "abstract": "as) United States\na2) Patent Application Publication io) Pub. No.: US 2024/0281487 A1\n\nBathwal et al.\n\nUS 2024028 1487A1\n\n(43) Pub. Date: Aug. 22, 2024\n\n(54)\n\n(71)\n(72)\n\n1)\n(22)\n\n(60)\n\nENHANCED SEARCH RESULT\nGENERATION USING MULTI-DOCUMENT\nSUMMARIZATION\n\nApplicant: Snowflake Inc., Bozeman, MT (US)\n\nInventors: Rahil Bathwal, San Francisco, CA\n(US); Daniel Fernando Campos,\nHudson, NY (US); Ashwin Devaraj,\nMenlo Park, CA (US); Seth Michael\nLi, Foster City, CA (US); Muhua\nNgan, San Mateo, CA (US); Vivek\nRaghunathan, Palo Alto, CA (US);\nSridhar Ramaswamy, Cupertino, CA\n(US); Rajhans Samdani, Belmon",
+    "num_pages": 31,
+    "raw_char_count": 147284,
+    "extra": {
+      "is_scanned": true
+    }
+  },
+  {
+    "document_id": "PAT-017",
+    "document_type": "patent",
+    "title": "MULTI-SEGMENT TEXT SEARCH USING (60) Provisional application No. 62/780,582, filed on Dee. MACHINE LEARNING MODEL FOR TEXT 17, 2018, provisional application No. 62/787,640, SIMILARITY filed on Jan. 2,",
+    "publication_number": "US 2025/0259470 A",
+    "authors": [
+      "Bryant Lee",
+      "San Francisco",
+      "CA"
+    ],
+    "assignee": "Cognition IP Technology Ine., San Publication Classification",
+    "publication_date": "Aug. 14, 2025",
+    "source": "Patent 17.pdf",
+    "filename": "Patent 17.pdf",
+    "abstract": "as) United States\na2 Patent Application Publication (1) Pub. No.: US 2025/0259470 Al\n\nUS 20250259470A1\n\nLee et al. (43) Pub. Date: Aug. 14, 2025\n(54) MULTI-SEGMENT TEXT SEARCH USING (60) Provisional application No. 62/780,582, filed on Dee.\nMACHINE LEARNING MODEL FOR TEXT 17, 2018, provisional application No. 62/787,640,\nSIMILARITY filed on Jan. 2, 2019.\n(71) Applicant: Cognition IP Technology Ine., San Publication Classification\nFrancisco, CA (US) (1) Int ch\n(72) Inventors: Bryant Lee, San Francisco, CA (US); GO6V 30/414 (2022.01)\nAndrew Tjang, Moraga, CA (US); GO6F 16/93 (2019.01)\nAndrew Per",
+    "num_pages": 31,
+    "raw_char_count": 56592,
+    "extra": {
+      "is_scanned": true
+    }
+  },
+  {
+    "document_id": "PAT-018",
+    "document_type": "patent",
+    "title": "PATENT MAPPING GO6F 16/38 (2019.01) GO6F 16/903 (2019.01)",
+    "publication_number": "US 2025/0335515 A",
+    "authors": [
+      "Steven W. Lundberg",
+      "Edina",
+      "MN"
+    ],
+    "assignee": "Black Hills IP Holdings, LLC, G06F 16/951",
+    "publication_date": "Oct. 30, 2025",
+    "source": "Patent 18.pdf",
+    "filename": "Patent 18.pdf",
+    "abstract": "as) United States\na2 Patent Application Publication (1) Pub. No.: US 2025/0335515 Al\n\nUS 2025033551SA1\n\nLundberg (43) Pub. Date: Oct. 30, 2025\n(54) PATENT MAPPING GO6F 16/38 (2019.01)\nGO6F 16/903 (2019.01)\n(71) Applicant: Black Hills IP Holdings, LLC, G06F 16/951 (2019.01)\nMinneapolis, MN (US) GO6F 16/9535 (2019.01)\nG06Q 10/06 (2023.01)\n(72) Inventor: Steven W. Lundberg, Edina, MN (US) G06Q. 10/0631 (2023.01)\nG06Q 50/18 (2012.01)\n(21) Appl. No.: 19/262,064 (2) US.CL.\n. CPC vreeseeees GOGF 16/93 (2019.01); GO6F 16/21\n(22) Filed: Jul. 7, 2025 (2019.01); GO6F 16/23 (2019.01); GO6F\nRelated U.S. Ap",
+    "num_pages": 31,
+    "raw_char_count": 51350,
+    "extra": {
+      "is_scanned": true
+    }
+  },
+  {
+    "document_id": "PAT-019",
+    "document_type": "patent",
+    "title": "COMPUTER IMPLEMENTED METHODS FOR THE AUTOMATED ANALYSIS OR USE OF DATA, INCLUDING USE OF A LARGE LANGUAGE MODEL",
+    "publication_number": "US 20260080164A1",
+    "authors": [
+      "William TUNSTALL-PEDOE"
+    ],
+    "assignee": "UNLIKELY ARTIFICIAL",
+    "publication_date": "Mar. 19, 2026",
+    "source": "Patent 19.pdf",
+    "filename": "Patent 19.pdf",
+    "abstract": "as) United States\n\nUS 20260080164A1\n\na2 Patent Application Publication (1) Pub. No.: US 2026/0080164 Al\n\nTUNSTALL-PEDOE et al.\n\n(43) Pub. Date: Mar. 19, 2026\n\n(54) COMPUTER IMPLEMENTED METHODS\nFOR THE AUTOMATED ANALYSIS OR USE\nOF DATA, INCLUDING USE OF A LARGE\nLANGUAGE MODEL\n\n(71) Applicant: UNLIKELY ARTIFICIAL\nINTELLIGENCE LIMITED,\nCambridgeshire (GB)\n\n(72) Inventors: William TUNSTALL-PEDOE,\nCambridgeshire (GB); Robert\nHEYWOOD, Cambridgeshire (GB);\nSeth WARREN, Cambridgeshire (GB);\nPaul BENN, Cambridgeshire (GB);\nDuncan REYNOLDS, Cambridgeshire\n(GB); Ayush SHAH, Cambridgeshire\n(GB); Luci KRNI",
+    "num_pages": 31,
+    "raw_char_count": 122722,
+    "extra": {
+      "is_scanned": true
+    }
+  },
+  {
+    "document_id": "PAT-020",
+    "document_type": "patent",
+    "title": "AUGMENTED QUESTION AND ANSWER Publication Classification (Q&A) WITH LARGE LANGUAGE MODELS",
+    "publication_number": "US 20260105258A1",
+    "authors": [
+      "Manish Marwah",
+      "Pleasanton",
+      "CA"
+    ],
+    "assignee": "MICRO FOCUS LLC, Wilmington, G06F 40/30",
+    "publication_date": "Apr. 16, 2026",
+    "source": "Patent 20.pdf",
+    "filename": "Patent 20.pdf",
+    "abstract": "(US); Martin Fraser Arlitt, Calgary Large language models (LLMs) are versatile in responding\n(CA) to user questions on a wide variety of topics. However,\n. LLMs suffer from several drawbacks, such as hallucinations,",
+    "num_pages": 21,
+    "raw_char_count": 98853,
+    "extra": {
+      "is_scanned": true
+    }
+  }
+]
