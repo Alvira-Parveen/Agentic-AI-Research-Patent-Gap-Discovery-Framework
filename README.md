@@ -7,6 +7,32 @@ An explainable, reproducible artificial intelligence system that accepts an AI/M
 
 ---
 
+## 🎯 Foundational Baselines (Base Paper & Base Patent)
+
+| Category | Reference | Core Contribution | How Our PBL-3 Project Extends It |
+|---|---|---|---|
+| **Base Research Paper** | **Paper 4 — EVOPAT**<br>*(A Multi-LLM-Based Patents Summarization & Analysis Framework)* | Uses LLMs for patent summarization, claim structuring, and document breakdown. | EVOPAT is single-corpus (patents only) and summarization-focused. Our framework introduces **dual-corpus cross-referencing (Patents + Research Papers)** and **autonomous gap discovery**. |
+| **Base Patent** | **Patent 12 — US 12,602,412 B2**<br>*(Method & System for Optimizing RAG Pipelines in Generative AI)* | Defines multi-model RAG architecture, chunking, vector DBs, and evaluation. | Patent 12 is a generalized RAG pipeline. Our system implements **specialized LangGraph multi-agent orchestration** and **deterministic novelty/white-space gap algorithms**. |
+
+---
+
+## 🚦 Implementation Status: 100% Complete (Step-by-Step Breakdown)
+
+| Step | Component / Module | Implementation Details | Status |
+|---|---|---|---|
+| **Step 1** | **Data Ingestion & Extraction** | Dual-mode PDF parser (PyMuPDF + Tesseract OCR fallback), section-aware extraction, metadata extraction across 20 patents and 20 research papers. | ✅ **100% Done** |
+| **Step 2** | **Preprocessing & Chunking** | Section-aware chunking (Abstract, Claims, Description, Methodology), whitespace normalization, MD5 deduplication (5,593 total chunks). | ✅ **100% Done** |
+| **Step 3** | **Embeddings & Vector Indexing** | Sentence-Transformers (`all-MiniLM-L6-v2`, 384-dim), L2-normalized FAISS cosine similarity indexes for patents and papers. | ✅ **100% Done** |
+| **Step 4** | **Retrieval Engine** | Isolated patent & paper retrievers, top-k ranking, query expansion, metadata filtering. | ✅ **100% Done** |
+| **Step 5** | **Agentic Architecture (LangGraph)** | 6 specialized agents: `RetrievalAgent`, `PatentAgent`, `ResearchAgent`, `FeatureComparison`, `NoveltyAgent`, `GapDiscoveryAgent`, `ReportAgent`. | ✅ **100% Done** |
+| **Step 6** | **3-Way Comparative Evaluation** | Mode A (Single LLM Baseline) vs Mode B (LLM + RAG) vs Mode C (Multi-Agent RAG). | ✅ **100% Done** |
+| **Step 7** | **Novelty & Gap Analysis Engines** | Transparent engineering heuristic for novelty overlap scoring + corpus-level cross-literature gap identification. | ✅ **100% Done** |
+| **Step 8** | **REST API (FastAPI)** | Full backend with `/analyze`, `/compare`, `/search`, `/benchmark`, `/corpus/stats` endpoints and OpenAPI/Swagger documentation. | ✅ **100% Done** |
+| **Step 9** | **User Interface (Streamlit)** | Multi-tab interactive UI for live idea analysis, mode comparison, prior-art search, and evaluation analytics. | ✅ **100% Done** |
+| **Step 10**| **Benchmark & Automated Testing** | 20 test cases benchmarked across all 3 modes + 25 passing `pytest` test suites. | ✅ **100% Done** |
+
+---
+
 ## 📌 Three Experimental Modes Compared
 1. **Mode A — Single LLM Baseline**: Evaluates ideas using parametric LLM memory without external retrieval.
 2. **Mode B — LLM + RAG**: Dense vector retrieval over patent and paper corpora using a single RAG generation prompt.
