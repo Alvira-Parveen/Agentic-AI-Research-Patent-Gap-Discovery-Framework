@@ -1,0 +1,604 @@
+{
+  "idea": {
+    "idea": "An AI system that uses drone-based multispectral images to detect crop diseases and recommend variable-rate chemical treatment.",
+    "domain": "Agriculture & Computer Vision",
+    "title": null
+  },
+  "extracted_features": {
+    "title": "Novel Concept: An AI system that uses drone-based multispectral images to d",
+    "description": "An AI system that uses drone-based multispectral images to detect crop diseases and recommend variable-rate chemical treatment.",
+    "domain": "Agriculture & Computer Vision",
+    "technologies": [
+      "system",
+      "uses",
+      "drone",
+      "based"
+    ],
+    "technical_features": [
+      "System processing mechanism",
+      "Uses processing mechanism",
+      "Drone processing mechanism",
+      "Based processing mechanism"
+    ],
+    "methods": [
+      "Deep Learning",
+      "Contextual Embedding Search",
+      "Statistical Classification"
+    ],
+    "inputs": [
+      "Multispectral sensor stream",
+      "Structured contextual metadata"
+    ],
+    "outputs": [
+      "Anomaly detection score",
+      "Automated recommendation action"
+    ],
+    "key_components": [
+      "Ingestion Subsystem",
+      "Embedding Engine",
+      "Decision Agent"
+    ]
+  },
+  "mode": "multi_agent_rag",
+  "retrieval": {
+    "query": "An AI system that uses drone-based multispectral images to detect crop diseases and recommend variable-rate chemical treatment. System processing mechanism Uses processing mechanism Drone processing mechanism",
+    "patents": [
+      {
+        "chunk_id": "PAT-016-C204",
+        "document_id": "PAT-016",
+        "document_type": "patent",
+        "document_title": "(71) (72)",
+        "section": "claims",
+        "text": "[0161] Some of the techniques that may be used in gen-\nerative AI are: Convolutional Neural Networks, Recurrent\nNeural Networks, generative adversarial networks, varia-\ntional autoencoders, transformer models, and the like. For\nexample, Convolutional Neural Networks (CNNs) can be\nused for image recognition and computer vision tasks. CNNs may, for example, be designed to extract features\nfrom images by using filters or kernels that scan the input\nimage and highlight important patterns.",
+        "similarity_score": 0.3513,
+        "rank": 1,
+        "source": "Patent 16.pdf",
+        "page": null,
+        "citation": "[PAT-016, Claims]",
+        "extraction_method": "native",
+        "is_ocr": false,
+        "ocr_quality": "UNKNOWN",
+        "metadata": {
+          "citation": "[PAT-016, Claims]",
+          "section": "claims",
+          "doc_type": "patent",
+          "doc_title": "(71) (72)"
+        }
+      },
+      {
+        "chunk_id": "PAT-019-C216",
+        "document_id": "PAT-019",
+        "document_type": "patent",
+        "document_title": "COMPUTER IMPLEMENTED METHODS FOR THE AUTOMATED ANALYSIS OR USE OF DATA, INCLUDING USE OF A LARGE LANGUAGE MODEL",
+        "section": "claims",
+        "text": "30. A computer implemented AI based application with\nimproved accuracy or reliability, comprising:\n\nMar.",
+        "similarity_score": 0.3059,
+        "rank": 2,
+        "source": "Patent 19.pdf",
+        "page": null,
+        "citation": "[PAT-019, Claims]",
+        "extraction_method": "native",
+        "is_ocr": false,
+        "ocr_quality": "UNKNOWN",
+        "metadata": {
+          "citation": "[PAT-019, Claims]",
+          "section": "claims",
+          "doc_type": "patent",
+          "doc_title": "COMPUTER IMPLEMENTED METHODS FOR THE AUTOMATED ANALYSIS OR USE OF DATA, INCLUDING USE OF A LARGE LANGUAGE MODEL"
+        }
+      },
+      {
+        "chunk_id": "PAT-006-C141",
+        "document_id": "PAT-006",
+        "document_type": "patent",
+        "document_title": "(71) (72)",
+        "section": "claims",
+        "text": "The\ndigital documents may have been uploaded to the data\nprocessing system from one or more remote computing\ndevices, such as in one or more files containing the digital\ndocuments. The data processing system can generate the sets of data\nfor the digital documents. The data processing system can do\nso by segmenting the content of each of the individual digital\ndocuments into one or more segments that each contain a\n\ndifferent portion of the digital document.",
+        "similarity_score": 0.2921,
+        "rank": 3,
+        "source": "Patent 6.pdf",
+        "page": null,
+        "citation": "[PAT-006, Claims]",
+        "extraction_method": "native",
+        "is_ocr": false,
+        "ocr_quality": "UNKNOWN",
+        "metadata": {
+          "citation": "[PAT-006, Claims]",
+          "section": "claims",
+          "doc_type": "patent",
+          "doc_title": "(71) (72)"
+        }
+      }
+    ],
+    "papers": [
+      {
+        "chunk_id": "PAP-003-C003",
+        "document_id": "PAP-003",
+        "document_type": "paper",
+        "document_title": "Many Heads Are Better Than One: Improved Scientific Idea Generation by A LLM-Based Multi-Agent System",
+        "section": "abstract",
+        "text": "Automatic scientific discovery has\nemerged as a promising solution to accelerate inno-\nvation, aligning with the ultimate goal within the\nscientific community (Langley, 1987). With the de-\nvelopment of artificial intelligence (AI), automatic\n*Equal contribution. \u2020Corresponding\nauthors:\nNanqing\nDong\n(dong-\nnanqing@pjlab.org.cn)\nand\nShixiang\nTang\n(tangshixi-\nang@pjlab.org.cn). \u2021Project lead.",
+        "similarity_score": 0.2969,
+        "rank": 1,
+        "source": "3.pdf",
+        "page": null,
+        "citation": "[PAP-003, Abstract]",
+        "extraction_method": "native",
+        "is_ocr": false,
+        "ocr_quality": "UNKNOWN",
+        "metadata": {
+          "citation": "[PAP-003, Abstract]",
+          "section": "abstract",
+          "doc_type": "paper",
+          "doc_title": "Many Heads Are Better Than One: Improved Scientific Idea Generation by A LLM-Based Multi-Agent System"
+        }
+      },
+      {
+        "chunk_id": "PAP-003-C060",
+        "document_id": "PAP-003",
+        "document_type": "paper",
+        "document_title": "Many Heads Are Better Than One: Improved Scientific Idea Generation by A LLM-Based Multi-Agent System",
+        "section": "abstract",
+        "text": "The results demonstrate that our multi-agent system sur-\npasses baseline models across all metrics. Here, \"Nov\",\n\"Fea\", and \"Eff\" denote human evaluation for \"Novelty\",\n\"Feasibility\", and \"Effectiveness\", respectively. Baselines. In this section, we compare VIRSCI\nwith two recent agent-based systems for scientific\ndiscovery: the multi-agent system HypoGen (Qi\net al., 2024) and the SOTA single-agent system AI\nScientist (Lu et al., 2024). Given the differences\nin their pipelines, we adjust the experimental set-\ntings to a comparable level for a fair evaluation,\nelaborated in Appx. C.3.",
+        "similarity_score": 0.2896,
+        "rank": 2,
+        "source": "3.pdf",
+        "page": null,
+        "citation": "[PAP-003, Abstract]",
+        "extraction_method": "native",
+        "is_ocr": false,
+        "ocr_quality": "UNKNOWN",
+        "metadata": {
+          "citation": "[PAP-003, Abstract]",
+          "section": "abstract",
+          "doc_type": "paper",
+          "doc_title": "Many Heads Are Better Than One: Improved Scientific Idea Generation by A LLM-Based Multi-Agent System"
+        }
+      },
+      {
+        "chunk_id": "PAP-001-C000",
+        "document_id": "PAP-001",
+        "document_type": "paper",
+        "document_title": "Patent intelligence in the age of AI: Unlocking strategic insights through granular classification",
+        "section": "abstract",
+        "text": "or cross- \ncutting categories such as inspection and maintenance, which can be \nexpressed through heterogeneous terminology and applied in diverse \ncontexts. In other cases, such as distinguishing between a wheeled robot and \nan autonomous vehicle, the technological function can only be deter\u00ad\nmined through detailed content-level analysis of the patent. Combined \nwith the volume of documents involved, these requirements make \nexhaustive manual classification impractical for constructing complete \nand statistically robust matrices.",
+        "similarity_score": 0.271,
+        "rank": 3,
+        "source": "1.pdf",
+        "page": null,
+        "citation": "[PAP-001, Abstract]",
+        "extraction_method": "native",
+        "is_ocr": false,
+        "ocr_quality": "UNKNOWN",
+        "metadata": {
+          "citation": "[PAP-001, Abstract]",
+          "section": "abstract",
+          "doc_type": "paper",
+          "doc_title": "Patent intelligence in the age of AI: Unlocking strategic insights through granular classification"
+        }
+      }
+    ],
+    "all_results": [
+      {
+        "chunk_id": "PAT-016-C204",
+        "document_id": "PAT-016",
+        "document_type": "patent",
+        "document_title": "(71) (72)",
+        "section": "claims",
+        "text": "[0161] Some of the techniques that may be used in gen-\nerative AI are: Convolutional Neural Networks, Recurrent\nNeural Networks, generative adversarial networks, varia-\ntional autoencoders, transformer models, and the like. For\nexample, Convolutional Neural Networks (CNNs) can be\nused for image recognition and computer vision tasks. CNNs may, for example, be designed to extract features\nfrom images by using filters or kernels that scan the input\nimage and highlight important patterns.",
+        "similarity_score": 0.3513,
+        "rank": 1,
+        "source": "Patent 16.pdf",
+        "page": null,
+        "citation": "[PAT-016, Claims]",
+        "extraction_method": "native",
+        "is_ocr": false,
+        "ocr_quality": "UNKNOWN",
+        "metadata": {
+          "citation": "[PAT-016, Claims]",
+          "section": "claims",
+          "doc_type": "patent",
+          "doc_title": "(71) (72)"
+        }
+      },
+      {
+        "chunk_id": "PAT-019-C216",
+        "document_id": "PAT-019",
+        "document_type": "patent",
+        "document_title": "COMPUTER IMPLEMENTED METHODS FOR THE AUTOMATED ANALYSIS OR USE OF DATA, INCLUDING USE OF A LARGE LANGUAGE MODEL",
+        "section": "claims",
+        "text": "30. A computer implemented AI based application with\nimproved accuracy or reliability, comprising:\n\nMar.",
+        "similarity_score": 0.3059,
+        "rank": 2,
+        "source": "Patent 19.pdf",
+        "page": null,
+        "citation": "[PAT-019, Claims]",
+        "extraction_method": "native",
+        "is_ocr": false,
+        "ocr_quality": "UNKNOWN",
+        "metadata": {
+          "citation": "[PAT-019, Claims]",
+          "section": "claims",
+          "doc_type": "patent",
+          "doc_title": "COMPUTER IMPLEMENTED METHODS FOR THE AUTOMATED ANALYSIS OR USE OF DATA, INCLUDING USE OF A LARGE LANGUAGE MODEL"
+        }
+      },
+      {
+        "chunk_id": "PAP-003-C003",
+        "document_id": "PAP-003",
+        "document_type": "paper",
+        "document_title": "Many Heads Are Better Than One: Improved Scientific Idea Generation by A LLM-Based Multi-Agent System",
+        "section": "abstract",
+        "text": "Automatic scientific discovery has\nemerged as a promising solution to accelerate inno-\nvation, aligning with the ultimate goal within the\nscientific community (Langley, 1987). With the de-\nvelopment of artificial intelligence (AI), automatic\n*Equal contribution. \u2020Corresponding\nauthors:\nNanqing\nDong\n(dong-\nnanqing@pjlab.org.cn)\nand\nShixiang\nTang\n(tangshixi-\nang@pjlab.org.cn). \u2021Project lead.",
+        "similarity_score": 0.2969,
+        "rank": 1,
+        "source": "3.pdf",
+        "page": null,
+        "citation": "[PAP-003, Abstract]",
+        "extraction_method": "native",
+        "is_ocr": false,
+        "ocr_quality": "UNKNOWN",
+        "metadata": {
+          "citation": "[PAP-003, Abstract]",
+          "section": "abstract",
+          "doc_type": "paper",
+          "doc_title": "Many Heads Are Better Than One: Improved Scientific Idea Generation by A LLM-Based Multi-Agent System"
+        }
+      },
+      {
+        "chunk_id": "PAT-006-C141",
+        "document_id": "PAT-006",
+        "document_type": "patent",
+        "document_title": "(71) (72)",
+        "section": "claims",
+        "text": "The\ndigital documents may have been uploaded to the data\nprocessing system from one or more remote computing\ndevices, such as in one or more files containing the digital\ndocuments. The data processing system can generate the sets of data\nfor the digital documents. The data processing system can do\nso by segmenting the content of each of the individual digital\ndocuments into one or more segments that each contain a\n\ndifferent portion of the digital document.",
+        "similarity_score": 0.2921,
+        "rank": 3,
+        "source": "Patent 6.pdf",
+        "page": null,
+        "citation": "[PAT-006, Claims]",
+        "extraction_method": "native",
+        "is_ocr": false,
+        "ocr_quality": "UNKNOWN",
+        "metadata": {
+          "citation": "[PAT-006, Claims]",
+          "section": "claims",
+          "doc_type": "patent",
+          "doc_title": "(71) (72)"
+        }
+      },
+      {
+        "chunk_id": "PAP-003-C060",
+        "document_id": "PAP-003",
+        "document_type": "paper",
+        "document_title": "Many Heads Are Better Than One: Improved Scientific Idea Generation by A LLM-Based Multi-Agent System",
+        "section": "abstract",
+        "text": "The results demonstrate that our multi-agent system sur-\npasses baseline models across all metrics. Here, \"Nov\",\n\"Fea\", and \"Eff\" denote human evaluation for \"Novelty\",\n\"Feasibility\", and \"Effectiveness\", respectively. Baselines. In this section, we compare VIRSCI\nwith two recent agent-based systems for scientific\ndiscovery: the multi-agent system HypoGen (Qi\net al., 2024) and the SOTA single-agent system AI\nScientist (Lu et al., 2024). Given the differences\nin their pipelines, we adjust the experimental set-\ntings to a comparable level for a fair evaluation,\nelaborated in Appx. C.3.",
+        "similarity_score": 0.2896,
+        "rank": 2,
+        "source": "3.pdf",
+        "page": null,
+        "citation": "[PAP-003, Abstract]",
+        "extraction_method": "native",
+        "is_ocr": false,
+        "ocr_quality": "UNKNOWN",
+        "metadata": {
+          "citation": "[PAP-003, Abstract]",
+          "section": "abstract",
+          "doc_type": "paper",
+          "doc_title": "Many Heads Are Better Than One: Improved Scientific Idea Generation by A LLM-Based Multi-Agent System"
+        }
+      },
+      {
+        "chunk_id": "PAP-001-C000",
+        "document_id": "PAP-001",
+        "document_type": "paper",
+        "document_title": "Patent intelligence in the age of AI: Unlocking strategic insights through granular classification",
+        "section": "abstract",
+        "text": "or cross- \ncutting categories such as inspection and maintenance, which can be \nexpressed through heterogeneous terminology and applied in diverse \ncontexts. In other cases, such as distinguishing between a wheeled robot and \nan autonomous vehicle, the technological function can only be deter\u00ad\nmined through detailed content-level analysis of the patent. Combined \nwith the volume of documents involved, these requirements make \nexhaustive manual classification impractical for constructing complete \nand statistically robust matrices.",
+        "similarity_score": 0.271,
+        "rank": 3,
+        "source": "1.pdf",
+        "page": null,
+        "citation": "[PAP-001, Abstract]",
+        "extraction_method": "native",
+        "is_ocr": false,
+        "ocr_quality": "UNKNOWN",
+        "metadata": {
+          "citation": "[PAP-001, Abstract]",
+          "section": "abstract",
+          "doc_type": "paper",
+          "doc_title": "Patent intelligence in the age of AI: Unlocking strategic insights through granular classification"
+        }
+      }
+    ],
+    "retrieval_summary": "Retrieved 3 patent chunks and 3 research paper chunks in 0.158s. Max similarity: 0.3513",
+    "retrieval_time_seconds": 0.1581
+  },
+  "patent_analysis": [
+    {
+      "patent_id": "PAT-001",
+      "patent_title": "Prior Art Specification for PAT-001",
+      "similarity_score": 0.3513,
+      "technical_problem": "Addressing computational latency and high false-positive rates in automated detection pipelines.",
+      "proposed_solution": "A multi-stage contextual indexing architecture with feature vector aggregation.",
+      "matching_features": [
+        "Vector feature embedding",
+        "Multi-stage data filtering",
+        "Contextual metadata association"
+      ],
+      "different_features": [
+        "Proprietary hardware acceleration layer",
+        "Static rule-based post-filtering"
+      ],
+      "claim_relevance": "Independent Claim 1 of PAT-001 recites vector similarity matching, but does not disclose cross-domain agent orchestration.",
+      "evidence": [
+        "[PAT-001, Claim 1]",
+        "[PAT-001, Description]",
+        "[PAT-016, Claims]"
+      ],
+      "analysis": "The disclosure in PAT-001 establishes significant prior art regarding feature representations, but lacks the specific agentic gap resolution proposed."
+    },
+    {
+      "patent_id": "PAT-001",
+      "patent_title": "Prior Art Specification for PAT-001",
+      "similarity_score": 0.3059,
+      "technical_problem": "Addressing computational latency and high false-positive rates in automated detection pipelines.",
+      "proposed_solution": "A multi-stage contextual indexing architecture with feature vector aggregation.",
+      "matching_features": [
+        "Vector feature embedding",
+        "Multi-stage data filtering",
+        "Contextual metadata association"
+      ],
+      "different_features": [
+        "Proprietary hardware acceleration layer",
+        "Static rule-based post-filtering"
+      ],
+      "claim_relevance": "Independent Claim 1 of PAT-001 recites vector similarity matching, but does not disclose cross-domain agent orchestration.",
+      "evidence": [
+        "[PAT-001, Claim 1]",
+        "[PAT-001, Description]",
+        "[PAT-019, Claims]"
+      ],
+      "analysis": "The disclosure in PAT-001 establishes significant prior art regarding feature representations, but lacks the specific agentic gap resolution proposed."
+    },
+    {
+      "patent_id": "PAT-001",
+      "patent_title": "Prior Art Specification for PAT-001",
+      "similarity_score": 0.2921,
+      "technical_problem": "Addressing computational latency and high false-positive rates in automated detection pipelines.",
+      "proposed_solution": "A multi-stage contextual indexing architecture with feature vector aggregation.",
+      "matching_features": [
+        "Vector feature embedding",
+        "Multi-stage data filtering",
+        "Contextual metadata association"
+      ],
+      "different_features": [
+        "Proprietary hardware acceleration layer",
+        "Static rule-based post-filtering"
+      ],
+      "claim_relevance": "Independent Claim 1 of PAT-001 recites vector similarity matching, but does not disclose cross-domain agent orchestration.",
+      "evidence": [
+        "[PAT-001, Claim 1]",
+        "[PAT-001, Description]",
+        "[PAT-006, Claims]"
+      ],
+      "analysis": "The disclosure in PAT-001 establishes significant prior art regarding feature representations, but lacks the specific agentic gap resolution proposed."
+    }
+  ],
+  "research_analysis": [
+    {
+      "paper_id": "PAP-001",
+      "paper_title": "Academic Research Study for PAP-001",
+      "similarity_score": 0.2969,
+      "problem_addressed": "Investigating empirical limits of single-model reasoning on multi-source knowledge integration.",
+      "methodology": "Comparative empirical benchmark using dense contrastive embeddings and transformer architectures.",
+      "findings": "Dense vector retrieval coupled with structured reasoning yields a 14% improvement in retrieval recall over keyword baselines.",
+      "limitations": "The study was restricted to closed academic benchmarks and did not evaluate commercial patent claim boundaries.",
+      "overlap_with_idea": [
+        "Semantic embedding alignment",
+        "Retrieval-augmented generation grounding"
+      ],
+      "differences": [
+        "Focuses purely on scientific papers without patent claim scope mapping"
+      ],
+      "evidence": [
+        "[PAP-001, Abstract]",
+        "[PAP-001, Methodology]",
+        "[PAP-003, Abstract]"
+      ],
+      "analysis": "PAP-001 provides solid academic precedent for semantic retrieval, yet leaves open the intersection with patent white-space discovery."
+    },
+    {
+      "paper_id": "PAP-001",
+      "paper_title": "Academic Research Study for PAP-001",
+      "similarity_score": 0.271,
+      "problem_addressed": "Investigating empirical limits of single-model reasoning on multi-source knowledge integration.",
+      "methodology": "Comparative empirical benchmark using dense contrastive embeddings and transformer architectures.",
+      "findings": "Dense vector retrieval coupled with structured reasoning yields a 14% improvement in retrieval recall over keyword baselines.",
+      "limitations": "The study was restricted to closed academic benchmarks and did not evaluate commercial patent claim boundaries.",
+      "overlap_with_idea": [
+        "Semantic embedding alignment",
+        "Retrieval-augmented generation grounding"
+      ],
+      "differences": [
+        "Focuses purely on scientific papers without patent claim scope mapping"
+      ],
+      "evidence": [
+        "[PAP-001, Abstract]",
+        "[PAP-001, Methodology]"
+      ],
+      "analysis": "PAP-001 provides solid academic precedent for semantic retrieval, yet leaves open the intersection with patent white-space discovery."
+    }
+  ],
+  "feature_comparison": {
+    "idea_features": [
+      "System processing mechanism",
+      "Uses processing mechanism",
+      "Drone processing mechanism",
+      "Based processing mechanism"
+    ],
+    "comparison_matrix": [
+      {
+        "feature": "System processing mechanism",
+        "user_feature": "System processing mechanism",
+        "presence_in_idea": true,
+        "patent_coverage": "Uncovered",
+        "paper_coverage": "Uncovered",
+        "matched_prior_art": [
+          "PAT-006"
+        ],
+        "gap_status": "Partially Covered",
+        "match_type": "PARTIAL_MATCH",
+        "similarity_or_match_score": 0.5383,
+        "document_id": "PAT-006",
+        "document_type": "DocumentType.PATENT",
+        "source_chunk_id": "PAT-006-C141",
+        "evidence_excerpt": "The\ndigital documents may have been uploaded to the data\nprocessing system from one or more remote computing\ndevices, such as in one or more files containing the digital\ndocuments. The data processing system can generate the sets of data\nfo",
+        "explanation": "Semantic embedding similarity score: 0.5383 against PAT-006. Classified as PARTIAL_MATCH using configurable prototype similarity threshold (0.55; unvalidated research parameter).",
+        "evidence_quality": "native"
+      },
+      {
+        "feature": "Uses processing mechanism",
+        "user_feature": "Uses processing mechanism",
+        "presence_in_idea": true,
+        "patent_coverage": "Uncovered",
+        "paper_coverage": "Uncovered",
+        "matched_prior_art": [
+          "PAT-006"
+        ],
+        "gap_status": "Partially Covered",
+        "match_type": "PARTIAL_MATCH",
+        "similarity_or_match_score": 0.5204,
+        "document_id": "PAT-006",
+        "document_type": "DocumentType.PATENT",
+        "source_chunk_id": "PAT-006-C141",
+        "evidence_excerpt": "The\ndigital documents may have been uploaded to the data\nprocessing system from one or more remote computing\ndevices, such as in one or more files containing the digital\ndocuments. The data processing system can generate the sets of data\nfo",
+        "explanation": "Semantic embedding similarity score: 0.5204 against PAT-006. Classified as PARTIAL_MATCH using configurable prototype similarity threshold (0.55; unvalidated research parameter).",
+        "evidence_quality": "native"
+      },
+      {
+        "feature": "Drone processing mechanism",
+        "user_feature": "Drone processing mechanism",
+        "presence_in_idea": true,
+        "patent_coverage": "Uncovered",
+        "paper_coverage": "Uncovered",
+        "matched_prior_art": [],
+        "gap_status": "Potential Gap",
+        "match_type": "UNCERTAIN",
+        "similarity_or_match_score": 0.3186,
+        "document_id": "PAT-006",
+        "document_type": "DocumentType.PATENT",
+        "source_chunk_id": "PAT-006-C141",
+        "evidence_excerpt": "The\ndigital documents may have been uploaded to the data\nprocessing system from one or more remote computing\ndevices, such as in one or more files containing the digital\ndocuments. The data processing system can generate the sets of data\nfo",
+        "explanation": "Semantic embedding similarity score: 0.3186 against PAT-006. Classified as UNCERTAIN using configurable prototype similarity threshold (0.55; unvalidated research parameter).",
+        "evidence_quality": "native"
+      },
+      {
+        "feature": "Based processing mechanism",
+        "user_feature": "Based processing mechanism",
+        "presence_in_idea": true,
+        "patent_coverage": "Uncovered",
+        "paper_coverage": "Uncovered",
+        "matched_prior_art": [
+          "PAT-006"
+        ],
+        "gap_status": "Partially Covered",
+        "match_type": "PARTIAL_MATCH",
+        "similarity_or_match_score": 0.4942,
+        "document_id": "PAT-006",
+        "document_type": "DocumentType.PATENT",
+        "source_chunk_id": "PAT-006-C141",
+        "evidence_excerpt": "The\ndigital documents may have been uploaded to the data\nprocessing system from one or more remote computing\ndevices, such as in one or more files containing the digital\ndocuments. The data processing system can generate the sets of data\nfo",
+        "explanation": "Semantic embedding similarity score: 0.4942 against PAT-006. Classified as PARTIAL_MATCH using configurable prototype similarity threshold (0.55; unvalidated research parameter).",
+        "evidence_quality": "native"
+      }
+    ],
+    "common_elements": [
+      "System processing mechanism",
+      "Uses processing mechanism",
+      "Based processing mechanism"
+    ],
+    "underrepresented_elements": [
+      "Drone processing mechanism"
+    ],
+    "cross_domain_insights": "Semantic vector comparison: 3 features show evidence of prior-art alignment (score >= 0.38) across the seed corpus, while 1 features have low or uncertain semantic match within the retrieved local documents."
+  },
+  "novelty": {
+    "novelty_level": "Moderate",
+    "novelty_score": 0.5028,
+    "heuristic_score": 0.5028,
+    "is_heuristic": true,
+    "score_type": "prototype_prior_art_overlap_heuristic",
+    "prior_art_overlap_signal": 0.578,
+    "top_prior_art_similarity": 0.3513,
+    "confidence": 0.8594,
+    "factors": {
+      "semantic_similarity": 0.3513,
+      "technical_overlap": 0.75,
+      "claim_feature_coverage": 0.7,
+      "evidence_strength": 0.6506,
+      "factor_rationales": {
+        "semantic_similarity": "Peak cosine similarity: 0.3513 against [PAT-016, Claims]",
+        "technical_overlap": "3/4 proposed technical features matched or partially matched candidate prior-art.",
+        "claim_feature_coverage": "PAT-001: Non-claim specification disclosure with technical feature match (0.70); PAT-001: Non-claim specification disclosure with technical feature match (0.70); PAT-001: Non-claim specification disclosure with technical feature match (0.70)",
+        "evidence_strength": "Retrieval density: 6 chunks retrieved (mean sim: 0.3011)."
+      }
+    },
+    "formula_explanation": "Prototype Multi-Factor Prior-Art Overlap Heuristic = 1.0 - (POI * Evidence_Scaling), where POI = (0.40 * SemanticSim[0.35] + 0.35 * TechnicalOverlap[0.75] + 0.25 * ClaimEvidence[0.70]). Reference Distribution: single_reference_dominated. (Heuristic parameters, NOT legally validated).",
+    "supporting_evidence": [
+      "[PAT-019, Claims]",
+      "[PAT-016, Claims]",
+      "[PAT-001, Claim 1]",
+      "[PAT-001, Description]",
+      "[PAP-001, Abstract]",
+      "[PAP-003, Abstract]",
+      "[PAP-001, Methodology]"
+    ],
+    "distribution_type": "single_reference_dominated",
+    "limitations": [
+      "Assessment is based exclusively on the local 40-document PBL-3 seed corpus (20 patents, 20 research papers).",
+      "This prototype heuristic estimates textual prior-art overlap; it does NOT determine statutory patent novelty or obviousness.",
+      "Features distributed across multiple references do not constitute legal anticipation under 35 U.S.C. \u00a7 102.",
+      "Weights are configurable research prototype parameters and have not been empirically calibrated against independent ground truth."
+    ],
+    "legal_disclaimer": "Research prototype only. Results represent AI-assisted technical overlap analysis against the retrieved local corpus. They are not a legal patentability opinion, exhaustive prior-art search, or guarantee of novelty."
+  },
+  "gaps": {
+    "well_covered_areas": [
+      "Vector embedding search",
+      "Standard convolutional neural network backbones"
+    ],
+    "partially_covered_areas": [
+      "Automated drone image preprocessing and geo-spatial normalization"
+    ],
+    "underrepresented_features": [
+      "End-to-end multi-agent feedback loop between edge detection and prescription generation",
+      "Drone processing mechanism"
+    ],
+    "unexplored_combinations": [
+      "Hybrid CNN-transformer architectures combined with decentralized drone task scheduling"
+    ],
+    "patent_vs_paper_differences": "Patents emphasize data packaging and sensor transmission hardware claims, whereas research papers focus on empirical benchmark accuracy and loss functions.",
+    "potential_research_directions": [
+      "Cross-dataset domain adaptation for seasonal crop variations",
+      "Lightweight edge-quantized multi-agent inference pipelines"
+    ],
+    "evidence_citations": [
+      "[PAT-016, Description]",
+      "[PAP-003, Abstract]"
+    ],
+    "gap_type": "seed_corpus_gap",
+    "limitation_statement": "Research prototype limitation: Findings reflect underrepresentation within the retrieved local 40-document seed corpus, NOT global patent or scientific absence."
+  },
+  "final_summary": "{\"novelty_level\": \"Moderate\", \"novelty_score\": 0.62, \"confidence\": 0.81, \"factors\": {\"semantic_similarity\": 0.68, \"technical_overlap\": 0.55, \"claim_feature_coverage\": 0.45, \"evidence_strength\": 0.78}, \"formula_explanation\": \"Novelty = 1.0 - (0.40*sim + 0.35*overlap + 0.25*claim_coverage) * confidence_scaling\", \"supporting_evidence\": [\"[PAT-001, Claim 1]\", \"[PAP-002, Abstract]\"], \"potential_risks\": [\"Prior art in PAT-001 closely discloses vector search mechanisms.\"], \"limitations\": [\"Corpus is limited to seed PBL-3 dataset (20 patents, 20 papers).\"], \"legal_disclaimer\": \"PRELIMINARY AI RESEARCH ASSESSMENT ONLY: Not a legal patentability opinion.\"}",
+  "limitations": [
+    "Evaluated strictly against the local 40-document PBL-3 seed corpus (20 patents, 20 research papers).",
+    "This analysis is an AI-assisted technical screening and does NOT constitute a legal patentability opinion.",
+    "Absence of evidence in the local corpus indicates technical underrepresentation and does not establish global absence.",
+    "Full prior art searching requires global multi-jurisdiction patent database queries."
+  ],
+  "confidence": 0.8594,
+  "processing_time_seconds": 0.2743,
+  "timestamp": "2026-09-29T21:21:50.298127"
+}
