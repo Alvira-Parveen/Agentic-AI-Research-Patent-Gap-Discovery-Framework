@@ -99,10 +99,9 @@ pytest tests/ -v
 ├── requirements.txt
 ├── .env.example
 ├── .gitignore
-├── app/
-│   └── streamlit_app.py           # Interactive Streamlit Web Dashboard
+├── Patents/                       # 20 Foundational Patent PDF Documents
+├── Research Papers/               # 20 Foundational Research Paper PDF Documents
 ├── data/
-│   ├── raw/                       # 20 Patents & 20 Research Papers
 │   ├── processed/                 # Chunked & deduplicated JSON datasets
 │   └── evaluation/                # 20 Curated test cases & annotations
 ├── vector_store/                  # FAISS indexes & metadata mapping

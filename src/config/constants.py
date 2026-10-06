@@ -3,8 +3,8 @@ from pathlib import Path
 # Base Paths
 PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
 DATA_DIR = PROJECT_ROOT / "data"
-RAW_PATENTS_DIR = DATA_DIR / "raw" / "patents"
-RAW_PAPERS_DIR = DATA_DIR / "raw" / "papers"
+RAW_PATENTS_DIR = PROJECT_ROOT / "Patents" if (PROJECT_ROOT / "Patents").exists() else DATA_DIR / "raw" / "patents"
+RAW_PAPERS_DIR = PROJECT_ROOT / "Research Papers" if (PROJECT_ROOT / "Research Papers").exists() else DATA_DIR / "raw" / "papers"
 PROCESSED_DIR = DATA_DIR / "processed"
 PROCESSED_PATENTS_DIR = PROCESSED_DIR / "patents"
 PROCESSED_PAPERS_DIR = PROCESSED_DIR / "papers"

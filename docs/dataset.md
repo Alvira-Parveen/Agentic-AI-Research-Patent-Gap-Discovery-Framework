@@ -6,7 +6,7 @@ A fundamental principle of this project is separating the **Knowledge Corpus** f
 
 | Concept | Purpose | Size & Contents | Location |
 |---|---|---|---|
-| **A. Knowledge Corpus** | Searchable reference knowledge base for dense vector retrieval | 20 USPTO Patents + 20 Academic Research Papers | `data/raw/patents/`, `data/raw/papers/` |
+| **A. Knowledge Corpus** | Searchable reference knowledge base for dense vector retrieval | 20 Patents + 20 Academic Research Papers | `Patents/`, `Research Papers/` |
 | **B. Evaluation Dataset** | Verified test queries to empirically benchmark the 3 systems | 20 Curated AI/ML Invention Cases | `data/evaluation/test_cases.json` |
 
 ---
