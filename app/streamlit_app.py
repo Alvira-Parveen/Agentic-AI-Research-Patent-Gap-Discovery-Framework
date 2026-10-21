@@ -1,3 +1,4 @@
+import re
 import streamlit as st
 import pandas as pd
 import json
@@ -57,7 +58,8 @@ mode_label = "🟢 Full Mode (Local)" if FULL_MODE else "🟡 Demo Mode (Cloud)"
 st.sidebar.info(
     f"**PBL-3 Research Prototype**\n\n"
     f"**Status**: {mode_label}\n\n"
-    f"**LLM Provider**: `{settings.llm_provider}`\n"
+    f"**Synthesizer**: `{'Offline Mock (Passage-Anchored RAG)' if settings.llm_provider == 'mock' else f'Live API ({settings.llm_provider})'}`\n"
+    f"*(Live API pending credit quota)*\n\n"
     f"**Embedding**: `{settings.embedding_model}`\n"
     f"**Vector Store**: `{settings.vector_store.upper()}`"
 )
@@ -246,23 +248,117 @@ if FULL_MODE:
                     if report.gaps.patent_vs_paper_differences:
                         st.caption(f"**Patent vs Scientific Literature Divergence:** {report.gaps.patent_vs_paper_differences}")
 
+                # Citation Traceability Explorer
+                st.markdown("### 🔗 Citation & Source Passage Traceability Explorer")
+                st.caption(
+                    "Each factual claim in the synthesized report cites a specific prior-art reference. "
+                    "Use this explorer to verify cited document IDs against their exact retrieved chunks and verbatim text passages."
+                )
+                cited_doc_ids = sorted(list(set(re.findall(r'\[(PAT-\d+|PAP-\d+)\]', report.final_summary))))
+                
+                # Build lookup of all retrieved chunks
+                chunk_by_doc = {}
                 if report.retrieval and report.retrieval.all_results:
-                    st.markdown("### 📜 Retrieved Prior-Art Evidence")
+                    for chk in report.retrieval.all_results:
+                        if chk.document_id not in chunk_by_doc:
+                            chunk_by_doc[chk.document_id] = []
+                        chunk_by_doc[chk.document_id].append(chk)
+
+                if cited_doc_ids:
+                    for doc_id in cited_doc_ids:
+                        chunks = chunk_by_doc.get(doc_id, [])
+                        is_in_pool = len(chunks) > 0
+                        status_badge = "🟢 In Retrieval Pool" if is_in_pool else "🔴 Out of Pool"
+                        
+                        with st.expander(f"Reference [{doc_id}] — {status_badge}", expanded=True):
+                            if is_in_pool:
+                                top_chk = chunks[0]
+                                st.markdown(f"**Document Title**: `{top_chk.document_title}`")
+                                st.markdown(f"**Primary Chunk ID**: `{top_chk.chunk_id}` | **Cosine Similarity**: `{top_chk.similarity_score:.4f}` | **Section**: `{top_chk.section}`")
+                                st.markdown("**Verbatim Passage Snippet:**")
+                                st.info(top_chk.text[:350] + ("..." if len(top_chk.text) > 350 else ""))
+                                with st.expander(f"View Full Chunk Text ({top_chk.chunk_id})"):
+                                    st.text(top_chk.text)
+                            else:
+                                st.warning(f"Document [{doc_id}] was cited by the generator but was not present in the query's top retrieved pool.")
+                else:
+                    st.markdown("_No standard document citations detected in summary._")
+
+                # Multi-Agent Evidence Disclosures (Mode C)
+                if report.patent_analysis or report.research_analysis:
+                    st.markdown("### 🔬 Multi-Agent Upstream Evidence Disclosures")
+                    st.caption("Verbatim passages and technical features extracted by specialized upstream agents prior to report synthesis.")
+                    
+                    ag_tab1, ag_tab2 = st.tabs(["Patent Analysis Agent Output", "Research Analysis Agent Output"])
+                    with ag_tab1:
+                        if report.patent_analysis:
+                            for pa in report.patent_analysis:
+                                with st.container():
+                                    st.markdown(f"**[{pa.patent_id}]** `{pa.patent_title}` (Chunk: `{pa.chunk_id}`)")
+                                    if getattr(pa, "matching_features", None):
+                                        st.markdown(f"- **Disclosed Features:** {', '.join(pa.matching_features)}")
+                                    if getattr(pa, "proposed_solution", None):
+                                        st.markdown(f"- **Disclosed Solution:** {pa.proposed_solution}")
+                                    if getattr(pa, "analysis", None):
+                                        st.markdown(f"- **Technical Analysis:** {pa.analysis}")
+                                    if getattr(pa, "excerpt", None):
+                                        st.caption(f'Verbatim Excerpt: "{pa.excerpt[:250]}..."')
+                                    st.markdown("---")
+                        else:
+                            st.markdown("_No patent agent items available._")
+
+                    with ag_tab2:
+                        if report.research_analysis:
+                            for ra in report.research_analysis:
+                                with st.container():
+                                    st.markdown(f"**[{ra.paper_id}]** `{ra.paper_title}` (Chunk: `{ra.chunk_id}`)")
+                                    if getattr(ra, "overlap_with_idea", None):
+                                        st.markdown(f"- **Research Overlap:** {', '.join(ra.overlap_with_idea)}")
+                                    diffs = getattr(ra, "differences", [])
+                                    if diffs:
+                                        diff_str = ", ".join(diffs) if isinstance(diffs, list) else str(diffs)
+                                        st.markdown(f"- **Divergence:** {diff_str}")
+                                    if getattr(ra, "analysis", None):
+                                        st.markdown(f"- **Methodology & Analysis:** {ra.analysis}")
+                                    if getattr(ra, "excerpt", None):
+                                        st.caption(f'Verbatim Excerpt: "{ra.excerpt[:250]}..."')
+                                    st.markdown("---")
+                        else:
+                            st.markdown("_No research agent items available._")
+
+                if report.retrieval and report.retrieval.all_results:
+                    st.markdown("### 📜 Retrieved Prior-Art Evidence Chunks")
                     p_tab, r_tab = st.tabs(["Patents Retrieved", "Research Papers Retrieved"])
                     with p_tab:
                         for p in report.retrieval.patents:
                             with st.container():
-                                st.markdown(f"**{p.citation}** — `{p.document_title}` (Similarity: **{p.similarity_score:.4f}**)")
+                                st.markdown(f"**{p.citation}** — `{p.document_title}` (Chunk: `{p.chunk_id}`, Sim: **{p.similarity_score:.4f}**)")
                                 st.caption(f"Section: {p.section} | Source: {p.source} | Method: {p.extraction_method} (OCR: {p.is_ocr})")
                                 st.text(p.text[:400] + "...")
                                 st.markdown("---")
                     with r_tab:
                         for r in report.retrieval.papers:
                             with st.container():
-                                st.markdown(f"**{r.citation}** — `{r.document_title}` (Similarity: **{r.similarity_score:.4f}**)")
+                                st.markdown(f"**{r.citation}** — `{r.document_title}` (Chunk: `{r.chunk_id}`, Sim: **{r.similarity_score:.4f}**)")
                                 st.caption(f"Section: {r.section} | Source: {r.source}")
                                 st.text(r.text[:400] + "...")
                                 st.markdown("---")
+
+                # Honest System Limitations & Legal Boundaries
+                st.markdown("### ⚠️ System Limitations & Research Boundaries")
+                limitations_to_show = report.limitations if report.limitations else [
+                    "This analysis is an AI-assisted technical screening and does NOT constitute a legal patentability opinion.",
+                    "Absence of evidence in the local corpus indicates technical underrepresentation and does not establish global absence.",
+                    "Full prior art searching requires global multi-jurisdiction patent database queries."
+                ]
+                for lim in limitations_to_show:
+                    st.markdown(f"- ⚠️ **Boundary**: {lim}")
+                
+                st.caption(
+                    "📌 **Evidence Support Policy**: Claims made by the system that cannot be traced to a corresponding retrieved chunk "
+                    "are not established by the available evidence and must not be treated as verified prior art. "
+                    "All identified gaps are exploratory white-space hypotheses relative to the local 40-document seed corpus."
+                )
 
     # TAB 2: THREE-WAY COMPARISON
     with tabs[1]:
@@ -475,7 +571,7 @@ else:
             col1, col2, col3 = st.columns(3)
             col1.metric("Gap Discovery Rate", "100%", help="Multi-Agent RAG found gaps in all 20 test cases")
             col2.metric("MRR (RAG)", "0.728", help="Correct document usually in top 1-2 results")
-            col3.metric("Citation Grounding (RAG)", "100%", help="Zero hallucination — all claims backed by evidence")
+            col3.metric("Citation Provenance (v1.0)", "99.13%", help="228/230 citations verified in query retrieval pool; passage-anchored synthesis eliminates cross-domain hallucination in controlled tests")
 
             # Per-case details
             st.markdown("### 📋 Per-Case Breakdown")

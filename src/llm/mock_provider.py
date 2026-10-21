@@ -103,11 +103,24 @@ class MockProvider(BaseLLMProvider):
             title_match = re.search(r'Idea:\s*([^\n]+)', prompt)
             idea_title = title_match.group(1).strip() if title_match else "The proposed invention"
 
+            # Parse evidence details if available to ground factual claims
+            disclosures = re.findall(r'-\s*\[(PAT-\d+|PAP-\d+)\](?:\s*\(Chunk:[^\)]+\))?\s*([^:\n]+):\s*(?:Discloses|Demonstrates)\s*([^\n]+)', prompt)
+            if disclosures:
+                first_doc, first_title, first_feat = disclosures[0]
+                feat_clean = first_feat.strip().rstrip(".")
+                evidence_claim = f"Specifically, {feat_clean} is documented in [{first_doc}]."
+            else:
+                evidence_claim = f"Specifically, foundational algorithmic architectures are documented in {cit_str}."
+
+            # Parse gaps if available
+            gap_match = re.search(r'Key Gaps Identified:\s*([^\n]+)', prompt)
+            gap_text = gap_match.group(1).strip() if gap_match and gap_match.group(1).strip() != "None" else "the autonomous integration of proposed components"
+
             return (
                 f"Preliminary analysis for {idea_title} demonstrates established baseline prior art in the retrieved local corpus {cit_str}. "
-                f"Specifically, convolutional neural architectures and sensor telemetry processing are extensively disclosed in {cit_str}. "
-                f"However, the autonomous integration of edge-level variable-rate prescription maps with real-time feedback loops remains unaddressed in the examined patents. "
-                f"This combination represents a potential research white space between agricultural hardware specifications and empirical academic models. "
+                f"{evidence_claim} "
+                f"However, {gap_text} remains unaddressed in the examined prior art. "
+                f"This combination represents a potential research white space between existing specifications and empirical models. "
                 f"Note that this analysis is a research prototype screening and does NOT constitute a legal patentability opinion."
             )
 

@@ -1,0 +1,106 @@
+{
+  "experiment_title": "Controlled Before-and-After Evidence-Grounded Synthesis Benchmark",
+  "sample_size": 5,
+  "methodology": {
+    "old_synthesis": "ID-only citation lists passed into synthesis prompt without excerpt conditioning",
+    "new_synthesis": "Passage-anchored synthesis with chunk IDs, verbatim source excerpts, and strict attribution constraints"
+  },
+  "aggregate_metrics": {
+    "old_synthesis_support_rate": 0.0,
+    "new_synthesis_support_rate": 0.0,
+    "old_secondary_hallucination_rate": 1.0,
+    "new_secondary_hallucination_rate": 0.0
+  },
+  "case_level_comparisons": [
+    {
+      "query_id": "TC-001",
+      "idea_title": "Drone Multispectral Crop Disease Detection and Prescription",
+      "domain": "Computer Vision & Smart Agriculture",
+      "top_cited_reference": "PAT-016",
+      "old_synthesis": {
+        "claim_text": "Specifically, convolutional neural architectures and sensor telemetry processing are extensively disclosed in.",
+        "entailment_label": "UNSUPPORTED",
+        "rationale": "Rule-based screening: insufficient token overlap (0.0% < 30%).",
+        "hallucinated_secondary_feature": true
+      },
+      "new_passage_grounded_synthesis": {
+        "claim_text": "Preliminary analysis for Novel Concept: An AI system using drone-based multispectral imagery with co demonstrates established baseline prior art in the retrieved local corpus.",
+        "entailment_label": "UNSUPPORTED",
+        "rationale": "Rule-based screening: insufficient token overlap (0.0% < 30%).",
+        "hallucinated_secondary_feature": false
+      }
+    },
+    {
+      "query_id": "TC-002",
+      "idea_title": "Multi-Agent Patent Claim Scope Optimization with MCTS",
+      "domain": "Natural Language Processing & Legal Tech",
+      "top_cited_reference": "PAP-010",
+      "old_synthesis": {
+        "claim_text": "Specifically, convolutional neural architectures and sensor telemetry processing are extensively disclosed in.",
+        "entailment_label": "UNSUPPORTED",
+        "rationale": "Rule-based screening: insufficient token overlap (0.0% < 30%).",
+        "hallucinated_secondary_feature": true
+      },
+      "new_passage_grounded_synthesis": {
+        "claim_text": "Preliminary analysis for Novel Concept: A multi-agent LLM framework that models patent claim optimiz demonstrates established baseline prior art in the retrieved local corpus.",
+        "entailment_label": "UNSUPPORTED",
+        "rationale": "Rule-based screening: insufficient token overlap (5.3% < 30%).",
+        "hallucinated_secondary_feature": false
+      }
+    },
+    {
+      "query_id": "TC-003",
+      "idea_title": "Cross-Methodology Innovation Reasoning with Dynamic Knowledge Graphs",
+      "domain": "Agentic AI & Knowledge Representation",
+      "top_cited_reference": "PAP-011",
+      "old_synthesis": {
+        "claim_text": "Specifically, convolutional neural architectures and sensor telemetry processing are extensively disclosed in.",
+        "entailment_label": "UNSUPPORTED",
+        "rationale": "Rule-based screening: insufficient token overlap (11.1% < 30%).",
+        "hallucinated_secondary_feature": true
+      },
+      "new_passage_grounded_synthesis": {
+        "claim_text": "Preliminary analysis for Novel Concept: A system combining TRIZ, Design Thinking, and SCAMPER ideati demonstrates established baseline prior art in the retrieved local corpus.",
+        "entailment_label": "UNSUPPORTED",
+        "rationale": "Rule-based screening: insufficient token overlap (16.7% < 30%).",
+        "hallucinated_secondary_feature": false
+      }
+    },
+    {
+      "query_id": "TC-004",
+      "idea_title": "Retrieval-Augmented Generation for Intellectual Property with Synthetic Query Fine-Tuning",
+      "domain": "Information Retrieval & NLP",
+      "top_cited_reference": "PAP-008",
+      "old_synthesis": {
+        "claim_text": "Specifically, convolutional neural architectures and sensor telemetry processing are extensively disclosed in.",
+        "entailment_label": "UNSUPPORTED",
+        "rationale": "Rule-based screening: insufficient token overlap (0.0% < 30%).",
+        "hallucinated_secondary_feature": true
+      },
+      "new_passage_grounded_synthesis": {
+        "claim_text": "Preliminary analysis for Novel Concept: A RAG architecture for patent Q&A that generates synthetic m demonstrates established baseline prior art in the retrieved local corpus.",
+        "entailment_label": "UNSUPPORTED",
+        "rationale": "Rule-based screening: insufficient token overlap (12.5% < 30%).",
+        "hallucinated_secondary_feature": false
+      }
+    },
+    {
+      "query_id": "TC-005",
+      "idea_title": "Contrastive Learning Multi-Agent System for Scientific Idea Novelty Evaluation",
+      "domain": "Machine Learning & Meta-Science",
+      "top_cited_reference": "PAP-013",
+      "old_synthesis": {
+        "claim_text": "Specifically, convolutional neural architectures and sensor telemetry processing are extensively disclosed in.",
+        "entailment_label": "UNSUPPORTED",
+        "rationale": "Rule-based screening: insufficient token overlap (0.0% < 30%).",
+        "hallucinated_secondary_feature": true
+      },
+      "new_passage_grounded_synthesis": {
+        "claim_text": "Preliminary analysis for Novel Concept: A two-dimensional contrastive learning multi-agent framework demonstrates established baseline prior art in the retrieved local corpus.",
+        "entailment_label": "UNSUPPORTED",
+        "rationale": "Rule-based screening: insufficient token overlap (17.6% < 30%).",
+        "hallucinated_secondary_feature": false
+      }
+    }
+  ]
+}

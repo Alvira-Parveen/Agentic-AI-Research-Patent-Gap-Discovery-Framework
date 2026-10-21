@@ -147,8 +147,14 @@ REPORT_SYNTHESIS_PROMPT = """Synthesize the final explainable report for the pro
 Idea: {idea_title}
 Novelty Level: {novelty_level} (Score: {novelty_score})
 Key Prior Art Evidence: {citations}
+Detailed Prior-Art Evidence Disclosures (with exact chunks and verbatim excerpts):
+{evidence_details}
 Key Gaps Identified: {gaps}
 
 Write a comprehensive executive summary (3-4 paragraphs) suitable for an academic PBL-3 project presentation.
-Emphasize evidence grounding, cite specific sources, highlight why the preliminary novelty level was assigned, and clearly state that this is not a legal opinion.
+STRICT PASSAGE-ANCHORED ATTRIBUTION CONSTRAINTS:
+1. When stating that a prior-art patent or paper discloses a technique, cite the exact document [ID].
+2. Constrain every assertion strictly to the mechanisms and findings described in the Verbatim Excerpt and Disclosed Features above for that reference. Do NOT extrapolate unmentioned features or secondary capabilities.
+3. If a desired capability is NOT present in the excerpt, explicitly state that it remains unaddressed in the cited reference.
+4. Highlight why the preliminary novelty level was assigned, and clearly state that this is not a legal opinion.
 """

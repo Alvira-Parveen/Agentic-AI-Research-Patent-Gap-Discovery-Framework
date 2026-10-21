@@ -44,8 +44,10 @@ class PatentAnalysisAgent:
                     schema_cls=PatentAnalysisItem,
                     system_prompt=SYSTEM_STRICT_EVIDENCE
                 )
-                # Enforce that deterministic similarity score is preserved
+                # Enforce that deterministic similarity score and exact chunk attribution are preserved
                 item.similarity_score = chunk.similarity_score
+                item.chunk_id = chunk.chunk_id
+                item.excerpt = chunk.text[:800]
                 if chunk.citation not in item.evidence:
                     item.evidence.append(chunk.citation)
                 analyses.append(item)
@@ -55,6 +57,8 @@ class PatentAnalysisAgent:
                     patent_id=chunk.document_id,
                     patent_title=chunk.document_title,
                     similarity_score=chunk.similarity_score,
+                    chunk_id=chunk.chunk_id,
+                    excerpt=chunk.text[:800],
                     technical_problem="Prior art discloses methods related to the query domain.",
                     proposed_solution=f"Technical implementation detailed in {chunk.citation}.",
                     matching_features=[f"Matching domain component from {chunk.document_id}"],

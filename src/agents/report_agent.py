@@ -33,11 +33,40 @@ class ReportAgent:
             all_citations.extend(gaps.evidence_citations)
         unique_citations = list(set(all_citations))
 
+        # Build evidence disclosures from structured patent and paper analyses
+        evidence_lines = []
+        for p in pat_analyses:
+            p_id = getattr(p, "patent_id", "PAT")
+            title = getattr(p, "patent_title", "")
+            matches = getattr(p, "matching_features", [])
+            sol = getattr(p, "proposed_solution", "")
+            chunk_id = getattr(p, "chunk_id", "")
+            excerpt = getattr(p, "excerpt", "")
+            details = ", ".join(matches) if matches else sol
+            chunk_tag = f" (Chunk: {chunk_id})" if chunk_id else ""
+            excerpt_tag = f"\n    Verbatim Excerpt: \"{excerpt[:300]}...\"" if excerpt else ""
+            evidence_lines.append(f"- [{p_id}]{chunk_tag} {title}: Discloses {details}{excerpt_tag}")
+
+        for pap in pap_analyses:
+            pap_id = getattr(pap, "paper_id", "PAP")
+            title = getattr(pap, "paper_title", "")
+            overlap = getattr(pap, "overlap_with_idea", [])
+            findings = getattr(pap, "findings", "")
+            chunk_id = getattr(pap, "chunk_id", "")
+            excerpt = getattr(pap, "excerpt", "")
+            details = ", ".join(overlap) if overlap else findings
+            chunk_tag = f" (Chunk: {chunk_id})" if chunk_id else ""
+            excerpt_tag = f"\n    Verbatim Excerpt: \"{excerpt[:300]}...\"" if excerpt else ""
+            evidence_lines.append(f"- [{pap_id}]{chunk_tag} {title}: Demonstrates {details}{excerpt_tag}")
+
+        evidence_str = "\n".join(evidence_lines) if evidence_lines else "None provided."
+
         prompt = REPORT_SYNTHESIS_PROMPT.format(
             idea_title=features.title,
             novelty_level=novelty.novelty_level if novelty else "Unassessed",
             novelty_score=f"{novelty.novelty_score:.2f}" if novelty else "N/A",
             citations=", ".join(unique_citations) or "None",
+            evidence_details=evidence_str,
             gaps="; ".join(gaps.unexplored_combinations[:2]) if gaps else "None"
         )
 

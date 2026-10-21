@@ -44,6 +44,8 @@ class ResearchAnalysisAgent:
                     system_prompt=SYSTEM_STRICT_EVIDENCE
                 )
                 item.similarity_score = chunk.similarity_score
+                item.chunk_id = chunk.chunk_id
+                item.excerpt = chunk.text[:800]
                 if chunk.citation not in item.evidence:
                     item.evidence.append(chunk.citation)
                 analyses.append(item)
@@ -53,6 +55,8 @@ class ResearchAnalysisAgent:
                     paper_id=chunk.document_id,
                     paper_title=chunk.document_title,
                     similarity_score=chunk.similarity_score,
+                    chunk_id=chunk.chunk_id,
+                    excerpt=chunk.text[:800],
                     problem_addressed="Academic research on algorithmic methodologies in the target domain.",
                     methodology=f"Empirical framework presented in {chunk.citation}.",
                     findings="Demonstrated empirical performance improvements on benchmark tasks.",
