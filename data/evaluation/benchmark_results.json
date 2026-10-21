@@ -7,7 +7,7 @@
     "llm_provider": "mock",
     "model_name": "gpt-4o-mini",
     "temperature": 0.2,
-    "execution_timestamp": "2026-10-21T07:34:11.170686+00:00",
+    "execution_timestamp": "2026-10-21T15:49:42.371827+00:00",
     "test_cases_file": "test_cases.json",
     "ground_truth_qualification": "Retrieval metrics are provisional retrieval diagnostics evaluated against developer-curated targets (N=20). They represent software integration diagnostics, NOT validated performance or proof of model superiority. Agreement against human labels reports N/A until independent human annotation is completed."
   },
@@ -24,7 +24,7 @@
     "provisional_agreement_developer": 0.0
   },
   "rag": {
-    "avg_latency_seconds": 0.0394,
+    "avg_latency_seconds": 0.0355,
     "avg_precision@3_provisional": 0.3333,
     "avg_recall@3_provisional": 0.2,
     "avg_f1@3_provisional": 0.25,
@@ -38,7 +38,7 @@
     "avg_gaps_discovered": 0.0
   },
   "multi_agent_rag": {
-    "avg_latency_seconds": 0.1447,
+    "avg_latency_seconds": 0.1377,
     "avg_precision@3_provisional": 0.3333,
     "avg_recall@3_provisional": 0.2,
     "avg_f1@3_provisional": 0.25,
@@ -69,7 +69,7 @@
         "citation_note": "Parametric generation \u2014 no retrieved citations"
       },
       "rag": {
-        "latency_seconds": 0.0395,
+        "latency_seconds": 0.0327,
         "novelty_score": 0.6254,
         "novelty_level": "Moderate",
         "precision@3_provisional": 0.0,
@@ -79,7 +79,7 @@
         "citation_grounding": 1.0
       },
       "multi_agent_rag": {
-        "latency_seconds": 0.1465,
+        "latency_seconds": 0.1371,
         "novelty_score": 0.6785,
         "novelty_level": "Moderate",
         "precision@3_provisional": 0.0,
@@ -106,7 +106,7 @@
         "citation_note": "Parametric generation \u2014 no retrieved citations"
       },
       "rag": {
-        "latency_seconds": 0.0394,
+        "latency_seconds": 0.0384,
         "novelty_score": 0.2205,
         "novelty_level": "Low",
         "precision@3_provisional": 0.6667,
@@ -116,7 +116,7 @@
         "citation_grounding": 1.0
       },
       "multi_agent_rag": {
-        "latency_seconds": 0.1429,
+        "latency_seconds": 0.1384,
         "novelty_score": 0.5048,
         "novelty_level": "Moderate",
         "precision@3_provisional": 0.6667,
