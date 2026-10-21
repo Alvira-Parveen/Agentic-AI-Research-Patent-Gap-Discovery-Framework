@@ -1,0 +1,1254 @@
+{
+  "benchmark_metadata": {
+    "name": "Balanced Human-Annotated Entailment Benchmark",
+    "sample_size": 24,
+    "classes": [
+      "SUPPORTED",
+      "PARTIALLY_SUPPORTED",
+      "UNSUPPORTED",
+      "CONTRADICTED"
+    ],
+    "per_class_sample_size": 6,
+    "design": "Independent human ground truth; balanced 4-way distribution.",
+    "latency_measurement_protocol": {
+      "hardware": "macOS Apple Silicon (Local Single-Process)",
+      "warmup_iterations": 5,
+      "model_loading": "Decoupled from per-claim inference; shared DistilBERT backbone requires ~267 ms cold load for either model",
+      "status": "Provisional diagnostic baseline; not production throughput validation"
+    }
+  },
+  "rule_based_baseline": {
+    "method_name": "Rule-Based Lexical & Negation Screening",
+    "confusion_matrix": {
+      "SUPPORTED": {
+        "SUPPORTED": 4,
+        "PARTIALLY_SUPPORTED": 0,
+        "UNSUPPORTED": 0,
+        "CONTRADICTED": 3
+      },
+      "PARTIALLY_SUPPORTED": {
+        "SUPPORTED": 1,
+        "PARTIALLY_SUPPORTED": 6,
+        "UNSUPPORTED": 0,
+        "CONTRADICTED": 1
+      },
+      "UNSUPPORTED": {
+        "SUPPORTED": 1,
+        "PARTIALLY_SUPPORTED": 0,
+        "UNSUPPORTED": 6,
+        "CONTRADICTED": 0
+      },
+      "CONTRADICTED": {
+        "SUPPORTED": 0,
+        "PARTIALLY_SUPPORTED": 0,
+        "UNSUPPORTED": 0,
+        "CONTRADICTED": 2
+      }
+    },
+    "per_class": {
+      "SUPPORTED": {
+        "tp": 4,
+        "fp": 3,
+        "fn": 2,
+        "precision": 0.5714285714285714,
+        "recall": 0.6666666666666666,
+        "f1": 0.6153846153846153
+      },
+      "PARTIALLY_SUPPORTED": {
+        "tp": 6,
+        "fp": 2,
+        "fn": 0,
+        "precision": 0.75,
+        "recall": 1.0,
+        "f1": 0.8571428571428571
+      },
+      "UNSUPPORTED": {
+        "tp": 6,
+        "fp": 1,
+        "fn": 0,
+        "precision": 0.8571428571428571,
+        "recall": 1.0,
+        "f1": 0.923076923076923
+      },
+      "CONTRADICTED": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 4,
+        "precision": 1.0,
+        "recall": 0.3333333333333333,
+        "f1": 0.5
+      }
+    },
+    "macro_f1": 0.7239,
+    "raw_accuracy_Po": 0.75,
+    "cohens_kappa": 0.6667,
+    "avg_latency_ms": 0.0417,
+    "median_latency_ms": 0.0387,
+    "min_latency_ms": 0.0326,
+    "max_latency_ms": 0.0606,
+    "model_load_ms": 0.0,
+    "itemized_results": [
+      {
+        "id": "SUP-01",
+        "ground_truth": "SUPPORTED",
+        "predicted": "SUPPORTED",
+        "latency_ms": 0.054,
+        "rationale": "Rule-based screening: token overlap 71.4% >= 60% threshold (matched: ['convolutional', 'image', 'networks', 'neural']). Not semantic entailment \u2014 human review required.",
+        "phenomenon": "Direct lexical overlap with core assertion.",
+        "match": true
+      },
+      {
+        "id": "SUP-02",
+        "ground_truth": "SUPPORTED",
+        "predicted": "SUPPORTED",
+        "latency_ms": 0.0606,
+        "rationale": "Rule-based screening: token overlap 81.8% >= 60% threshold (matched: ['analysis', 'basic', 'extract', 'extraction']). Not semantic entailment \u2014 human review required.",
+        "phenomenon": "Paraphrased structural description with synonym variation (drawings -> graphical information).",
+        "match": true
+      },
+      {
+        "id": "SUP-03",
+        "ground_truth": "SUPPORTED",
+        "predicted": "PARTIALLY_SUPPORTED",
+        "latency_ms": 0.0483,
+        "rationale": "Rule-based screening: partial token overlap 30.0% (30\u201360%) (matched: ['efficiency', 'methodologies', 'patent']). Not semantic entailment \u2014 human review required.",
+        "phenomenon": "Synonym substitution (accuracy -> analytical precision, volume -> processing).",
+        "match": false
+      },
+      {
+        "id": "SUP-04",
+        "ground_truth": "SUPPORTED",
+        "predicted": "SUPPORTED",
+        "latency_ms": 0.046,
+        "rationale": "Rule-based screening: token overlap 81.8% >= 60% threshold (matched: ['continuous', 'dense', 'embeddings', 'mathematical']). Not semantic entailment \u2014 human review required.",
+        "phenomenon": "Syntactic passive-to-active restructuring with strong technical alignment.",
+        "match": true
+      },
+      {
+        "id": "SUP-05",
+        "ground_truth": "SUPPORTED",
+        "predicted": "SUPPORTED",
+        "latency_ms": 0.0488,
+        "rationale": "Rule-based screening: token overlap 66.7% >= 60% threshold (matched: ['artificial', 'discovery', 'innovation', 'intelligence']). Not semantic entailment \u2014 human review required.",
+        "phenomenon": "High lexical overlap with morphological inflection (automatic -> automated).",
+        "match": true
+      },
+      {
+        "id": "SUP-06",
+        "ground_truth": "SUPPORTED",
+        "predicted": "UNSUPPORTED",
+        "latency_ms": 0.0405,
+        "rationale": "Rule-based screening: insufficient token overlap (27.3% < 30%).",
+        "phenomenon": "Domain-specific technical alignment with conceptual paraphrase.",
+        "match": false
+      },
+      {
+        "id": "PART-01",
+        "ground_truth": "PARTIALLY_SUPPORTED",
+        "predicted": "PARTIALLY_SUPPORTED",
+        "latency_ms": 0.0382,
+        "rationale": "Rule-based screening: partial token overlap 45.5% (30\u201360%) (matched: ['convolutional', 'extract', 'features', 'foliar']). Not semantic entailment \u2014 human review required.",
+        "phenomenon": "Feature extraction is supported, but autonomous real-time telemetry navigation is unmentioned.",
+        "match": true
+      },
+      {
+        "id": "PART-02",
+        "ground_truth": "PARTIALLY_SUPPORTED",
+        "predicted": "PARTIALLY_SUPPORTED",
+        "latency_ms": 0.0488,
+        "rationale": "Rule-based screening: partial token overlap 50.0% (30\u201360%) (matched: ['carlo', 'claim', 'claims', 'monte']). Not semantic entailment \u2014 human review required.",
+        "phenomenon": "MCTS claim modeling is supported, but the guaranteed zero-rejection claim is an ungrounded exaggeration.",
+        "match": true
+      },
+      {
+        "id": "PART-03",
+        "ground_truth": "PARTIALLY_SUPPORTED",
+        "predicted": "PARTIALLY_SUPPORTED",
+        "latency_ms": 0.0385,
+        "rationale": "Rule-based screening: partial token overlap 30.8% (30\u201360%) (matched: ['agent', 'frameworks', 'multi', 'summaries']). Not semantic entailment \u2014 human review required.",
+        "phenomenon": "Multi-agent summarization is supported; legal USPTO registration is unsupported.",
+        "match": true
+      },
+      {
+        "id": "PART-04",
+        "ground_truth": "PARTIALLY_SUPPORTED",
+        "predicted": "PARTIALLY_SUPPORTED",
+        "latency_ms": 0.0389,
+        "rationale": "Rule-based screening: partial token overlap 33.3% (30\u201360%) (matched: ['graphs', 'inventive', 'knowledge', 'triz']). Not semantic entailment \u2014 human review required.",
+        "phenomenon": "TRIZ knowledge graph is supported; physical agricultural prototyping is unaddressed.",
+        "match": true
+      },
+      {
+        "id": "PART-05",
+        "ground_truth": "PARTIALLY_SUPPORTED",
+        "predicted": "PARTIALLY_SUPPORTED",
+        "latency_ms": 0.0339,
+        "rationale": "Rule-based screening: partial token overlap 33.3% (30\u201360%) (matched: ['convolutional', 'extraction', 'feature', 'networks']). Not semantic entailment \u2014 human review required.",
+        "phenomenon": "Convolutional feature network is supported; specific sub-millisecond edge latency is ungrounded.",
+        "match": true
+      },
+      {
+        "id": "PART-06",
+        "ground_truth": "PARTIALLY_SUPPORTED",
+        "predicted": "PARTIALLY_SUPPORTED",
+        "latency_ms": 0.0347,
+        "rationale": "Rule-based screening: partial token overlap 30.8% (30\u201360%) (matched: ['dense', 'retrieval', 'sparse', 'technical']). Not semantic entailment \u2014 human review required.",
+        "phenomenon": "General retrieval superiority is supported; specific Precision@3 and multilingual corpus scope are unstated.",
+        "match": true
+      },
+      {
+        "id": "UNSUP-01",
+        "ground_truth": "UNSUPPORTED",
+        "predicted": "UNSUPPORTED",
+        "latency_ms": 0.0344,
+        "rationale": "Rule-based screening: insufficient token overlap (0.0% < 30%).",
+        "phenomenon": "Completely unrelated technology (quantum annealing vs. patent drawing analysis).",
+        "match": true
+      },
+      {
+        "id": "UNSUP-02",
+        "ground_truth": "UNSUPPORTED",
+        "predicted": "UNSUPPORTED",
+        "latency_ms": 0.0552,
+        "rationale": "Rule-based screening: insufficient token overlap (0.0% < 30%).",
+        "phenomenon": "Unrelated domain (blockchain IP contracts vs. multi-agent literature synthesis).",
+        "match": true
+      },
+      {
+        "id": "UNSUP-03",
+        "ground_truth": "UNSUPPORTED",
+        "predicted": "UNSUPPORTED",
+        "latency_ms": 0.0429,
+        "rationale": "Rule-based screening: insufficient token overlap (0.0% < 30%).",
+        "phenomenon": "Domain clash (agricultural spraying mechanics vs. BM25 text indexing).",
+        "match": true
+      },
+      {
+        "id": "UNSUP-04",
+        "ground_truth": "UNSUPPORTED",
+        "predicted": "UNSUPPORTED",
+        "latency_ms": 0.0345,
+        "rationale": "Rule-based screening: insufficient token overlap (0.0% < 30%).",
+        "phenomenon": "Hallucinated empirical benchmark metrics unsupported by passage.",
+        "match": true
+      },
+      {
+        "id": "UNSUP-05",
+        "ground_truth": "UNSUPPORTED",
+        "predicted": "UNSUPPORTED",
+        "latency_ms": 0.0346,
+        "rationale": "Rule-based screening: insufficient token overlap (0.0% < 30%).",
+        "phenomenon": "Extrapolated application claim not present in generic generative AI passage.",
+        "match": true
+      },
+      {
+        "id": "UNSUP-06",
+        "ground_truth": "UNSUPPORTED",
+        "predicted": "UNSUPPORTED",
+        "latency_ms": 0.034,
+        "rationale": "Rule-based screening: insufficient token overlap (0.0% < 30%).",
+        "phenomenon": "Specific machine learning claim unmentioned in high-level overview passage.",
+        "match": true
+      },
+      {
+        "id": "CONT-01",
+        "ground_truth": "CONTRADICTED",
+        "predicted": "CONTRADICTED",
+        "latency_ms": 0.047,
+        "rationale": "Polarity conflict detected despite token alignment (75.0%). Note: pattern-based negation check; human review recommended.",
+        "phenomenon": "Direct polarity negation of an explicit passage capability (cannot vs. can be used).",
+        "match": true
+      },
+      {
+        "id": "CONT-02",
+        "ground_truth": "CONTRADICTED",
+        "predicted": "CONTRADICTED",
+        "latency_ms": 0.0336,
+        "rationale": "Polarity conflict detected despite token alignment (63.6%). Note: pattern-based negation check; human review recommended.",
+        "phenomenon": "Direct empirical contradiction of reported retrieval performance (fails vs. significantly outperforms).",
+        "match": true
+      },
+      {
+        "id": "CONT-03",
+        "ground_truth": "CONTRADICTED",
+        "predicted": "SUPPORTED",
+        "latency_ms": 0.0359,
+        "rationale": "Rule-based screening: token overlap 72.7% >= 60% threshold (matched: ['agent', 'annotation', 'claim', 'framework']). Not semantic entailment \u2014 human review required.",
+        "phenomenon": "Operational contradiction (requires exhaustive manual vs. fully autonomous without requiring).",
+        "match": false
+      },
+      {
+        "id": "CONT-04",
+        "ground_truth": "CONTRADICTED",
+        "predicted": "SUPPORTED",
+        "latency_ms": 0.0326,
+        "rationale": "Rule-based screening: token overlap 90.0% >= 60% threshold (matched: ['carlo', 'claim', 'diversity', 'formulations']). Not semantic entailment \u2014 human review required.",
+        "phenomenon": "Directional contradiction of optimization outcome (degrades vs. substantially increases).",
+        "match": false
+      },
+      {
+        "id": "CONT-05",
+        "ground_truth": "CONTRADICTED",
+        "predicted": "SUPPORTED",
+        "latency_ms": 0.0372,
+        "rationale": "Rule-based screening: token overlap 62.5% >= 60% threshold (matched: ['automatic', 'communities', 'discovery', 'innovation']). Not semantic entailment \u2014 human review required.",
+        "phenomenon": "Evaluative contradiction (ineffective vs. promising solution to accelerate).",
+        "match": false
+      },
+      {
+        "id": "CONT-06",
+        "ground_truth": "CONTRADICTED",
+        "predicted": "PARTIALLY_SUPPORTED",
+        "latency_ms": 0.0485,
+        "rationale": "Rule-based screening: partial token overlap 33.3% (30\u201360%) (matched: ['drawing', 'extracting', 'module']). Not semantic entailment \u2014 human review required.",
+        "phenomenon": "Functional negation (incapable vs. configured to extract).",
+        "match": false
+      }
+    ]
+  },
+  "semantic_nli_baseline": {
+    "method_name": "Pretrained Cross-Encoder NLI (DistilBERT-MNLI)",
+    "model_name": "typeform/distilbert-base-uncased-mnli",
+    "parameter_count": 66955779,
+    "label_mapping": "ENTAILMENT->SUPPORTED, CONTRADICTION->CONTRADICTED, NEUTRAL->UNSUPPORTED",
+    "confusion_matrix": {
+      "SUPPORTED": {
+        "SUPPORTED": 4,
+        "PARTIALLY_SUPPORTED": 0,
+        "UNSUPPORTED": 0,
+        "CONTRADICTED": 1
+      },
+      "PARTIALLY_SUPPORTED": {
+        "SUPPORTED": 0,
+        "PARTIALLY_SUPPORTED": 0,
+        "UNSUPPORTED": 0,
+        "CONTRADICTED": 0
+      },
+      "UNSUPPORTED": {
+        "SUPPORTED": 2,
+        "PARTIALLY_SUPPORTED": 6,
+        "UNSUPPORTED": 4,
+        "CONTRADICTED": 0
+      },
+      "CONTRADICTED": {
+        "SUPPORTED": 0,
+        "PARTIALLY_SUPPORTED": 0,
+        "UNSUPPORTED": 2,
+        "CONTRADICTED": 5
+      }
+    },
+    "per_class": {
+      "SUPPORTED": {
+        "tp": 4,
+        "fp": 1,
+        "fn": 2,
+        "precision": 0.8,
+        "recall": 0.6666666666666666,
+        "f1": 0.7272727272727272
+      },
+      "PARTIALLY_SUPPORTED": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 6,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "UNSUPPORTED": {
+        "tp": 4,
+        "fp": 8,
+        "fn": 2,
+        "precision": 0.3333333333333333,
+        "recall": 0.6666666666666666,
+        "f1": 0.4444444444444444
+      },
+      "CONTRADICTED": {
+        "tp": 5,
+        "fp": 2,
+        "fn": 1,
+        "precision": 0.7142857142857143,
+        "recall": 0.8333333333333334,
+        "f1": 0.7692307692307692
+      }
+    },
+    "macro_f1": 0.4852,
+    "raw_accuracy_Po": 0.5417,
+    "cohens_kappa": 0.3889,
+    "avg_latency_ms": 19.93,
+    "median_latency_ms": 19.16,
+    "min_latency_ms": 16.64,
+    "max_latency_ms": 28.18,
+    "model_load_ms": 297.9,
+    "itemized_results": [
+      {
+        "id": "SUP-01",
+        "ground_truth": "SUPPORTED",
+        "predicted": "SUPPORTED",
+        "latency_ms": 28.18,
+        "probs": {
+          "entailment": 0.9967,
+          "neutral": 0.0031,
+          "contradiction": 0.0002
+        },
+        "rationale": "Semantic NLI entailment verified (P(entail)=99.7%).",
+        "phenomenon": "Direct lexical overlap with core assertion.",
+        "match": true
+      },
+      {
+        "id": "SUP-02",
+        "ground_truth": "SUPPORTED",
+        "predicted": "SUPPORTED",
+        "latency_ms": 25.7,
+        "probs": {
+          "entailment": 0.9762,
+          "neutral": 0.0076,
+          "contradiction": 0.0162
+        },
+        "rationale": "Semantic NLI entailment verified (P(entail)=97.6%).",
+        "phenomenon": "Paraphrased structural description with synonym variation (drawings -> graphical information).",
+        "match": true
+      },
+      {
+        "id": "SUP-03",
+        "ground_truth": "SUPPORTED",
+        "predicted": "SUPPORTED",
+        "latency_ms": 20.2,
+        "probs": {
+          "entailment": 0.9761,
+          "neutral": 0.0217,
+          "contradiction": 0.0022
+        },
+        "rationale": "Semantic NLI entailment verified (P(entail)=97.6%).",
+        "phenomenon": "Synonym substitution (accuracy -> analytical precision, volume -> processing).",
+        "match": true
+      },
+      {
+        "id": "SUP-04",
+        "ground_truth": "SUPPORTED",
+        "predicted": "UNSUPPORTED",
+        "latency_ms": 25.73,
+        "probs": {
+          "entailment": 0.0041,
+          "neutral": 0.993,
+          "contradiction": 0.0029
+        },
+        "rationale": "Semantic NLI unsupported: premise does not entail claim (P(neutral)=99.3%).",
+        "phenomenon": "Syntactic passive-to-active restructuring with strong technical alignment.",
+        "match": false
+      },
+      {
+        "id": "SUP-05",
+        "ground_truth": "SUPPORTED",
+        "predicted": "SUPPORTED",
+        "latency_ms": 20.23,
+        "probs": {
+          "entailment": 0.997,
+          "neutral": 0.0027,
+          "contradiction": 0.0003
+        },
+        "rationale": "Semantic NLI entailment verified (P(entail)=99.7%).",
+        "phenomenon": "High lexical overlap with morphological inflection (automatic -> automated).",
+        "match": true
+      },
+      {
+        "id": "SUP-06",
+        "ground_truth": "SUPPORTED",
+        "predicted": "UNSUPPORTED",
+        "latency_ms": 21.1,
+        "probs": {
+          "entailment": 0.0001,
+          "neutral": 0.9988,
+          "contradiction": 0.001
+        },
+        "rationale": "Semantic NLI unsupported: premise does not entail claim (P(neutral)=99.9%).",
+        "phenomenon": "Domain-specific technical alignment with conceptual paraphrase.",
+        "match": false
+      },
+      {
+        "id": "PART-01",
+        "ground_truth": "PARTIALLY_SUPPORTED",
+        "predicted": "UNSUPPORTED",
+        "latency_ms": 19.3,
+        "probs": {
+          "entailment": 0.0017,
+          "neutral": 0.9561,
+          "contradiction": 0.0422
+        },
+        "rationale": "Semantic NLI unsupported: premise does not entail claim (P(neutral)=95.6%).",
+        "phenomenon": "Feature extraction is supported, but autonomous real-time telemetry navigation is unmentioned.",
+        "match": false
+      },
+      {
+        "id": "PART-02",
+        "ground_truth": "PARTIALLY_SUPPORTED",
+        "predicted": "UNSUPPORTED",
+        "latency_ms": 18.79,
+        "probs": {
+          "entailment": 0.0002,
+          "neutral": 0.9895,
+          "contradiction": 0.0102
+        },
+        "rationale": "Semantic NLI unsupported: premise does not entail claim (P(neutral)=99.0%).",
+        "phenomenon": "MCTS claim modeling is supported, but the guaranteed zero-rejection claim is an ungrounded exaggeration.",
+        "match": false
+      },
+      {
+        "id": "PART-03",
+        "ground_truth": "PARTIALLY_SUPPORTED",
+        "predicted": "UNSUPPORTED",
+        "latency_ms": 20.09,
+        "probs": {
+          "entailment": 0.0001,
+          "neutral": 0.9992,
+          "contradiction": 0.0006
+        },
+        "rationale": "Semantic NLI unsupported: premise does not entail claim (P(neutral)=99.9%).",
+        "phenomenon": "Multi-agent summarization is supported; legal USPTO registration is unsupported.",
+        "match": false
+      },
+      {
+        "id": "PART-04",
+        "ground_truth": "PARTIALLY_SUPPORTED",
+        "predicted": "UNSUPPORTED",
+        "latency_ms": 20.25,
+        "probs": {
+          "entailment": 0.0001,
+          "neutral": 0.9994,
+          "contradiction": 0.0004
+        },
+        "rationale": "Semantic NLI unsupported: premise does not entail claim (P(neutral)=99.9%).",
+        "phenomenon": "TRIZ knowledge graph is supported; physical agricultural prototyping is unaddressed.",
+        "match": false
+      },
+      {
+        "id": "PART-05",
+        "ground_truth": "PARTIALLY_SUPPORTED",
+        "predicted": "UNSUPPORTED",
+        "latency_ms": 18.78,
+        "probs": {
+          "entailment": 0.0001,
+          "neutral": 0.9979,
+          "contradiction": 0.002
+        },
+        "rationale": "Semantic NLI unsupported: premise does not entail claim (P(neutral)=99.8%).",
+        "phenomenon": "Convolutional feature network is supported; specific sub-millisecond edge latency is ungrounded.",
+        "match": false
+      },
+      {
+        "id": "PART-06",
+        "ground_truth": "PARTIALLY_SUPPORTED",
+        "predicted": "UNSUPPORTED",
+        "latency_ms": 18.72,
+        "probs": {
+          "entailment": 0.0008,
+          "neutral": 0.9987,
+          "contradiction": 0.0005
+        },
+        "rationale": "Semantic NLI unsupported: premise does not entail claim (P(neutral)=99.9%).",
+        "phenomenon": "General retrieval superiority is supported; specific Precision@3 and multilingual corpus scope are unstated.",
+        "match": false
+      },
+      {
+        "id": "UNSUP-01",
+        "ground_truth": "UNSUPPORTED",
+        "predicted": "CONTRADICTED",
+        "latency_ms": 20.84,
+        "probs": {
+          "entailment": 0.0002,
+          "neutral": 0.0661,
+          "contradiction": 0.9337
+        },
+        "rationale": "Semantic NLI contradiction detected (P(contra)=93.4%, P(entail)=0.0%).",
+        "phenomenon": "Completely unrelated technology (quantum annealing vs. patent drawing analysis).",
+        "match": false
+      },
+      {
+        "id": "UNSUP-02",
+        "ground_truth": "UNSUPPORTED",
+        "predicted": "UNSUPPORTED",
+        "latency_ms": 19.03,
+        "probs": {
+          "entailment": 0.0002,
+          "neutral": 0.9972,
+          "contradiction": 0.0027
+        },
+        "rationale": "Semantic NLI unsupported: premise does not entail claim (P(neutral)=99.7%).",
+        "phenomenon": "Unrelated domain (blockchain IP contracts vs. multi-agent literature synthesis).",
+        "match": true
+      },
+      {
+        "id": "UNSUP-03",
+        "ground_truth": "UNSUPPORTED",
+        "predicted": "CONTRADICTED",
+        "latency_ms": 19.66,
+        "probs": {
+          "entailment": 0.0004,
+          "neutral": 0.4792,
+          "contradiction": 0.5203
+        },
+        "rationale": "Semantic NLI contradiction detected (P(contra)=52.0%, P(entail)=0.0%).",
+        "phenomenon": "Domain clash (agricultural spraying mechanics vs. BM25 text indexing).",
+        "match": false
+      },
+      {
+        "id": "UNSUP-04",
+        "ground_truth": "UNSUPPORTED",
+        "predicted": "UNSUPPORTED",
+        "latency_ms": 18.03,
+        "probs": {
+          "entailment": 0.0001,
+          "neutral": 0.9995,
+          "contradiction": 0.0003
+        },
+        "rationale": "Semantic NLI unsupported: premise does not entail claim (P(neutral)=100.0%).",
+        "phenomenon": "Hallucinated empirical benchmark metrics unsupported by passage.",
+        "match": true
+      },
+      {
+        "id": "UNSUP-05",
+        "ground_truth": "UNSUPPORTED",
+        "predicted": "UNSUPPORTED",
+        "latency_ms": 18.0,
+        "probs": {
+          "entailment": 0.0002,
+          "neutral": 0.9907,
+          "contradiction": 0.009
+        },
+        "rationale": "Semantic NLI unsupported: premise does not entail claim (P(neutral)=99.1%).",
+        "phenomenon": "Extrapolated application claim not present in generic generative AI passage.",
+        "match": true
+      },
+      {
+        "id": "UNSUP-06",
+        "ground_truth": "UNSUPPORTED",
+        "predicted": "UNSUPPORTED",
+        "latency_ms": 17.95,
+        "probs": {
+          "entailment": 0.0003,
+          "neutral": 0.968,
+          "contradiction": 0.0317
+        },
+        "rationale": "Semantic NLI unsupported: premise does not entail claim (P(neutral)=96.8%).",
+        "phenomenon": "Specific machine learning claim unmentioned in high-level overview passage.",
+        "match": true
+      },
+      {
+        "id": "CONT-01",
+        "ground_truth": "CONTRADICTED",
+        "predicted": "CONTRADICTED",
+        "latency_ms": 19.72,
+        "probs": {
+          "entailment": 0.0,
+          "neutral": 0.0003,
+          "contradiction": 0.9996
+        },
+        "rationale": "Semantic NLI contradiction detected (P(contra)=100.0%, P(entail)=0.0%).",
+        "phenomenon": "Direct polarity negation of an explicit passage capability (cannot vs. can be used).",
+        "match": true
+      },
+      {
+        "id": "CONT-02",
+        "ground_truth": "CONTRADICTED",
+        "predicted": "SUPPORTED",
+        "latency_ms": 18.65,
+        "probs": {
+          "entailment": 0.9974,
+          "neutral": 0.0016,
+          "contradiction": 0.001
+        },
+        "rationale": "Semantic NLI entailment verified (P(entail)=99.7%).",
+        "phenomenon": "Direct empirical contradiction of reported retrieval performance (fails vs. significantly outperforms).",
+        "match": false
+      },
+      {
+        "id": "CONT-03",
+        "ground_truth": "CONTRADICTED",
+        "predicted": "CONTRADICTED",
+        "latency_ms": 17.96,
+        "probs": {
+          "entailment": 0.0001,
+          "neutral": 0.0002,
+          "contradiction": 0.9998
+        },
+        "rationale": "Semantic NLI contradiction detected (P(contra)=100.0%, P(entail)=0.0%).",
+        "phenomenon": "Operational contradiction (requires exhaustive manual vs. fully autonomous without requiring).",
+        "match": true
+      },
+      {
+        "id": "CONT-04",
+        "ground_truth": "CONTRADICTED",
+        "predicted": "CONTRADICTED",
+        "latency_ms": 17.14,
+        "probs": {
+          "entailment": 0.0001,
+          "neutral": 0.0002,
+          "contradiction": 0.9997
+        },
+        "rationale": "Semantic NLI contradiction detected (P(contra)=100.0%, P(entail)=0.0%).",
+        "phenomenon": "Directional contradiction of optimization outcome (degrades vs. substantially increases).",
+        "match": true
+      },
+      {
+        "id": "CONT-05",
+        "ground_truth": "CONTRADICTED",
+        "predicted": "CONTRADICTED",
+        "latency_ms": 16.64,
+        "probs": {
+          "entailment": 0.0,
+          "neutral": 0.0003,
+          "contradiction": 0.9996
+        },
+        "rationale": "Semantic NLI contradiction detected (P(contra)=100.0%, P(entail)=0.0%).",
+        "phenomenon": "Evaluative contradiction (ineffective vs. promising solution to accelerate).",
+        "match": true
+      },
+      {
+        "id": "CONT-06",
+        "ground_truth": "CONTRADICTED",
+        "predicted": "CONTRADICTED",
+        "latency_ms": 17.59,
+        "probs": {
+          "entailment": 0.0,
+          "neutral": 0.0002,
+          "contradiction": 0.9998
+        },
+        "rationale": "Semantic NLI contradiction detected (P(contra)=100.0%, P(entail)=0.0%).",
+        "phenomenon": "Functional negation (incapable vs. configured to extract).",
+        "match": true
+      }
+    ]
+  },
+  "hybrid_nli_lexical_fallback": {
+    "method_name": "Two-Stage Hybrid (Semantic NLI + Lexical Fallback)",
+    "model_name": "typeform/distilbert-base-uncased-mnli with lexical overlap fallback",
+    "parameter_count": 66955779,
+    "architecture_note": "Stage 1 evaluates semantic NLI for contradiction (P>=0.35) and strong entailment (P>=0.50). Stage 2 uses rule-based token overlap (>=30%) to disambiguate neutral NLI into PARTIALLY_SUPPORTED vs UNSUPPORTED. Does NOT use atomic decomposition on the 24 single-assertion benchmark items.",
+    "heuristic_qualification": "Partial support assignment is an explicitly defined heuristic decision rule, not a formal semantic guarantee.",
+    "confusion_matrix": {
+      "SUPPORTED": {
+        "SUPPORTED": 4,
+        "PARTIALLY_SUPPORTED": 0,
+        "UNSUPPORTED": 0,
+        "CONTRADICTED": 1
+      },
+      "PARTIALLY_SUPPORTED": {
+        "SUPPORTED": 1,
+        "PARTIALLY_SUPPORTED": 6,
+        "UNSUPPORTED": 0,
+        "CONTRADICTED": 0
+      },
+      "UNSUPPORTED": {
+        "SUPPORTED": 1,
+        "PARTIALLY_SUPPORTED": 0,
+        "UNSUPPORTED": 4,
+        "CONTRADICTED": 0
+      },
+      "CONTRADICTED": {
+        "SUPPORTED": 0,
+        "PARTIALLY_SUPPORTED": 0,
+        "UNSUPPORTED": 2,
+        "CONTRADICTED": 5
+      }
+    },
+    "per_class": {
+      "SUPPORTED": {
+        "tp": 4,
+        "fp": 1,
+        "fn": 2,
+        "precision": 0.8,
+        "recall": 0.6666666666666666,
+        "f1": 0.7272727272727272
+      },
+      "PARTIALLY_SUPPORTED": {
+        "tp": 6,
+        "fp": 1,
+        "fn": 0,
+        "precision": 0.8571428571428571,
+        "recall": 1.0,
+        "f1": 0.923076923076923
+      },
+      "UNSUPPORTED": {
+        "tp": 4,
+        "fp": 1,
+        "fn": 2,
+        "precision": 0.8,
+        "recall": 0.6666666666666666,
+        "f1": 0.7272727272727272
+      },
+      "CONTRADICTED": {
+        "tp": 5,
+        "fp": 2,
+        "fn": 1,
+        "precision": 0.7142857142857143,
+        "recall": 0.8333333333333334,
+        "f1": 0.7692307692307692
+      }
+    },
+    "macro_f1": 0.7867,
+    "raw_accuracy_Po": 0.7917,
+    "cohens_kappa": 0.7222,
+    "avg_latency_ms": 17.14,
+    "median_latency_ms": 16.86,
+    "min_latency_ms": 15.71,
+    "max_latency_ms": 20.02,
+    "model_load_ms": 25.6,
+    "itemized_results": [
+      {
+        "id": "SUP-01",
+        "ground_truth": "SUPPORTED",
+        "predicted": "SUPPORTED",
+        "latency_ms": 19.89,
+        "meta": {
+          "nli_probs": {
+            "entailment": 0.9967,
+            "neutral": 0.0031,
+            "contradiction": 0.0002
+          },
+          "rule_based_label": "SUPPORTED",
+          "rule_based_rationale": "Rule-based screening: token overlap 71.4% >= 60% threshold (matched: ['convolutional', 'image', 'networks', 'neural']). Not semantic entailment \u2014 human review required.",
+          "sub_claims_count": 1
+        },
+        "rationale": "Hybrid Stage 1: Semantic NLI confirmed entailment (P(entail)=99.7%).",
+        "phenomenon": "Direct lexical overlap with core assertion.",
+        "match": true
+      },
+      {
+        "id": "SUP-02",
+        "ground_truth": "SUPPORTED",
+        "predicted": "SUPPORTED",
+        "latency_ms": 19.77,
+        "meta": {
+          "nli_probs": {
+            "entailment": 0.9762,
+            "neutral": 0.0076,
+            "contradiction": 0.0162
+          },
+          "rule_based_label": "SUPPORTED",
+          "rule_based_rationale": "Rule-based screening: token overlap 81.8% >= 60% threshold (matched: ['analysis', 'basic', 'extract', 'extraction']). Not semantic entailment \u2014 human review required.",
+          "sub_claims_count": 1
+        },
+        "rationale": "Hybrid Stage 1: Semantic NLI confirmed entailment (P(entail)=97.6%).",
+        "phenomenon": "Paraphrased structural description with synonym variation (drawings -> graphical information).",
+        "match": true
+      },
+      {
+        "id": "SUP-03",
+        "ground_truth": "SUPPORTED",
+        "predicted": "SUPPORTED",
+        "latency_ms": 16.81,
+        "meta": {
+          "nli_probs": {
+            "entailment": 0.9761,
+            "neutral": 0.0217,
+            "contradiction": 0.0022
+          },
+          "rule_based_label": "PARTIALLY_SUPPORTED",
+          "rule_based_rationale": "Rule-based screening: partial token overlap 30.0% (30\u201360%) (matched: ['efficiency', 'methodologies', 'patent']). Not semantic entailment \u2014 human review required.",
+          "sub_claims_count": 1
+        },
+        "rationale": "Hybrid Stage 1: Semantic NLI confirmed entailment (P(entail)=97.6%).",
+        "phenomenon": "Synonym substitution (accuracy -> analytical precision, volume -> processing).",
+        "match": true
+      },
+      {
+        "id": "SUP-04",
+        "ground_truth": "SUPPORTED",
+        "predicted": "PARTIALLY_SUPPORTED",
+        "latency_ms": 17.24,
+        "meta": {
+          "nli_probs": {
+            "entailment": 0.0041,
+            "neutral": 0.993,
+            "contradiction": 0.0029
+          },
+          "rule_based_label": "SUPPORTED",
+          "rule_based_rationale": "Rule-based screening: token overlap 81.8% >= 60% threshold (matched: ['continuous', 'dense', 'embeddings', 'mathematical']). Not semantic entailment \u2014 human review required.",
+          "sub_claims_count": 1
+        },
+        "rationale": "Hybrid Stage 2 Fallback: NLI is neutral (P(neutral)=99.3%) while lexical screening detected partial topical overlap (SUPPORTED). Note: Assigned via heuristic decision rule, not formal semantic guarantee.",
+        "phenomenon": "Syntactic passive-to-active restructuring with strong technical alignment.",
+        "match": false
+      },
+      {
+        "id": "SUP-05",
+        "ground_truth": "SUPPORTED",
+        "predicted": "SUPPORTED",
+        "latency_ms": 17.3,
+        "meta": {
+          "nli_probs": {
+            "entailment": 0.997,
+            "neutral": 0.0027,
+            "contradiction": 0.0003
+          },
+          "rule_based_label": "SUPPORTED",
+          "rule_based_rationale": "Rule-based screening: token overlap 66.7% >= 60% threshold (matched: ['artificial', 'discovery', 'innovation', 'intelligence']). Not semantic entailment \u2014 human review required.",
+          "sub_claims_count": 1
+        },
+        "rationale": "Hybrid Stage 1: Semantic NLI confirmed entailment (P(entail)=99.7%).",
+        "phenomenon": "High lexical overlap with morphological inflection (automatic -> automated).",
+        "match": true
+      },
+      {
+        "id": "SUP-06",
+        "ground_truth": "SUPPORTED",
+        "predicted": "UNSUPPORTED",
+        "latency_ms": 17.16,
+        "meta": {
+          "nli_probs": {
+            "entailment": 0.0001,
+            "neutral": 0.9988,
+            "contradiction": 0.001
+          },
+          "rule_based_label": "UNSUPPORTED",
+          "rule_based_rationale": "Rule-based screening: insufficient token overlap (27.3% < 30%).",
+          "sub_claims_count": 1
+        },
+        "rationale": "Hybrid Stage 2 Fallback: NLI is neutral (P(neutral)=99.9%) and lexical screening confirmed insufficient token overlap (< 30%).",
+        "phenomenon": "Domain-specific technical alignment with conceptual paraphrase.",
+        "match": false
+      },
+      {
+        "id": "PART-01",
+        "ground_truth": "PARTIALLY_SUPPORTED",
+        "predicted": "PARTIALLY_SUPPORTED",
+        "latency_ms": 16.94,
+        "meta": {
+          "nli_probs": {
+            "entailment": 0.0017,
+            "neutral": 0.9561,
+            "contradiction": 0.0422
+          },
+          "rule_based_label": "PARTIALLY_SUPPORTED",
+          "rule_based_rationale": "Rule-based screening: partial token overlap 45.5% (30\u201360%) (matched: ['convolutional', 'extract', 'features', 'foliar']). Not semantic entailment \u2014 human review required.",
+          "sub_claims_count": 1
+        },
+        "rationale": "Hybrid Stage 2 Fallback: NLI is neutral (P(neutral)=95.6%) while lexical screening detected partial topical overlap (PARTIALLY_SUPPORTED). Note: Assigned via heuristic decision rule, not formal semantic guarantee.",
+        "phenomenon": "Feature extraction is supported, but autonomous real-time telemetry navigation is unmentioned.",
+        "match": true
+      },
+      {
+        "id": "PART-02",
+        "ground_truth": "PARTIALLY_SUPPORTED",
+        "predicted": "PARTIALLY_SUPPORTED",
+        "latency_ms": 16.91,
+        "meta": {
+          "nli_probs": {
+            "entailment": 0.0002,
+            "neutral": 0.9895,
+            "contradiction": 0.0102
+          },
+          "rule_based_label": "PARTIALLY_SUPPORTED",
+          "rule_based_rationale": "Rule-based screening: partial token overlap 50.0% (30\u201360%) (matched: ['carlo', 'claim', 'claims', 'monte']). Not semantic entailment \u2014 human review required.",
+          "sub_claims_count": 1
+        },
+        "rationale": "Hybrid Stage 2 Fallback: NLI is neutral (P(neutral)=99.0%) while lexical screening detected partial topical overlap (PARTIALLY_SUPPORTED). Note: Assigned via heuristic decision rule, not formal semantic guarantee.",
+        "phenomenon": "MCTS claim modeling is supported, but the guaranteed zero-rejection claim is an ungrounded exaggeration.",
+        "match": true
+      },
+      {
+        "id": "PART-03",
+        "ground_truth": "PARTIALLY_SUPPORTED",
+        "predicted": "PARTIALLY_SUPPORTED",
+        "latency_ms": 17.3,
+        "meta": {
+          "nli_probs": {
+            "entailment": 0.0001,
+            "neutral": 0.9992,
+            "contradiction": 0.0006
+          },
+          "rule_based_label": "PARTIALLY_SUPPORTED",
+          "rule_based_rationale": "Rule-based screening: partial token overlap 30.8% (30\u201360%) (matched: ['agent', 'frameworks', 'multi', 'summaries']). Not semantic entailment \u2014 human review required.",
+          "sub_claims_count": 1
+        },
+        "rationale": "Hybrid Stage 2 Fallback: NLI is neutral (P(neutral)=99.9%) while lexical screening detected partial topical overlap (PARTIALLY_SUPPORTED). Note: Assigned via heuristic decision rule, not formal semantic guarantee.",
+        "phenomenon": "Multi-agent summarization is supported; legal USPTO registration is unsupported.",
+        "match": true
+      },
+      {
+        "id": "PART-04",
+        "ground_truth": "PARTIALLY_SUPPORTED",
+        "predicted": "PARTIALLY_SUPPORTED",
+        "latency_ms": 17.2,
+        "meta": {
+          "nli_probs": {
+            "entailment": 0.0001,
+            "neutral": 0.9994,
+            "contradiction": 0.0004
+          },
+          "rule_based_label": "PARTIALLY_SUPPORTED",
+          "rule_based_rationale": "Rule-based screening: partial token overlap 33.3% (30\u201360%) (matched: ['graphs', 'inventive', 'knowledge', 'triz']). Not semantic entailment \u2014 human review required.",
+          "sub_claims_count": 1
+        },
+        "rationale": "Hybrid Stage 2 Fallback: NLI is neutral (P(neutral)=99.9%) while lexical screening detected partial topical overlap (PARTIALLY_SUPPORTED). Note: Assigned via heuristic decision rule, not formal semantic guarantee.",
+        "phenomenon": "TRIZ knowledge graph is supported; physical agricultural prototyping is unaddressed.",
+        "match": true
+      },
+      {
+        "id": "PART-05",
+        "ground_truth": "PARTIALLY_SUPPORTED",
+        "predicted": "PARTIALLY_SUPPORTED",
+        "latency_ms": 16.82,
+        "meta": {
+          "nli_probs": {
+            "entailment": 0.0001,
+            "neutral": 0.9979,
+            "contradiction": 0.002
+          },
+          "rule_based_label": "PARTIALLY_SUPPORTED",
+          "rule_based_rationale": "Rule-based screening: partial token overlap 33.3% (30\u201360%) (matched: ['convolutional', 'extraction', 'feature', 'networks']). Not semantic entailment \u2014 human review required.",
+          "sub_claims_count": 1
+        },
+        "rationale": "Hybrid Stage 2 Fallback: NLI is neutral (P(neutral)=99.8%) while lexical screening detected partial topical overlap (PARTIALLY_SUPPORTED). Note: Assigned via heuristic decision rule, not formal semantic guarantee.",
+        "phenomenon": "Convolutional feature network is supported; specific sub-millisecond edge latency is ungrounded.",
+        "match": true
+      },
+      {
+        "id": "PART-06",
+        "ground_truth": "PARTIALLY_SUPPORTED",
+        "predicted": "PARTIALLY_SUPPORTED",
+        "latency_ms": 16.8,
+        "meta": {
+          "nli_probs": {
+            "entailment": 0.0008,
+            "neutral": 0.9987,
+            "contradiction": 0.0005
+          },
+          "rule_based_label": "PARTIALLY_SUPPORTED",
+          "rule_based_rationale": "Rule-based screening: partial token overlap 30.8% (30\u201360%) (matched: ['dense', 'retrieval', 'sparse', 'technical']). Not semantic entailment \u2014 human review required.",
+          "sub_claims_count": 1
+        },
+        "rationale": "Hybrid Stage 2 Fallback: NLI is neutral (P(neutral)=99.9%) while lexical screening detected partial topical overlap (PARTIALLY_SUPPORTED). Note: Assigned via heuristic decision rule, not formal semantic guarantee.",
+        "phenomenon": "General retrieval superiority is supported; specific Precision@3 and multilingual corpus scope are unstated.",
+        "match": true
+      },
+      {
+        "id": "UNSUP-01",
+        "ground_truth": "UNSUPPORTED",
+        "predicted": "CONTRADICTED",
+        "latency_ms": 16.71,
+        "meta": {
+          "nli_probs": {
+            "entailment": 0.0002,
+            "neutral": 0.0661,
+            "contradiction": 0.9337
+          },
+          "rule_based_label": "UNSUPPORTED",
+          "rule_based_rationale": "Rule-based screening: insufficient token overlap (0.0% < 30%).",
+          "sub_claims_count": 1
+        },
+        "rationale": "Hybrid Stage 1: Semantic NLI detected directional contradiction (P(contra)=93.4%, P(entail)=0.0%).",
+        "phenomenon": "Completely unrelated technology (quantum annealing vs. patent drawing analysis).",
+        "match": false
+      },
+      {
+        "id": "UNSUP-02",
+        "ground_truth": "UNSUPPORTED",
+        "predicted": "UNSUPPORTED",
+        "latency_ms": 15.92,
+        "meta": {
+          "nli_probs": {
+            "entailment": 0.0002,
+            "neutral": 0.9972,
+            "contradiction": 0.0027
+          },
+          "rule_based_label": "UNSUPPORTED",
+          "rule_based_rationale": "Rule-based screening: insufficient token overlap (0.0% < 30%).",
+          "sub_claims_count": 1
+        },
+        "rationale": "Hybrid Stage 2 Fallback: NLI is neutral (P(neutral)=99.7%) and lexical screening confirmed insufficient token overlap (< 30%).",
+        "phenomenon": "Unrelated domain (blockchain IP contracts vs. multi-agent literature synthesis).",
+        "match": true
+      },
+      {
+        "id": "UNSUP-03",
+        "ground_truth": "UNSUPPORTED",
+        "predicted": "CONTRADICTED",
+        "latency_ms": 16.69,
+        "meta": {
+          "nli_probs": {
+            "entailment": 0.0004,
+            "neutral": 0.4792,
+            "contradiction": 0.5203
+          },
+          "rule_based_label": "UNSUPPORTED",
+          "rule_based_rationale": "Rule-based screening: insufficient token overlap (0.0% < 30%).",
+          "sub_claims_count": 1
+        },
+        "rationale": "Hybrid Stage 1: Semantic NLI detected directional contradiction (P(contra)=52.0%, P(entail)=0.0%).",
+        "phenomenon": "Domain clash (agricultural spraying mechanics vs. BM25 text indexing).",
+        "match": false
+      },
+      {
+        "id": "UNSUP-04",
+        "ground_truth": "UNSUPPORTED",
+        "predicted": "UNSUPPORTED",
+        "latency_ms": 17.11,
+        "meta": {
+          "nli_probs": {
+            "entailment": 0.0001,
+            "neutral": 0.9995,
+            "contradiction": 0.0003
+          },
+          "rule_based_label": "UNSUPPORTED",
+          "rule_based_rationale": "Rule-based screening: insufficient token overlap (0.0% < 30%).",
+          "sub_claims_count": 1
+        },
+        "rationale": "Hybrid Stage 2 Fallback: NLI is neutral (P(neutral)=100.0%) and lexical screening confirmed insufficient token overlap (< 30%).",
+        "phenomenon": "Hallucinated empirical benchmark metrics unsupported by passage.",
+        "match": true
+      },
+      {
+        "id": "UNSUP-05",
+        "ground_truth": "UNSUPPORTED",
+        "predicted": "UNSUPPORTED",
+        "latency_ms": 17.08,
+        "meta": {
+          "nli_probs": {
+            "entailment": 0.0002,
+            "neutral": 0.9907,
+            "contradiction": 0.009
+          },
+          "rule_based_label": "UNSUPPORTED",
+          "rule_based_rationale": "Rule-based screening: insufficient token overlap (0.0% < 30%).",
+          "sub_claims_count": 1
+        },
+        "rationale": "Hybrid Stage 2 Fallback: NLI is neutral (P(neutral)=99.1%) and lexical screening confirmed insufficient token overlap (< 30%).",
+        "phenomenon": "Extrapolated application claim not present in generic generative AI passage.",
+        "match": true
+      },
+      {
+        "id": "UNSUP-06",
+        "ground_truth": "UNSUPPORTED",
+        "predicted": "UNSUPPORTED",
+        "latency_ms": 16.61,
+        "meta": {
+          "nli_probs": {
+            "entailment": 0.0003,
+            "neutral": 0.968,
+            "contradiction": 0.0317
+          },
+          "rule_based_label": "UNSUPPORTED",
+          "rule_based_rationale": "Rule-based screening: insufficient token overlap (0.0% < 30%).",
+          "sub_claims_count": 1
+        },
+        "rationale": "Hybrid Stage 2 Fallback: NLI is neutral (P(neutral)=96.8%) and lexical screening confirmed insufficient token overlap (< 30%).",
+        "phenomenon": "Specific machine learning claim unmentioned in high-level overview passage.",
+        "match": true
+      },
+      {
+        "id": "CONT-01",
+        "ground_truth": "CONTRADICTED",
+        "predicted": "CONTRADICTED",
+        "latency_ms": 20.02,
+        "meta": {
+          "nli_probs": {
+            "entailment": 0.0,
+            "neutral": 0.0003,
+            "contradiction": 0.9996
+          },
+          "rule_based_label": "CONTRADICTED",
+          "rule_based_rationale": "Polarity conflict detected despite token alignment (75.0%). Note: pattern-based negation check; human review recommended.",
+          "sub_claims_count": 1
+        },
+        "rationale": "Hybrid Stage 1: Semantic NLI detected directional contradiction (P(contra)=100.0%, P(entail)=0.0%).",
+        "phenomenon": "Direct polarity negation of an explicit passage capability (cannot vs. can be used).",
+        "match": true
+      },
+      {
+        "id": "CONT-02",
+        "ground_truth": "CONTRADICTED",
+        "predicted": "SUPPORTED",
+        "latency_ms": 15.91,
+        "meta": {
+          "nli_probs": {
+            "entailment": 0.9974,
+            "neutral": 0.0016,
+            "contradiction": 0.001
+          },
+          "rule_based_label": "CONTRADICTED",
+          "rule_based_rationale": "Polarity conflict detected despite token alignment (63.6%). Note: pattern-based negation check; human review recommended.",
+          "sub_claims_count": 1
+        },
+        "rationale": "Hybrid Stage 1: Semantic NLI confirmed entailment (P(entail)=99.7%).",
+        "phenomenon": "Direct empirical contradiction of reported retrieval performance (fails vs. significantly outperforms).",
+        "match": false
+      },
+      {
+        "id": "CONT-03",
+        "ground_truth": "CONTRADICTED",
+        "predicted": "CONTRADICTED",
+        "latency_ms": 16.74,
+        "meta": {
+          "nli_probs": {
+            "entailment": 0.0001,
+            "neutral": 0.0002,
+            "contradiction": 0.9998
+          },
+          "rule_based_label": "SUPPORTED",
+          "rule_based_rationale": "Rule-based screening: token overlap 72.7% >= 60% threshold (matched: ['agent', 'annotation', 'claim', 'framework']). Not semantic entailment \u2014 human review required.",
+          "sub_claims_count": 1
+        },
+        "rationale": "Hybrid Stage 1: Semantic NLI detected directional contradiction (P(contra)=100.0%, P(entail)=0.0%).",
+        "phenomenon": "Operational contradiction (requires exhaustive manual vs. fully autonomous without requiring).",
+        "match": true
+      },
+      {
+        "id": "CONT-04",
+        "ground_truth": "CONTRADICTED",
+        "predicted": "CONTRADICTED",
+        "latency_ms": 15.71,
+        "meta": {
+          "nli_probs": {
+            "entailment": 0.0001,
+            "neutral": 0.0002,
+            "contradiction": 0.9997
+          },
+          "rule_based_label": "SUPPORTED",
+          "rule_based_rationale": "Rule-based screening: token overlap 90.0% >= 60% threshold (matched: ['carlo', 'claim', 'diversity', 'formulations']). Not semantic entailment \u2014 human review required.",
+          "sub_claims_count": 1
+        },
+        "rationale": "Hybrid Stage 1: Semantic NLI detected directional contradiction (P(contra)=100.0%, P(entail)=0.0%).",
+        "phenomenon": "Directional contradiction of optimization outcome (degrades vs. substantially increases).",
+        "match": true
+      },
+      {
+        "id": "CONT-05",
+        "ground_truth": "CONTRADICTED",
+        "predicted": "CONTRADICTED",
+        "latency_ms": 15.94,
+        "meta": {
+          "nli_probs": {
+            "entailment": 0.0,
+            "neutral": 0.0003,
+            "contradiction": 0.9996
+          },
+          "rule_based_label": "SUPPORTED",
+          "rule_based_rationale": "Rule-based screening: token overlap 62.5% >= 60% threshold (matched: ['automatic', 'communities', 'discovery', 'innovation']). Not semantic entailment \u2014 human review required.",
+          "sub_claims_count": 1
+        },
+        "rationale": "Hybrid Stage 1: Semantic NLI detected directional contradiction (P(contra)=100.0%, P(entail)=0.0%).",
+        "phenomenon": "Evaluative contradiction (ineffective vs. promising solution to accelerate).",
+        "match": true
+      },
+      {
+        "id": "CONT-06",
+        "ground_truth": "CONTRADICTED",
+        "predicted": "CONTRADICTED",
+        "latency_ms": 16.76,
+        "meta": {
+          "nli_probs": {
+            "entailment": 0.0,
+            "neutral": 0.0002,
+            "contradiction": 0.9998
+          },
+          "rule_based_label": "PARTIALLY_SUPPORTED",
+          "rule_based_rationale": "Rule-based screening: partial token overlap 33.3% (30\u201360%) (matched: ['drawing', 'extracting', 'module']). Not semantic entailment \u2014 human review required.",
+          "sub_claims_count": 1
+        },
+        "rationale": "Hybrid Stage 1: Semantic NLI detected directional contradiction (P(contra)=100.0%, P(entail)=0.0%).",
+        "phenomenon": "Functional negation (incapable vs. configured to extract).",
+        "match": true
+      }
+    ]
+  }
+}

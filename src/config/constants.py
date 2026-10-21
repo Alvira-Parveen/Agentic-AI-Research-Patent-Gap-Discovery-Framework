@@ -25,8 +25,8 @@ DEFAULT_CHUNK_SIZE = 600
 DEFAULT_CHUNK_OVERLAP = 80
 
 # Default Retrieval Counts
-DEFAULT_TOP_K_PATENTS = 3
-DEFAULT_TOP_K_PAPERS = 3
+DEFAULT_TOP_K_PATENTS = 5
+DEFAULT_TOP_K_PAPERS = 5
 
 # Novelty Assessment Configurable Formula Weights (Prototype Heuristic)
 DEFAULT_WEIGHT_SEMANTIC = 0.40

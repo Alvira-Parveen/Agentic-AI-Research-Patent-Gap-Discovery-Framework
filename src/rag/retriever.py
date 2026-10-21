@@ -20,17 +20,22 @@ class RAGRetriever:
         self,
         query: str,
         top_k_patents: Optional[int] = None,
-        top_k_papers: Optional[int] = None
+        top_k_papers: Optional[int] = None,
+        mode: str = "hybrid"
     ) -> RetrievalResult:
         t0 = time.perf_counter()
         k_pat = top_k_patents or settings.top_k_patents
         k_pap = top_k_papers or settings.top_k_papers
 
-        patents = self.patent_retriever.retrieve(query, top_k=k_pat)
-        papers = self.paper_retriever.retrieve(query, top_k=k_pap)
+        patents = self.patent_retriever.retrieve(query, top_k=k_pat, mode=mode)
+        papers = self.paper_retriever.retrieve(query, top_k=k_pap, mode=mode)
 
         all_chunks: List[RetrievedChunk] = patents + papers
-        all_chunks = sorted(all_chunks, key=lambda x: x.similarity_score, reverse=True)
+        all_chunks = sorted(
+            all_chunks,
+            key=lambda x: (x.metadata.get("rrf_score", 0.0) if x.metadata else 0.0, x.similarity_score),
+            reverse=True
+        )
 
         elapsed = round(time.perf_counter() - t0, 4)
         summary = (

@@ -1,0 +1,285 @@
+{
+  "benchmark_metadata": {
+    "name": "Balanced Human-Annotated Entailment Benchmark",
+    "sample_size": 24,
+    "classes": [
+      "SUPPORTED",
+      "PARTIALLY_SUPPORTED",
+      "UNSUPPORTED",
+      "CONTRADICTED"
+    ],
+    "per_class_sample_size": 6,
+    "design": "Independent human ground truth; balanced 4-way distribution."
+  },
+  "performance_metrics": {
+    "confusion_matrix_pred_rows_gt_cols": {
+      "SUPPORTED": {
+        "SUPPORTED": 4,
+        "PARTIALLY_SUPPORTED": 0,
+        "UNSUPPORTED": 0,
+        "CONTRADICTED": 3
+      },
+      "PARTIALLY_SUPPORTED": {
+        "SUPPORTED": 1,
+        "PARTIALLY_SUPPORTED": 6,
+        "UNSUPPORTED": 0,
+        "CONTRADICTED": 1
+      },
+      "UNSUPPORTED": {
+        "SUPPORTED": 1,
+        "PARTIALLY_SUPPORTED": 0,
+        "UNSUPPORTED": 6,
+        "CONTRADICTED": 0
+      },
+      "CONTRADICTED": {
+        "SUPPORTED": 0,
+        "PARTIALLY_SUPPORTED": 0,
+        "UNSUPPORTED": 0,
+        "CONTRADICTED": 2
+      }
+    },
+    "per_class": [
+      {
+        "class": "SUPPORTED",
+        "tp": 4,
+        "fp": 3,
+        "fn": 2,
+        "precision": 0.5714,
+        "recall": 0.6667,
+        "f1": 0.6154,
+        "support": 6
+      },
+      {
+        "class": "PARTIALLY_SUPPORTED",
+        "tp": 6,
+        "fp": 2,
+        "fn": 0,
+        "precision": 0.75,
+        "recall": 1.0,
+        "f1": 0.8571,
+        "support": 6
+      },
+      {
+        "class": "UNSUPPORTED",
+        "tp": 6,
+        "fp": 1,
+        "fn": 0,
+        "precision": 0.8571,
+        "recall": 1.0,
+        "f1": 0.9231,
+        "support": 6
+      },
+      {
+        "class": "CONTRADICTED",
+        "tp": 2,
+        "fp": 0,
+        "fn": 4,
+        "precision": 1.0,
+        "recall": 0.3333,
+        "f1": 0.5,
+        "support": 6
+      }
+    ],
+    "macro_precision": 0.7946,
+    "macro_recall": 0.75,
+    "macro_f1": 0.7239,
+    "weighted_f1": 0.7239,
+    "raw_accuracy_Po": 0.75,
+    "expected_agreement_Pe": 0.25,
+    "cohens_kappa": 0.6667
+  },
+  "itemized_results": [
+    {
+      "id": "SUP-01",
+      "ground_truth": "SUPPORTED",
+      "predicted": "SUPPORTED",
+      "rationale": "Rule-based screening: token overlap 71.4% >= 60% threshold (matched: ['convolutional', 'image', 'networks', 'neural']). Not semantic entailment \u2014 human review required.",
+      "phenomenon": "Direct lexical overlap with core assertion.",
+      "match": true
+    },
+    {
+      "id": "SUP-02",
+      "ground_truth": "SUPPORTED",
+      "predicted": "SUPPORTED",
+      "rationale": "Rule-based screening: token overlap 81.8% >= 60% threshold (matched: ['analysis', 'basic', 'extract', 'extraction']). Not semantic entailment \u2014 human review required.",
+      "phenomenon": "Paraphrased structural description with synonym variation (drawings -> graphical information).",
+      "match": true
+    },
+    {
+      "id": "SUP-03",
+      "ground_truth": "SUPPORTED",
+      "predicted": "PARTIALLY_SUPPORTED",
+      "rationale": "Rule-based screening: partial token overlap 30.0% (30\u201360%) (matched: ['efficiency', 'methodologies', 'patent']). Not semantic entailment \u2014 human review required.",
+      "phenomenon": "Synonym substitution (accuracy -> analytical precision, volume -> processing).",
+      "match": false
+    },
+    {
+      "id": "SUP-04",
+      "ground_truth": "SUPPORTED",
+      "predicted": "SUPPORTED",
+      "rationale": "Rule-based screening: token overlap 81.8% >= 60% threshold (matched: ['continuous', 'dense', 'embeddings', 'mathematical']). Not semantic entailment \u2014 human review required.",
+      "phenomenon": "Syntactic passive-to-active restructuring with strong technical alignment.",
+      "match": true
+    },
+    {
+      "id": "SUP-05",
+      "ground_truth": "SUPPORTED",
+      "predicted": "SUPPORTED",
+      "rationale": "Rule-based screening: token overlap 66.7% >= 60% threshold (matched: ['artificial', 'discovery', 'innovation', 'intelligence']). Not semantic entailment \u2014 human review required.",
+      "phenomenon": "High lexical overlap with morphological inflection (automatic -> automated).",
+      "match": true
+    },
+    {
+      "id": "SUP-06",
+      "ground_truth": "SUPPORTED",
+      "predicted": "UNSUPPORTED",
+      "rationale": "Rule-based screening: insufficient token overlap (27.3% < 30%).",
+      "phenomenon": "Domain-specific technical alignment with conceptual paraphrase.",
+      "match": false
+    },
+    {
+      "id": "PART-01",
+      "ground_truth": "PARTIALLY_SUPPORTED",
+      "predicted": "PARTIALLY_SUPPORTED",
+      "rationale": "Rule-based screening: partial token overlap 45.5% (30\u201360%) (matched: ['convolutional', 'extract', 'features', 'foliar']). Not semantic entailment \u2014 human review required.",
+      "phenomenon": "Feature extraction is supported, but autonomous real-time telemetry navigation is unmentioned.",
+      "match": true
+    },
+    {
+      "id": "PART-02",
+      "ground_truth": "PARTIALLY_SUPPORTED",
+      "predicted": "PARTIALLY_SUPPORTED",
+      "rationale": "Rule-based screening: partial token overlap 50.0% (30\u201360%) (matched: ['carlo', 'claim', 'claims', 'monte']). Not semantic entailment \u2014 human review required.",
+      "phenomenon": "MCTS claim modeling is supported, but the guaranteed zero-rejection claim is an ungrounded exaggeration.",
+      "match": true
+    },
+    {
+      "id": "PART-03",
+      "ground_truth": "PARTIALLY_SUPPORTED",
+      "predicted": "PARTIALLY_SUPPORTED",
+      "rationale": "Rule-based screening: partial token overlap 30.8% (30\u201360%) (matched: ['agent', 'frameworks', 'multi', 'summaries']). Not semantic entailment \u2014 human review required.",
+      "phenomenon": "Multi-agent summarization is supported; legal USPTO registration is unsupported.",
+      "match": true
+    },
+    {
+      "id": "PART-04",
+      "ground_truth": "PARTIALLY_SUPPORTED",
+      "predicted": "PARTIALLY_SUPPORTED",
+      "rationale": "Rule-based screening: partial token overlap 33.3% (30\u201360%) (matched: ['graphs', 'inventive', 'knowledge', 'triz']). Not semantic entailment \u2014 human review required.",
+      "phenomenon": "TRIZ knowledge graph is supported; physical agricultural prototyping is unaddressed.",
+      "match": true
+    },
+    {
+      "id": "PART-05",
+      "ground_truth": "PARTIALLY_SUPPORTED",
+      "predicted": "PARTIALLY_SUPPORTED",
+      "rationale": "Rule-based screening: partial token overlap 33.3% (30\u201360%) (matched: ['convolutional', 'extraction', 'feature', 'networks']). Not semantic entailment \u2014 human review required.",
+      "phenomenon": "Convolutional feature network is supported; specific sub-millisecond edge latency is ungrounded.",
+      "match": true
+    },
+    {
+      "id": "PART-06",
+      "ground_truth": "PARTIALLY_SUPPORTED",
+      "predicted": "PARTIALLY_SUPPORTED",
+      "rationale": "Rule-based screening: partial token overlap 30.8% (30\u201360%) (matched: ['dense', 'retrieval', 'sparse', 'technical']). Not semantic entailment \u2014 human review required.",
+      "phenomenon": "General retrieval superiority is supported; specific Precision@3 and multilingual corpus scope are unstated.",
+      "match": true
+    },
+    {
+      "id": "UNSUP-01",
+      "ground_truth": "UNSUPPORTED",
+      "predicted": "UNSUPPORTED",
+      "rationale": "Rule-based screening: insufficient token overlap (0.0% < 30%).",
+      "phenomenon": "Completely unrelated technology (quantum annealing vs. patent drawing analysis).",
+      "match": true
+    },
+    {
+      "id": "UNSUP-02",
+      "ground_truth": "UNSUPPORTED",
+      "predicted": "UNSUPPORTED",
+      "rationale": "Rule-based screening: insufficient token overlap (0.0% < 30%).",
+      "phenomenon": "Unrelated domain (blockchain IP contracts vs. multi-agent literature synthesis).",
+      "match": true
+    },
+    {
+      "id": "UNSUP-03",
+      "ground_truth": "UNSUPPORTED",
+      "predicted": "UNSUPPORTED",
+      "rationale": "Rule-based screening: insufficient token overlap (0.0% < 30%).",
+      "phenomenon": "Domain clash (agricultural spraying mechanics vs. BM25 text indexing).",
+      "match": true
+    },
+    {
+      "id": "UNSUP-04",
+      "ground_truth": "UNSUPPORTED",
+      "predicted": "UNSUPPORTED",
+      "rationale": "Rule-based screening: insufficient token overlap (0.0% < 30%).",
+      "phenomenon": "Hallucinated empirical benchmark metrics unsupported by passage.",
+      "match": true
+    },
+    {
+      "id": "UNSUP-05",
+      "ground_truth": "UNSUPPORTED",
+      "predicted": "UNSUPPORTED",
+      "rationale": "Rule-based screening: insufficient token overlap (0.0% < 30%).",
+      "phenomenon": "Extrapolated application claim not present in generic generative AI passage.",
+      "match": true
+    },
+    {
+      "id": "UNSUP-06",
+      "ground_truth": "UNSUPPORTED",
+      "predicted": "UNSUPPORTED",
+      "rationale": "Rule-based screening: insufficient token overlap (0.0% < 30%).",
+      "phenomenon": "Specific machine learning claim unmentioned in high-level overview passage.",
+      "match": true
+    },
+    {
+      "id": "CONT-01",
+      "ground_truth": "CONTRADICTED",
+      "predicted": "CONTRADICTED",
+      "rationale": "Polarity conflict detected despite token alignment (75.0%). Note: pattern-based negation check; human review recommended.",
+      "phenomenon": "Direct polarity negation of an explicit passage capability (cannot vs. can be used).",
+      "match": true
+    },
+    {
+      "id": "CONT-02",
+      "ground_truth": "CONTRADICTED",
+      "predicted": "CONTRADICTED",
+      "rationale": "Polarity conflict detected despite token alignment (63.6%). Note: pattern-based negation check; human review recommended.",
+      "phenomenon": "Direct empirical contradiction of reported retrieval performance (fails vs. significantly outperforms).",
+      "match": true
+    },
+    {
+      "id": "CONT-03",
+      "ground_truth": "CONTRADICTED",
+      "predicted": "SUPPORTED",
+      "rationale": "Rule-based screening: token overlap 72.7% >= 60% threshold (matched: ['agent', 'annotation', 'claim', 'framework']). Not semantic entailment \u2014 human review required.",
+      "phenomenon": "Operational contradiction (requires exhaustive manual vs. fully autonomous without requiring).",
+      "match": false
+    },
+    {
+      "id": "CONT-04",
+      "ground_truth": "CONTRADICTED",
+      "predicted": "SUPPORTED",
+      "rationale": "Rule-based screening: token overlap 90.0% >= 60% threshold (matched: ['carlo', 'claim', 'diversity', 'formulations']). Not semantic entailment \u2014 human review required.",
+      "phenomenon": "Directional contradiction of optimization outcome (degrades vs. substantially increases).",
+      "match": false
+    },
+    {
+      "id": "CONT-05",
+      "ground_truth": "CONTRADICTED",
+      "predicted": "SUPPORTED",
+      "rationale": "Rule-based screening: token overlap 62.5% >= 60% threshold (matched: ['automatic', 'communities', 'discovery', 'innovation']). Not semantic entailment \u2014 human review required.",
+      "phenomenon": "Evaluative contradiction (ineffective vs. promising solution to accelerate).",
+      "match": false
+    },
+    {
+      "id": "CONT-06",
+      "ground_truth": "CONTRADICTED",
+      "predicted": "PARTIALLY_SUPPORTED",
+      "rationale": "Rule-based screening: partial token overlap 33.3% (30\u201360%) (matched: ['drawing', 'extracting', 'module']). Not semantic entailment \u2014 human review required.",
+      "phenomenon": "Functional negation (incapable vs. configured to extract).",
+      "match": false
+    }
+  ]
+}

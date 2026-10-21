@@ -79,15 +79,30 @@ def main():
     p3_c = format_val(ma_rag.get("avg_precision@3_provisional"), ".4f")
     print(f"{'Precision@3 (Prov. Diagnostic)':<36} | {p3_a:<14} | {p3_b:<14} | {p3_c:<14}")
 
+    p5_a = "N/A (no ret)"
+    p5_b = format_val(rag.get("avg_precision@5_provisional"), ".4f")
+    p5_c = format_val(ma_rag.get("avg_precision@5_provisional"), ".4f")
+    print(f"{'Precision@5 (Prov. Diagnostic)':<36} | {p5_a:<14} | {p5_b:<14} | {p5_c:<14}")
+
     r3_a = "N/A (no ret)"
     r3_b = format_val(rag.get("avg_recall@3_provisional"), ".4f")
     r3_c = format_val(ma_rag.get("avg_recall@3_provisional"), ".4f")
     print(f"{'Recall@3 (Prov. Diagnostic)':<36} | {r3_a:<14} | {r3_b:<14} | {r3_c:<14}")
 
+    r5_a = "N/A (no ret)"
+    r5_b = format_val(rag.get("avg_recall@5_provisional"), ".4f")
+    r5_c = format_val(ma_rag.get("avg_recall@5_provisional"), ".4f")
+    print(f"{'Recall@5 (Prov. Diagnostic)':<36} | {r5_a:<14} | {r5_b:<14} | {r5_c:<14}")
+
     f1_a = "N/A (no ret)"
     f1_b = format_val(rag.get("avg_f1@3_provisional"), ".4f")
     f1_c = format_val(ma_rag.get("avg_f1@3_provisional"), ".4f")
     print(f"{'F1@3 (Prov. Diagnostic)':<36} | {f1_a:<14} | {f1_b:<14} | {f1_c:<14}")
+
+    f1_5_a = "N/A (no ret)"
+    f1_5_b = format_val(rag.get("avg_f1@5_provisional"), ".4f")
+    f1_5_c = format_val(ma_rag.get("avg_f1@5_provisional"), ".4f")
+    print(f"{'F1@5 (Prov. Diagnostic)':<36} | {f1_5_a:<14} | {f1_5_b:<14} | {f1_5_c:<14}")
 
     mrr_a = "N/A (no ret)"
     mrr_b = format_val(rag.get("mean_reciprocal_rank_provisional"), ".4f")

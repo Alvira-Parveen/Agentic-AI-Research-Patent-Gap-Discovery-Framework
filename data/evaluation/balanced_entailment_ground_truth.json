@@ -1,0 +1,194 @@
+[
+  {
+    "id": "SUP-01",
+    "category": "SUPPORTED",
+    "claim_text": "Convolutional Neural Networks can be utilized for image recognition tasks.",
+    "passage_text": "Some of the techniques that may be used in generative AI are: Convolutional Neural Networks, Recurrent Neural Networks, and transformer models. For example, Convolutional Neural Networks (CNNs) can be used for image recognition.",
+    "source_doc": "PAT-016",
+    "phenomenon": "Direct lexical overlap with core assertion."
+  },
+  {
+    "id": "SUP-02",
+    "category": "SUPPORTED",
+    "claim_text": "The image analysis module incorporates a basic feature extraction network to extract graphical information.",
+    "passage_text": "In an embodiment, the image analysis module comprises a basic feature extraction module and a specification detection module. The basic feature extraction module is configured to extract basic feature information of the one or more drawings through a feature extraction convolutional network.",
+    "source_doc": "PAT-005",
+    "phenomenon": "Paraphrased structural description with synonym variation (drawings -> graphical information)."
+  },
+  {
+    "id": "SUP-03",
+    "category": "SUPPORTED",
+    "claim_text": "Patent intelligence methodologies require balancing processing efficiency against analytical precision.",
+    "passage_text": "Contemporary patent analysis necessitates increasingly sophisticated methodologies to navigate the vast volume of information, demanding a balance between efficiency and accuracy.",
+    "source_doc": "PAP-001",
+    "phenomenon": "Synonym substitution (accuracy -> analytical precision, volume -> processing)."
+  },
+  {
+    "id": "SUP-04",
+    "category": "SUPPORTED",
+    "claim_text": "Vector embeddings represent text passages in a continuous dense mathematical space for semantic matching.",
+    "passage_text": "Text passages are transformed into dense vector embeddings within a continuous multidimensional space, enabling mathematical proximity calculations for semantic document retrieval.",
+    "source_doc": "PAT-002",
+    "phenomenon": "Syntactic passive-to-active restructuring with strong technical alignment."
+  },
+  {
+    "id": "SUP-05",
+    "category": "SUPPORTED",
+    "claim_text": "Automated scientific discovery accelerates innovation by integrating artificial intelligence systems.",
+    "passage_text": "Automatic scientific discovery has emerged as a promising solution to accelerate innovation, aligning with the ultimate goal within the scientific community. With the development of artificial intelligence (AI), automatic discovery systems have progressed.",
+    "source_doc": "PAP-003",
+    "phenomenon": "High lexical overlap with morphological inflection (automatic -> automated)."
+  },
+  {
+    "id": "SUP-06",
+    "category": "SUPPORTED",
+    "claim_text": "The tree-based search space models patent claim scopes hierarchically for iterative refinement.",
+    "passage_text": "We construct a hierarchical tree of claims where search nodes represent candidate claim language, enabling structured tree search rollouts for claim scope optimization.",
+    "source_doc": "PAP-010",
+    "phenomenon": "Domain-specific technical alignment with conceptual paraphrase."
+  },
+  {
+    "id": "PART-01",
+    "category": "PARTIALLY_SUPPORTED",
+    "claim_text": "Convolutional networks extract foliar features for autonomous real-time drone telemetry navigation.",
+    "passage_text": "The convolutional neural network module extracts foliar disease features from aerial images captured during field survey flights.",
+    "source_doc": "PAT-003",
+    "phenomenon": "Feature extraction is supported, but autonomous real-time telemetry navigation is unmentioned."
+  },
+  {
+    "id": "PART-02",
+    "category": "PARTIALLY_SUPPORTED",
+    "claim_text": "The system applies Monte Carlo Tree Search across claims and guarantees zero claim rejection by patent examiners.",
+    "passage_text": "Our algorithm models patent claim drafting using Monte Carlo Tree Search (MCTS) to explore alternative linguistic formulations and maximize statutory breadth.",
+    "source_doc": "PAP-010",
+    "phenomenon": "MCTS claim modeling is supported, but the guaranteed zero-rejection claim is an ungrounded exaggeration."
+  },
+  {
+    "id": "PART-03",
+    "category": "PARTIALLY_SUPPORTED",
+    "claim_text": "Multi-agent frameworks generate technical summaries and automatically register certified legal filings with the USPTO.",
+    "passage_text": "EVOPAT employs a multi-agent framework of specialized LLMs to synthesize comprehensive patent summaries and extract core novel contributions.",
+    "source_doc": "PAP-004",
+    "phenomenon": "Multi-agent summarization is supported; legal USPTO registration is unsupported."
+  },
+  {
+    "id": "PART-04",
+    "category": "PARTIALLY_SUPPORTED",
+    "claim_text": "Knowledge graphs represent TRIZ inventive principles and execute autonomous physical prototyping in agricultural hardware.",
+    "passage_text": "IdeaForge organizes inventive methodologies including TRIZ and SCAMPER as dynamic nodes within a cross-domain knowledge graph to stimulate concept generation.",
+    "source_doc": "PAP-011",
+    "phenomenon": "TRIZ knowledge graph is supported; physical agricultural prototyping is unaddressed."
+  },
+  {
+    "id": "PART-05",
+    "category": "PARTIALLY_SUPPORTED",
+    "claim_text": "Feature extraction convolutional networks operate on agricultural drone imagery with sub-millisecond edge latency.",
+    "passage_text": "The feature extraction convolutional network processes input drawings and sensor maps to isolate technical specifications.",
+    "source_doc": "PAT-005",
+    "phenomenon": "Convolutional feature network is supported; specific sub-millisecond edge latency is ungrounded."
+  },
+  {
+    "id": "PART-06",
+    "category": "PARTIALLY_SUPPORTED",
+    "claim_text": "Dense retrieval improves Precision@3 over sparse lexical baselines on large multi-lingual technical corpuses.",
+    "passage_text": "Experimental benchmarks show that dense embedding retrieval outperforms sparse keyword matching on technical search tasks.",
+    "source_doc": "PAT-002",
+    "phenomenon": "General retrieval superiority is supported; specific Precision@3 and multilingual corpus scope are unstated."
+  },
+  {
+    "id": "UNSUP-01",
+    "category": "UNSUPPORTED",
+    "claim_text": "Quantum annealers optimize real-time drone flight trajectories using superconducting qubits.",
+    "passage_text": "The feature extraction module comprises an image analysis pipeline configured to detect technical specifications from patent drawings.",
+    "source_doc": "PAT-005",
+    "phenomenon": "Completely unrelated technology (quantum annealing vs. patent drawing analysis)."
+  },
+  {
+    "id": "UNSUP-02",
+    "category": "UNSUPPORTED",
+    "claim_text": "Blockchain smart contracts verify intellectual property assignment on Ethereum distributed ledgers.",
+    "passage_text": "We investigate multi-agent collaboration strategies for scientific literature synthesis and automated hypothesis formulation.",
+    "source_doc": "PAP-003",
+    "phenomenon": "Unrelated domain (blockchain IP contracts vs. multi-agent literature synthesis)."
+  },
+  {
+    "id": "UNSUP-03",
+    "category": "UNSUPPORTED",
+    "claim_text": "Variable-rate chemical spraying apparatus utilizes hydraulic centrifugal nozzles for liquid pesticide dispersal.",
+    "passage_text": "Text sequences are tokenized and indexed using an inverted file structure with BM25 term weighting algorithms.",
+    "source_doc": "PAT-001",
+    "phenomenon": "Domain clash (agricultural spraying mechanics vs. BM25 text indexing)."
+  },
+  {
+    "id": "UNSUP-04",
+    "category": "UNSUPPORTED",
+    "claim_text": "The deep learning system achieves 99.8% diagnostic accuracy across five distinct commercial crop varieties.",
+    "passage_text": "A method for contextual textual searching using vector embeddings and cosine similarity ranking over document segments.",
+    "source_doc": "PAT-002",
+    "phenomenon": "Hallucinated empirical benchmark metrics unsupported by passage."
+  },
+  {
+    "id": "UNSUP-05",
+    "category": "UNSUPPORTED",
+    "claim_text": "The framework incorporates an autonomous decision mechanism for variable fungicide dosage mapping.",
+    "passage_text": "Some of the techniques that may be used in generative AI are: Convolutional Neural Networks, Recurrent Neural Networks, and transformer models.",
+    "source_doc": "PAT-016",
+    "phenomenon": "Extrapolated application claim not present in generic generative AI passage."
+  },
+  {
+    "id": "UNSUP-06",
+    "category": "UNSUPPORTED",
+    "claim_text": "Synthetic data augmentation using diffusion models doubles the training dataset size without quality degradation.",
+    "passage_text": "Patent analysis demands balancing computational efficiency with retrieval accuracy across large patent corpora.",
+    "source_doc": "PAP-001",
+    "phenomenon": "Specific machine learning claim unmentioned in high-level overview passage."
+  },
+  {
+    "id": "CONT-01",
+    "category": "CONTRADICTED",
+    "claim_text": "Convolutional Neural Networks cannot be used for image recognition tasks.",
+    "passage_text": "Some of the techniques that may be used in generative AI are: Convolutional Neural Networks, Recurrent Neural Networks, and transformer models. For example, Convolutional Neural Networks (CNNs) can be used for image recognition.",
+    "source_doc": "PAT-016",
+    "phenomenon": "Direct polarity negation of an explicit passage capability (cannot vs. can be used)."
+  },
+  {
+    "id": "CONT-02",
+    "category": "CONTRADICTED",
+    "claim_text": "Dense vector retrieval fails to improve search accuracy over traditional keyword indexing.",
+    "passage_text": "Dense vector retrieval significantly outperforms traditional keyword indexing across all evaluated patent search benchmarks.",
+    "source_doc": "PAT-002",
+    "phenomenon": "Direct empirical contradiction of reported retrieval performance (fails vs. significantly outperforms)."
+  },
+  {
+    "id": "CONT-03",
+    "category": "CONTRADICTED",
+    "claim_text": "The multi-agent framework requires exhaustive manual human annotation for every generated claim.",
+    "passage_text": "The multi-agent framework operates fully autonomously without requiring manual human annotation during claim generation rollouts.",
+    "source_doc": "PAP-004",
+    "phenomenon": "Operational contradiction (requires exhaustive manual vs. fully autonomous without requiring)."
+  },
+  {
+    "id": "CONT-04",
+    "category": "CONTRADICTED",
+    "claim_text": "Monte Carlo Tree Search degrades the diversity of generated patent claim formulations.",
+    "passage_text": "Monte Carlo Tree Search substantially increases the diversity and statutory coverage of generated patent claim formulations.",
+    "source_doc": "PAP-010",
+    "phenomenon": "Directional contradiction of optimization outcome (degrades vs. substantially increases)."
+  },
+  {
+    "id": "CONT-05",
+    "category": "CONTRADICTED",
+    "claim_text": "Automatic scientific discovery is ineffective for accelerating innovation in research communities.",
+    "passage_text": "Automatic scientific discovery has emerged as a promising solution to accelerate innovation, aligning with the ultimate goal within the scientific community.",
+    "source_doc": "PAP-003",
+    "phenomenon": "Evaluative contradiction (ineffective vs. promising solution to accelerate)."
+  },
+  {
+    "id": "CONT-06",
+    "category": "CONTRADICTED",
+    "claim_text": "The image analysis module is completely invalid and incapable of extracting drawing features.",
+    "passage_text": "The basic feature extraction module is configured to extract basic feature information of the one or more drawings through a feature extraction convolutional network.",
+    "source_doc": "PAT-005",
+    "phenomenon": "Functional negation (incapable vs. configured to extract)."
+  }
+]

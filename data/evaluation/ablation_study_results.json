@@ -1,0 +1,701 @@
+{
+  "num_cases": 20,
+  "configurations": [
+    "Dense-Only",
+    "Sparse-BM25-Only",
+    "Hybrid-RRF"
+  ],
+  "statistical_summary": {
+    "Dense-Only": {
+      "p3": {
+        "mean": 0.3666,
+        "std": 0.2136,
+        "ci95_half": 0.1,
+        "formatted": "0.3666 \u00b1 0.1000"
+      },
+      "p5": {
+        "mean": 0.32,
+        "std": 0.1508,
+        "ci95_half": 0.0706,
+        "formatted": "0.3200 \u00b1 0.0706"
+      },
+      "r3": {
+        "mean": 0.3242,
+        "std": 0.2128,
+        "ci95_half": 0.0996,
+        "formatted": "0.3242 \u00b1 0.0996"
+      },
+      "r5": {
+        "mean": 0.4675,
+        "std": 0.2466,
+        "ci95_half": 0.1154,
+        "formatted": "0.4675 \u00b1 0.1154"
+      },
+      "f1_3": {
+        "mean": 0.3388,
+        "std": 0.2075,
+        "ci95_half": 0.0971,
+        "formatted": "0.3388 \u00b1 0.0971"
+      },
+      "f1_5": {
+        "mean": 0.3742,
+        "std": 0.1774,
+        "ci95_half": 0.083,
+        "formatted": "0.3742 \u00b1 0.0830"
+      },
+      "mrr": {
+        "mean": 0.7792,
+        "std": 0.327,
+        "ci95_half": 0.153,
+        "formatted": "0.7792 \u00b1 0.1530"
+      }
+    },
+    "Sparse-BM25-Only": {
+      "p3": {
+        "mean": 0.4167,
+        "std": 0.3035,
+        "ci95_half": 0.142,
+        "formatted": "0.4167 \u00b1 0.1420"
+      },
+      "p5": {
+        "mean": 0.3,
+        "std": 0.1892,
+        "ci95_half": 0.0885,
+        "formatted": "0.3000 \u00b1 0.0885"
+      },
+      "r3": {
+        "mean": 0.3567,
+        "std": 0.2755,
+        "ci95_half": 0.129,
+        "formatted": "0.3567 \u00b1 0.1290"
+      },
+      "r5": {
+        "mean": 0.4275,
+        "std": 0.2775,
+        "ci95_half": 0.1299,
+        "formatted": "0.4275 \u00b1 0.1299"
+      },
+      "f1_3": {
+        "mean": 0.3767,
+        "std": 0.2729,
+        "ci95_half": 0.1277,
+        "formatted": "0.3767 \u00b1 0.1277"
+      },
+      "f1_5": {
+        "mean": 0.3467,
+        "std": 0.2145,
+        "ci95_half": 0.1004,
+        "formatted": "0.3467 \u00b1 0.1004"
+      },
+      "mrr": {
+        "mean": 0.7021,
+        "std": 0.3972,
+        "ci95_half": 0.1859,
+        "formatted": "0.7021 \u00b1 0.1859"
+      }
+    },
+    "Hybrid-RRF": {
+      "p3": {
+        "mean": 0.4667,
+        "std": 0.2736,
+        "ci95_half": 0.1281,
+        "formatted": "0.4667 \u00b1 0.1281"
+      },
+      "p5": {
+        "mean": 0.36,
+        "std": 0.1903,
+        "ci95_half": 0.0891,
+        "formatted": "0.3600 \u00b1 0.0891"
+      },
+      "r3": {
+        "mean": 0.3983,
+        "std": 0.2486,
+        "ci95_half": 0.1164,
+        "formatted": "0.3983 \u00b1 0.1164"
+      },
+      "r5": {
+        "mean": 0.5058,
+        "std": 0.2535,
+        "ci95_half": 0.1186,
+        "formatted": "0.5058 \u00b1 0.1186"
+      },
+      "f1_3": {
+        "mean": 0.4219,
+        "std": 0.2439,
+        "ci95_half": 0.1141,
+        "formatted": "0.4219 \u00b1 0.1141"
+      },
+      "f1_5": {
+        "mean": 0.414,
+        "std": 0.2049,
+        "ci95_half": 0.0959,
+        "formatted": "0.4140 \u00b1 0.0959"
+      },
+      "mrr": {
+        "mean": 0.8208,
+        "std": 0.3336,
+        "ci95_half": 0.1561,
+        "formatted": "0.8208 \u00b1 0.1561"
+      }
+    }
+  },
+  "significance_vs_dense": {
+    "p3": {
+      "t_statistic": 1.6746,
+      "p_nominal_ttest": 0.1104,
+      "p_holm_ttest": 0.552,
+      "q_bh_ttest": 0.3708,
+      "wilcoxon_stat": 9.5,
+      "p_nominal_wilcoxon": 0.0291,
+      "p_holm_wilcoxon": 0.1456,
+      "is_nominally_significant": false,
+      "is_holm_significant": false
+    },
+    "p5": {
+      "t_statistic": 1.0731,
+      "p_nominal_ttest": 0.2967,
+      "p_holm_ttest": 0.785,
+      "q_bh_ttest": 0.3708,
+      "wilcoxon_stat": 25.0,
+      "p_nominal_wilcoxon": 0.4668,
+      "p_holm_wilcoxon": 1.0,
+      "is_nominally_significant": false,
+      "is_holm_significant": false
+    },
+    "r3": {
+      "t_statistic": 1.4425,
+      "p_nominal_ttest": 0.1654,
+      "p_holm_ttest": 0.6618,
+      "q_bh_ttest": 0.3708,
+      "wilcoxon_stat": 22.0,
+      "p_nominal_wilcoxon": 0.3227,
+      "p_holm_wilcoxon": 1.0,
+      "is_nominally_significant": false,
+      "is_holm_significant": false
+    },
+    "r5": {
+      "t_statistic": 0.7564,
+      "p_nominal_ttest": 0.4587,
+      "p_holm_ttest": 0.785,
+      "q_bh_ttest": 0.4587,
+      "wilcoxon_stat": 25.5,
+      "p_nominal_wilcoxon": 0.5019,
+      "p_holm_wilcoxon": 1.0,
+      "is_nominally_significant": false,
+      "is_holm_significant": false
+    },
+    "mrr": {
+      "t_statistic": 1.1569,
+      "p_nominal_ttest": 0.2617,
+      "p_holm_ttest": 0.785,
+      "q_bh_ttest": 0.3708,
+      "wilcoxon_stat": 1.0,
+      "p_nominal_wilcoxon": 0.2763,
+      "p_holm_wilcoxon": 1.0,
+      "is_nominally_significant": false,
+      "is_holm_significant": false
+    }
+  },
+  "per_query_results": [
+    {
+      "case_id": "TC-001",
+      "title": "Drone Multispectral Crop Disease Detection and Prescription",
+      "Dense-Only": {
+        "P@3": 0.3333,
+        "P@5": 0.2,
+        "R@3": 0.3333,
+        "R@5": 0.3333,
+        "MRR": 0.3333
+      },
+      "Sparse-BM25-Only": {
+        "P@3": 0.0,
+        "P@5": 0.0,
+        "R@3": 0.0,
+        "R@5": 0.0,
+        "MRR": 0.0
+      },
+      "Hybrid-RRF": {
+        "P@3": 0.0,
+        "P@5": 0.0,
+        "R@3": 0.0,
+        "R@5": 0.0,
+        "MRR": 0.1667
+      }
+    },
+    {
+      "case_id": "TC-002",
+      "title": "Multi-Agent Patent Claim Scope Optimization with MCTS",
+      "Dense-Only": {
+        "P@3": 0.3333,
+        "P@5": 0.2,
+        "R@3": 0.2,
+        "R@5": 0.2,
+        "MRR": 1.0
+      },
+      "Sparse-BM25-Only": {
+        "P@3": 0.6667,
+        "P@5": 0.4,
+        "R@3": 0.4,
+        "R@5": 0.4,
+        "MRR": 1.0
+      },
+      "Hybrid-RRF": {
+        "P@3": 0.6667,
+        "P@5": 0.6,
+        "R@3": 0.4,
+        "R@5": 0.6,
+        "MRR": 1.0
+      }
+    },
+    {
+      "case_id": "TC-003",
+      "title": "Cross-Methodology Innovation Reasoning with Dynamic Knowledge Graphs",
+      "Dense-Only": {
+        "P@3": 0.3333,
+        "P@5": 0.4,
+        "R@3": 0.25,
+        "R@5": 0.5,
+        "MRR": 1.0
+      },
+      "Sparse-BM25-Only": {
+        "P@3": 0.3333,
+        "P@5": 0.2,
+        "R@3": 0.25,
+        "R@5": 0.25,
+        "MRR": 1.0
+      },
+      "Hybrid-RRF": {
+        "P@3": 0.6667,
+        "P@5": 0.4,
+        "R@3": 0.5,
+        "R@5": 0.5,
+        "MRR": 1.0
+      }
+    },
+    {
+      "case_id": "TC-004",
+      "title": "Retrieval-Augmented Generation for Intellectual Property with Synthetic Query Fine-Tuning",
+      "Dense-Only": {
+        "P@3": 0.3333,
+        "P@5": 0.4,
+        "R@3": 0.2,
+        "R@5": 0.4,
+        "MRR": 1.0
+      },
+      "Sparse-BM25-Only": {
+        "P@3": 0.6667,
+        "P@5": 0.4,
+        "R@3": 0.4,
+        "R@5": 0.4,
+        "MRR": 1.0
+      },
+      "Hybrid-RRF": {
+        "P@3": 0.6667,
+        "P@5": 0.6,
+        "R@3": 0.4,
+        "R@5": 0.6,
+        "MRR": 1.0
+      }
+    },
+    {
+      "case_id": "TC-005",
+      "title": "Contrastive Learning Multi-Agent System for Scientific Idea Novelty Evaluation",
+      "Dense-Only": {
+        "P@3": 0.3333,
+        "P@5": 0.2,
+        "R@3": 0.3333,
+        "R@5": 0.3333,
+        "MRR": 1.0
+      },
+      "Sparse-BM25-Only": {
+        "P@3": 0.3333,
+        "P@5": 0.2,
+        "R@3": 0.3333,
+        "R@5": 0.3333,
+        "MRR": 1.0
+      },
+      "Hybrid-RRF": {
+        "P@3": 0.3333,
+        "P@5": 0.4,
+        "R@3": 0.3333,
+        "R@5": 0.6667,
+        "MRR": 1.0
+      }
+    },
+    {
+      "case_id": "TC-006",
+      "title": "Memory Graph Enhanced Patent Document Matching",
+      "Dense-Only": {
+        "P@3": 0.3333,
+        "P@5": 0.4,
+        "R@3": 0.25,
+        "R@5": 0.5,
+        "MRR": 1.0
+      },
+      "Sparse-BM25-Only": {
+        "P@3": 0.3333,
+        "P@5": 0.6,
+        "R@3": 0.25,
+        "R@5": 0.75,
+        "MRR": 1.0
+      },
+      "Hybrid-RRF": {
+        "P@3": 0.6667,
+        "P@5": 0.4,
+        "R@3": 0.5,
+        "R@5": 0.5,
+        "MRR": 1.0
+      }
+    },
+    {
+      "case_id": "TC-007",
+      "title": "Hierarchical Value-Guided Search for Optimal LLM Agent Team Design",
+      "Dense-Only": {
+        "P@3": 0.3333,
+        "P@5": 0.2,
+        "R@3": 0.25,
+        "R@5": 0.25,
+        "MRR": 0.5
+      },
+      "Sparse-BM25-Only": {
+        "P@3": 0.6667,
+        "P@5": 0.4,
+        "R@3": 0.5,
+        "R@5": 0.5,
+        "MRR": 1.0
+      },
+      "Hybrid-RRF": {
+        "P@3": 0.6667,
+        "P@5": 0.4,
+        "R@3": 0.5,
+        "R@5": 0.5,
+        "MRR": 0.5
+      }
+    },
+    {
+      "case_id": "TC-008",
+      "title": "Automated Patent White Space Discovery via Multidimensional Technological Clustering",
+      "Dense-Only": {
+        "P@3": 0.3333,
+        "P@5": 0.4,
+        "R@3": 0.25,
+        "R@5": 0.5,
+        "MRR": 0.5
+      },
+      "Sparse-BM25-Only": {
+        "P@3": 1.0,
+        "P@5": 0.6,
+        "R@3": 0.75,
+        "R@5": 0.75,
+        "MRR": 1.0
+      },
+      "Hybrid-RRF": {
+        "P@3": 1.0,
+        "P@5": 0.6,
+        "R@3": 0.75,
+        "R@5": 0.75,
+        "MRR": 1.0
+      }
+    },
+    {
+      "case_id": "TC-009",
+      "title": "Segment-Level Claim-Aware Prior Art Retrieval System",
+      "Dense-Only": {
+        "P@3": 0.3333,
+        "P@5": 0.2,
+        "R@3": 0.25,
+        "R@5": 0.25,
+        "MRR": 1.0
+      },
+      "Sparse-BM25-Only": {
+        "P@3": 0.6667,
+        "P@5": 0.4,
+        "R@3": 0.5,
+        "R@5": 0.5,
+        "MRR": 1.0
+      },
+      "Hybrid-RRF": {
+        "P@3": 0.3333,
+        "P@5": 0.2,
+        "R@3": 0.25,
+        "R@5": 0.25,
+        "MRR": 1.0
+      }
+    },
+    {
+      "case_id": "TC-010",
+      "title": "Self-Supervised Siamese Network for Patentability Detection",
+      "Dense-Only": {
+        "P@3": 0.3333,
+        "P@5": 0.2,
+        "R@3": 0.3333,
+        "R@5": 0.3333,
+        "MRR": 1.0
+      },
+      "Sparse-BM25-Only": {
+        "P@3": 0.6667,
+        "P@5": 0.4,
+        "R@3": 0.6667,
+        "R@5": 0.6667,
+        "MRR": 1.0
+      },
+      "Hybrid-RRF": {
+        "P@3": 0.3333,
+        "P@5": 0.4,
+        "R@3": 0.3333,
+        "R@5": 0.6667,
+        "MRR": 1.0
+      }
+    },
+    {
+      "case_id": "TC-011",
+      "title": "Real-Time AI Edge Pipeline for Robotic Weed Laser Eradication",
+      "Dense-Only": {
+        "P@3": 0.0,
+        "P@5": 0.0,
+        "R@3": 0.0,
+        "R@5": 0.0,
+        "MRR": 0.0
+      },
+      "Sparse-BM25-Only": {
+        "P@3": 0.0,
+        "P@5": 0.0,
+        "R@3": 0.0,
+        "R@5": 0.0,
+        "MRR": 0.0
+      },
+      "Hybrid-RRF": {
+        "P@3": 0.0,
+        "P@5": 0.0,
+        "R@3": 0.0,
+        "R@5": 0.0,
+        "MRR": 0.0
+      }
+    },
+    {
+      "case_id": "TC-012",
+      "title": "Multi-Document Grounded RAG with Provenance Attestation",
+      "Dense-Only": {
+        "P@3": 0.3333,
+        "P@5": 0.4,
+        "R@3": 0.25,
+        "R@5": 0.5,
+        "MRR": 0.5
+      },
+      "Sparse-BM25-Only": {
+        "P@3": 0.0,
+        "P@5": 0.0,
+        "R@3": 0.0,
+        "R@5": 0.0,
+        "MRR": 0.125
+      },
+      "Hybrid-RRF": {
+        "P@3": 0.3333,
+        "P@5": 0.2,
+        "R@3": 0.25,
+        "R@5": 0.25,
+        "MRR": 0.5
+      }
+    },
+    {
+      "case_id": "TC-013",
+      "title": "Contextual Text Search with Dynamic Embedding Normalization",
+      "Dense-Only": {
+        "P@3": 1.0,
+        "P@5": 0.6,
+        "R@3": 1.0,
+        "R@5": 1.0,
+        "MRR": 1.0
+      },
+      "Sparse-BM25-Only": {
+        "P@3": 0.3333,
+        "P@5": 0.4,
+        "R@3": 0.3333,
+        "R@5": 0.6667,
+        "MRR": 1.0
+      },
+      "Hybrid-RRF": {
+        "P@3": 0.6667,
+        "P@5": 0.4,
+        "R@3": 0.6667,
+        "R@5": 0.6667,
+        "MRR": 1.0
+      }
+    },
+    {
+      "case_id": "TC-014",
+      "title": "Automated Patent Antecedent Basis and Claim Scope Verifier",
+      "Dense-Only": {
+        "P@3": 0.3333,
+        "P@5": 0.4,
+        "R@3": 0.25,
+        "R@5": 0.5,
+        "MRR": 1.0
+      },
+      "Sparse-BM25-Only": {
+        "P@3": 0.6667,
+        "P@5": 0.4,
+        "R@3": 0.5,
+        "R@5": 0.5,
+        "MRR": 1.0
+      },
+      "Hybrid-RRF": {
+        "P@3": 0.6667,
+        "P@5": 0.6,
+        "R@3": 0.5,
+        "R@5": 0.75,
+        "MRR": 1.0
+      }
+    },
+    {
+      "case_id": "TC-015",
+      "title": "Multi-Agent Dialectical Debate for Automated Hypothesis Generation",
+      "Dense-Only": {
+        "P@3": 0.6667,
+        "P@5": 0.4,
+        "R@3": 0.5,
+        "R@5": 0.5,
+        "MRR": 0.5
+      },
+      "Sparse-BM25-Only": {
+        "P@3": 0.6667,
+        "P@5": 0.4,
+        "R@3": 0.5,
+        "R@5": 0.5,
+        "MRR": 0.5
+      },
+      "Hybrid-RRF": {
+        "P@3": 0.3333,
+        "P@5": 0.4,
+        "R@3": 0.25,
+        "R@5": 0.5,
+        "MRR": 1.0
+      }
+    },
+    {
+      "case_id": "TC-016",
+      "title": "Quantum-Inspired Optimization for Vector Quantization in FAISS",
+      "Dense-Only": {
+        "P@3": 0.3333,
+        "P@5": 0.4,
+        "R@3": 0.5,
+        "R@5": 1.0,
+        "MRR": 1.0
+      },
+      "Sparse-BM25-Only": {
+        "P@3": 0.6667,
+        "P@5": 0.4,
+        "R@3": 1.0,
+        "R@5": 1.0,
+        "MRR": 0.5
+      },
+      "Hybrid-RRF": {
+        "P@3": 0.6667,
+        "P@5": 0.4,
+        "R@3": 1.0,
+        "R@5": 1.0,
+        "MRR": 1.0
+      }
+    },
+    {
+      "case_id": "TC-017",
+      "title": "Federated Multi-Agent Framework for Cross-Hospital Rare Disease Ideation",
+      "Dense-Only": {
+        "P@3": 0.3333,
+        "P@5": 0.4,
+        "R@3": 0.3333,
+        "R@5": 0.6667,
+        "MRR": 1.0
+      },
+      "Sparse-BM25-Only": {
+        "P@3": 0.0,
+        "P@5": 0.0,
+        "R@3": 0.0,
+        "R@5": 0.0,
+        "MRR": 0.1667
+      },
+      "Hybrid-RRF": {
+        "P@3": 0.3333,
+        "P@5": 0.2,
+        "R@3": 0.3333,
+        "R@5": 0.3333,
+        "MRR": 1.0
+      }
+    },
+    {
+      "case_id": "TC-018",
+      "title": "Semantic Patent Validity and Infringement Risk Prediction Engine",
+      "Dense-Only": {
+        "P@3": 0.0,
+        "P@5": 0.2,
+        "R@3": 0.0,
+        "R@5": 0.3333,
+        "MRR": 0.25
+      },
+      "Sparse-BM25-Only": {
+        "P@3": 0.0,
+        "P@5": 0.2,
+        "R@3": 0.0,
+        "R@5": 0.3333,
+        "MRR": 0.25
+      },
+      "Hybrid-RRF": {
+        "P@3": 0.0,
+        "P@5": 0.2,
+        "R@3": 0.0,
+        "R@5": 0.3333,
+        "MRR": 0.25
+      }
+    },
+    {
+      "case_id": "TC-019",
+      "title": "Automated Technology Knowledge Element Extraction using Transformer Triples",
+      "Dense-Only": {
+        "P@3": 0.3333,
+        "P@5": 0.2,
+        "R@3": 0.5,
+        "R@5": 0.5,
+        "MRR": 1.0
+      },
+      "Sparse-BM25-Only": {
+        "P@3": 0.3333,
+        "P@5": 0.2,
+        "R@3": 0.5,
+        "R@5": 0.5,
+        "MRR": 1.0
+      },
+      "Hybrid-RRF": {
+        "P@3": 0.3333,
+        "P@5": 0.2,
+        "R@3": 0.5,
+        "R@5": 0.5,
+        "MRR": 1.0
+      }
+    },
+    {
+      "case_id": "TC-020",
+      "title": "Contextual RAG Cache with Semantic Invalidity Invalidation",
+      "Dense-Only": {
+        "P@3": 0.6667,
+        "P@5": 0.6,
+        "R@3": 0.5,
+        "R@5": 0.75,
+        "MRR": 1.0
+      },
+      "Sparse-BM25-Only": {
+        "P@3": 0.3333,
+        "P@5": 0.4,
+        "R@3": 0.25,
+        "R@5": 0.5,
+        "MRR": 0.5
+      },
+      "Hybrid-RRF": {
+        "P@3": 0.6667,
+        "P@5": 0.6,
+        "R@3": 0.5,
+        "R@5": 0.75,
+        "MRR": 1.0
+      }
+    }
+  ]
+}

@@ -7,6 +7,17 @@ from typing import List, Dict, Any, Optional, Union
 from src.schemas.ideas import UserIdeaInput
 from src.workflows.orchestrator import IdeaAnalysisOrchestrator
 from src.evaluation.retrieval_metrics import precision_at_k, recall_at_k, f1_at_k, mean_reciprocal_rank
+
+
+def _dedup_doc_ids(ids: list) -> list:
+    """Deduplicate document IDs while preserving rank order (first occurrence wins)."""
+    seen = set()
+    result = []
+    for doc_id in ids:
+        if doc_id not in seen:
+            seen.add(doc_id)
+            result.append(doc_id)
+    return result
 from src.evaluation.novelty_metrics import evaluate_novelty_agreement
 from src.evaluation.explainability import evaluate_explainability
 from src.config.constants import EVALUATION_DIR
@@ -80,6 +91,9 @@ class BenchmarkRunner:
                 "precision_3": [],
                 "recall_3": [],
                 "f1_3": [],
+                "precision_5": [],
+                "recall_5": [],
+                "f1_5": [],
                 "mrr": [],
                 "novelty_agreements_human": [],
                 "provisional_agreements": [],
@@ -90,6 +104,9 @@ class BenchmarkRunner:
                 "precision_3": [],
                 "recall_3": [],
                 "f1_3": [],
+                "precision_5": [],
+                "recall_5": [],
+                "f1_5": [],
                 "mrr": [],
                 "novelty_agreements_human": [],
                 "provisional_agreements": [],
@@ -126,12 +143,17 @@ class BenchmarkRunner:
             # Evaluate Mode B: RAG
             rep_b = comp_res.rag
             results_by_mode["rag"]["latencies"].append(rep_b.processing_time_seconds)
-            ret_b_ids = [c.document_id for c in rep_b.retrieval.all_results] if rep_b.retrieval else []
+            ret_b_ids = _dedup_doc_ids([c.document_id for c in rep_b.retrieval.all_results] if rep_b.retrieval else [])
             p3_b = precision_at_k(ret_b_ids, ground_truth_docs, k=3)
             r3_b = recall_at_k(ret_b_ids, ground_truth_docs, k=3)
+            p5_b = precision_at_k(ret_b_ids, ground_truth_docs, k=5)
+            r5_b = recall_at_k(ret_b_ids, ground_truth_docs, k=5)
             results_by_mode["rag"]["precision_3"].append(p3_b)
             results_by_mode["rag"]["recall_3"].append(r3_b)
             results_by_mode["rag"]["f1_3"].append(f1_at_k(p3_b, r3_b))
+            results_by_mode["rag"]["precision_5"].append(p5_b)
+            results_by_mode["rag"]["recall_5"].append(r5_b)
+            results_by_mode["rag"]["f1_5"].append(f1_at_k(p5_b, r5_b))
             results_by_mode["rag"]["mrr"].append(mean_reciprocal_rank(ret_b_ids, ground_truth_docs))
             if human_novelty is not None:
                 nov_b_human = evaluate_novelty_agreement(rep_b.novelty.novelty_level if rep_b.novelty else "Unassessed", human_novelty)
@@ -145,12 +167,17 @@ class BenchmarkRunner:
             # Evaluate Mode C: Multi-Agent RAG
             rep_c = comp_res.multi_agent_rag
             results_by_mode["multi_agent_rag"]["latencies"].append(rep_c.processing_time_seconds)
-            ret_c_ids = [c.document_id for c in rep_c.retrieval.all_results] if rep_c.retrieval else []
+            ret_c_ids = _dedup_doc_ids([c.document_id for c in rep_c.retrieval.all_results] if rep_c.retrieval else [])
             p3_c = precision_at_k(ret_c_ids, ground_truth_docs, k=3)
             r3_c = recall_at_k(ret_c_ids, ground_truth_docs, k=3)
+            p5_c = precision_at_k(ret_c_ids, ground_truth_docs, k=5)
+            r5_c = recall_at_k(ret_c_ids, ground_truth_docs, k=5)
             results_by_mode["multi_agent_rag"]["precision_3"].append(p3_c)
             results_by_mode["multi_agent_rag"]["recall_3"].append(r3_c)
             results_by_mode["multi_agent_rag"]["f1_3"].append(f1_at_k(p3_c, r3_c))
+            results_by_mode["multi_agent_rag"]["precision_5"].append(p5_c)
+            results_by_mode["multi_agent_rag"]["recall_5"].append(r5_c)
+            results_by_mode["multi_agent_rag"]["f1_5"].append(f1_at_k(p5_c, r5_c))
             results_by_mode["multi_agent_rag"]["mrr"].append(mean_reciprocal_rank(ret_c_ids, ground_truth_docs))
             if human_novelty is not None:
                 nov_c_human = evaluate_novelty_agreement(rep_c.novelty.novelty_level if rep_c.novelty else "Unassessed", human_novelty)
@@ -224,6 +251,9 @@ class BenchmarkRunner:
                 "avg_precision@3_provisional": avg(results_by_mode["rag"]["precision_3"]),
                 "avg_recall@3_provisional": avg(results_by_mode["rag"]["recall_3"]),
                 "avg_f1@3_provisional": avg(results_by_mode["rag"]["f1_3"]),
+                "avg_precision@5_provisional": avg(results_by_mode["rag"]["precision_5"]),
+                "avg_recall@5_provisional": avg(results_by_mode["rag"]["recall_5"]),
+                "avg_f1@5_provisional": avg(results_by_mode["rag"]["f1_5"]),
                 "mean_reciprocal_rank_provisional": avg(results_by_mode["rag"]["mrr"]),
                 "avg_grounding_ratio": avg(results_by_mode["rag"]["grounding_ratios"]),
                 "novelty_agreement_human": agreement_ratio(results_by_mode["rag"]["novelty_agreements_human"]),
@@ -235,6 +265,9 @@ class BenchmarkRunner:
                 "avg_precision@3_provisional": avg(results_by_mode["multi_agent_rag"]["precision_3"]),
                 "avg_recall@3_provisional": avg(results_by_mode["multi_agent_rag"]["recall_3"]),
                 "avg_f1@3_provisional": avg(results_by_mode["multi_agent_rag"]["f1_3"]),
+                "avg_precision@5_provisional": avg(results_by_mode["multi_agent_rag"]["precision_5"]),
+                "avg_recall@5_provisional": avg(results_by_mode["multi_agent_rag"]["recall_5"]),
+                "avg_f1@5_provisional": avg(results_by_mode["multi_agent_rag"]["f1_5"]),
                 "mean_reciprocal_rank_provisional": avg(results_by_mode["multi_agent_rag"]["mrr"]),
                 "avg_grounding_ratio": avg(results_by_mode["multi_agent_rag"]["grounding_ratios"]),
                 "novelty_agreement_human": agreement_ratio(results_by_mode["multi_agent_rag"]["novelty_agreements_human"]),

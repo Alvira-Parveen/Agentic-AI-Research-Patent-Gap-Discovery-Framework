@@ -27,17 +27,22 @@ class StandardRAGWorkflow:
         t0 = time.perf_counter()
         features = self.feature_extractor.extract(idea_input.idea, idea_input.domain)
 
+        # Build enriched technical query with title and key features if available
+        query = f"{idea_input.title}. {idea_input.idea}" if idea_input.title else idea_input.idea
+        if features and features.technical_features:
+            query = f"{query} {' '.join(features.technical_features[:3])}"
+
         # Retrieve prior art
-        retrieval_res = self.retriever.retrieve(idea_input.idea)
+        retrieval_res = self.retriever.retrieve(query)
 
         # Generate RAG response
         summary = self.generator.generate_rag_report(idea_input.idea, retrieval_res)
 
         elapsed = round(time.perf_counter() - t0, 4)
 
-        # RAG baseline novelty calculation grounded strictly on retrieved embeddings (zero hardcoded constants)
+        # RAG baseline novelty calculation grounded strictly on top-ranked retrieved evidence
         all_sims = [c.similarity_score for c in retrieval_res.all_results]
-        top_sim = max(all_sims) if all_sims else 0.0
+        top_sim = retrieval_res.all_results[0].similarity_score if retrieval_res.all_results else 0.0
         mean_sim = sum(all_sims) / max(1, len(all_sims)) if all_sims else 0.0
 
         novelty_score = round(max(0.0, min(1.0, 1.0 - top_sim)), 4) if all_sims else None

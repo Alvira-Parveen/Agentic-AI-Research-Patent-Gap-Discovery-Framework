@@ -141,9 +141,10 @@ def test_gap_discovery_no_artificial_coupling_and_insufficient_evidence():
         ext_feats_gap, pat_analysis, [], feat_comp_gap
     )
     assert len(result_gap.unexplored_combinations) >= 1
-    combo_text = result_gap.unexplored_combinations[0]
-    assert "unexplored_telemetry" in combo_text
-    assert "feature_alpha + unexplored_telemetry" not in combo_text
+    # Check across all generated combinations — enriched discovery produces multiple gaps
+    all_combo_text = " ".join(result_gap.unexplored_combinations)
+    assert "unexplored_telemetry" in all_combo_text
+    assert "feature_alpha + unexplored_telemetry" not in all_combo_text
 
 
 def test_compare_all_modes():

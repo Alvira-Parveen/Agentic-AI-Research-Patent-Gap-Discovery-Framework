@@ -1,0 +1,244 @@
+{
+  "evaluation_metadata": {
+    "benchmark_dataset": "Real-World Sampling Manifest (data/evaluation/real_world_sampling_manifest.json)",
+    "sample_size_records": 232,
+    "sample_size_unique_citations": 230,
+    "sample_size_unique_claims": 80,
+    "gold_standard": "Consensus Adjudication (Reviewer 1 & Reviewer 2)",
+    "timestamp": "2026-10-21T07:22:00Z"
+  },
+  "baseline_system_metrics": {
+    "rule_based": {
+      "accuracy": 0.819,
+      "macro_f1": 0.2961,
+      "weighted_f1": 0.7526,
+      "cohens_kappa": 0.1346,
+      "total_evaluated": 232,
+      "correct_predictions": 190,
+      "per_class_metrics": {
+        "SUPPORTED": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 22
+        },
+        "PARTIALLY_SUPPORTED": {
+          "precision": 0.8,
+          "recall": 0.1739,
+          "f1": 0.2857,
+          "support": 23
+        },
+        "UNSUPPORTED": {
+          "precision": 0.8194,
+          "recall": 0.9947,
+          "f1": 0.8986,
+          "support": 187
+        },
+        "CONTRADICTED": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 0
+        }
+      },
+      "confusion_matrix": {
+        "SUPPORTED": {
+          "SUPPORTED": 0,
+          "PARTIALLY_SUPPORTED": 0,
+          "UNSUPPORTED": 22,
+          "CONTRADICTED": 0
+        },
+        "PARTIALLY_SUPPORTED": {
+          "SUPPORTED": 0,
+          "PARTIALLY_SUPPORTED": 4,
+          "UNSUPPORTED": 19,
+          "CONTRADICTED": 0
+        },
+        "UNSUPPORTED": {
+          "SUPPORTED": 0,
+          "PARTIALLY_SUPPORTED": 1,
+          "UNSUPPORTED": 186,
+          "CONTRADICTED": 0
+        },
+        "CONTRADICTED": {
+          "SUPPORTED": 0,
+          "PARTIALLY_SUPPORTED": 0,
+          "UNSUPPORTED": 0,
+          "CONTRADICTED": 0
+        }
+      },
+      "latency": {
+        "mean_ms": 0.086,
+        "median_ms": 0.083,
+        "min_ms": 0.05,
+        "max_ms": 0.514
+      }
+    },
+    "standalone_nli": {
+      "accuracy": 0.4138,
+      "macro_f1": 0.1817,
+      "weighted_f1": 0.5049,
+      "cohens_kappa": -0.0164,
+      "total_evaluated": 232,
+      "correct_predictions": 96,
+      "per_class_metrics": {
+        "SUPPORTED": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 22
+        },
+        "PARTIALLY_SUPPORTED": {
+          "precision": 0.1667,
+          "recall": 0.087,
+          "f1": 0.1143,
+          "support": 23
+        },
+        "UNSUPPORTED": {
+          "precision": 0.7833,
+          "recall": 0.5027,
+          "f1": 0.6124,
+          "support": 187
+        },
+        "CONTRADICTED": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 0
+        }
+      },
+      "confusion_matrix": {
+        "SUPPORTED": {
+          "SUPPORTED": 0,
+          "PARTIALLY_SUPPORTED": 0,
+          "UNSUPPORTED": 9,
+          "CONTRADICTED": 13
+        },
+        "PARTIALLY_SUPPORTED": {
+          "SUPPORTED": 1,
+          "PARTIALLY_SUPPORTED": 2,
+          "UNSUPPORTED": 17,
+          "CONTRADICTED": 3
+        },
+        "UNSUPPORTED": {
+          "SUPPORTED": 2,
+          "PARTIALLY_SUPPORTED": 10,
+          "UNSUPPORTED": 94,
+          "CONTRADICTED": 81
+        },
+        "CONTRADICTED": {
+          "SUPPORTED": 0,
+          "PARTIALLY_SUPPORTED": 0,
+          "UNSUPPORTED": 0,
+          "CONTRADICTED": 0
+        }
+      },
+      "latency": {
+        "mean_ms": 32.049,
+        "median_ms": 27.311,
+        "min_ms": 17.059,
+        "max_ms": 973.057
+      }
+    },
+    "two_stage_hybrid_b": {
+      "accuracy": 0.4483,
+      "macro_f1": 0.1825,
+      "weighted_f1": 0.5317,
+      "cohens_kappa": -0.01,
+      "total_evaluated": 232,
+      "correct_predictions": 104,
+      "per_class_metrics": {
+        "SUPPORTED": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 22
+        },
+        "PARTIALLY_SUPPORTED": {
+          "precision": 0.5,
+          "recall": 0.0435,
+          "f1": 0.08,
+          "support": 23
+        },
+        "UNSUPPORTED": {
+          "precision": 0.7923,
+          "recall": 0.5508,
+          "f1": 0.6498,
+          "support": 187
+        },
+        "CONTRADICTED": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 0
+        }
+      },
+      "confusion_matrix": {
+        "SUPPORTED": {
+          "SUPPORTED": 0,
+          "PARTIALLY_SUPPORTED": 0,
+          "UNSUPPORTED": 9,
+          "CONTRADICTED": 13
+        },
+        "PARTIALLY_SUPPORTED": {
+          "SUPPORTED": 1,
+          "PARTIALLY_SUPPORTED": 1,
+          "UNSUPPORTED": 18,
+          "CONTRADICTED": 3
+        },
+        "UNSUPPORTED": {
+          "SUPPORTED": 2,
+          "PARTIALLY_SUPPORTED": 1,
+          "UNSUPPORTED": 103,
+          "CONTRADICTED": 81
+        },
+        "CONTRADICTED": {
+          "SUPPORTED": 0,
+          "PARTIALLY_SUPPORTED": 0,
+          "UNSUPPORTED": 0,
+          "CONTRADICTED": 0
+        }
+      },
+      "latency": {
+        "mean_ms": 28.373,
+        "median_ms": 26.582,
+        "min_ms": 17.181,
+        "max_ms": 197.799
+      }
+    }
+  },
+  "two_tier_citation_support_results": {
+    "tier_1_citation_occurrence_level": {
+      "total_occurrences": 230,
+      "label_distribution": {
+        "SUPPORTED": 22,
+        "UNSUPPORTED": 185,
+        "PARTIALLY_SUPPORTED": 23
+      },
+      "factual_support_rate": 0.1957,
+      "strict_supported_rate": 0.0957,
+      "unsupported_rate": 0.8043,
+      "contradiction_rate": 0.0
+    },
+    "tier_2_claim_level": {
+      "total_claims": 80,
+      "label_distribution": {
+        "PARTIALLY_SUPPORTED": 29,
+        "UNSUPPORTED": 49,
+        "SUPPORTED": 2
+      },
+      "composite_support_rate": 0.3875,
+      "system_b_distribution": {
+        "PARTIALLY_SUPPORTED": 21,
+        "UNSUPPORTED": 17,
+        "SUPPORTED": 2
+      },
+      "system_c_distribution": {
+        "UNSUPPORTED": 32,
+        "PARTIALLY_SUPPORTED": 8
+      },
+      "system_b_support_rate": 0.575,
+      "system_c_support_rate": 0.2
+    }
+  }
+}

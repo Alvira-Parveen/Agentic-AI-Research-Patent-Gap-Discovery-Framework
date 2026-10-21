@@ -7,7 +7,7 @@
     "llm_provider": "mock",
     "model_name": "gpt-4o-mini",
     "temperature": 0.2,
-    "execution_timestamp": "2026-09-29T22:10:37.921820+00:00",
+    "execution_timestamp": "2026-10-21T07:34:11.170686+00:00",
     "test_cases_file": "test_cases.json",
     "ground_truth_qualification": "Retrieval metrics are provisional retrieval diagnostics evaluated against developer-curated targets (N=20). They represent software integration diagnostics, NOT validated performance or proof of model superiority. Agreement against human labels reports N/A until independent human annotation is completed."
   },
@@ -24,25 +24,31 @@
     "provisional_agreement_developer": 0.0
   },
   "rag": {
-    "avg_latency_seconds": 0.0151,
+    "avg_latency_seconds": 0.0394,
     "avg_precision@3_provisional": 0.3333,
     "avg_recall@3_provisional": 0.2,
     "avg_f1@3_provisional": 0.25,
-    "mean_reciprocal_rank_provisional": 0.5,
+    "avg_precision@5_provisional": 0.3,
+    "avg_recall@5_provisional": 0.3,
+    "avg_f1@5_provisional": 0.3,
+    "mean_reciprocal_rank_provisional": 0.5834,
     "avg_grounding_ratio": 1.0,
     "novelty_agreement_human": null,
     "provisional_agreement_developer": 0.5,
     "avg_gaps_discovered": 0.0
   },
   "multi_agent_rag": {
-    "avg_latency_seconds": 0.0882,
+    "avg_latency_seconds": 0.1447,
     "avg_precision@3_provisional": 0.3333,
     "avg_recall@3_provisional": 0.2,
     "avg_f1@3_provisional": 0.25,
-    "mean_reciprocal_rank_provisional": 0.5,
-    "avg_grounding_ratio": 0.6072,
+    "avg_precision@5_provisional": 0.3,
+    "avg_recall@5_provisional": 0.3,
+    "avg_f1@5_provisional": 0.3,
+    "mean_reciprocal_rank_provisional": 0.5834,
+    "avg_grounding_ratio": 1.0,
     "novelty_agreement_human": null,
-    "provisional_agreement_developer": 0.5,
+    "provisional_agreement_developer": 1.0,
     "avg_gaps_discovered": 1.0
   },
   "provisional_targets_disclaimer": "NOTE: Retrieval metrics are provisional retrieval diagnostics evaluated against developer-curated targets (N=20), which serve as a software integration diagnostic rather than an independently verified gold standard. These metrics must NOT be interpreted as validated accuracy, research performance, or proof of model superiority. Agreement against human novelty annotations is marked N/A until independent double-blind annotations are collected.",
@@ -63,24 +69,24 @@
         "citation_note": "Parametric generation \u2014 no retrieved citations"
       },
       "rag": {
-        "latency_seconds": 0.015,
-        "novelty_score": 0.6447,
+        "latency_seconds": 0.0395,
+        "novelty_score": 0.6254,
         "novelty_level": "Moderate",
         "precision@3_provisional": 0.0,
         "recall@3_provisional": 0.0,
         "f1@3_provisional": 0.0,
-        "mrr_provisional": 0.0,
+        "mrr_provisional": 0.1667,
         "citation_grounding": 1.0
       },
       "multi_agent_rag": {
-        "latency_seconds": 0.0817,
-        "novelty_score": 0.7171,
-        "novelty_level": "High",
+        "latency_seconds": 0.1465,
+        "novelty_score": 0.6785,
+        "novelty_level": "Moderate",
         "precision@3_provisional": 0.0,
         "recall@3_provisional": 0.0,
         "f1@3_provisional": 0.0,
-        "mrr_provisional": 0.0,
-        "citation_grounding": 0.7143,
+        "mrr_provisional": 0.1667,
+        "citation_grounding": 1.0,
         "gaps_count": 1
       }
     },
@@ -100,8 +106,8 @@
         "citation_note": "Parametric generation \u2014 no retrieved citations"
       },
       "rag": {
-        "latency_seconds": 0.0152,
-        "novelty_score": 0.1881,
+        "latency_seconds": 0.0394,
+        "novelty_score": 0.2205,
         "novelty_level": "Low",
         "precision@3_provisional": 0.6667,
         "recall@3_provisional": 0.4,
@@ -110,14 +116,14 @@
         "citation_grounding": 1.0
       },
       "multi_agent_rag": {
-        "latency_seconds": 0.0946,
-        "novelty_score": 0.5476,
+        "latency_seconds": 0.1429,
+        "novelty_score": 0.5048,
         "novelty_level": "Moderate",
         "precision@3_provisional": 0.6667,
         "recall@3_provisional": 0.4,
         "f1@3_provisional": 0.5,
         "mrr_provisional": 1.0,
-        "citation_grounding": 0.5,
+        "citation_grounding": 1.0,
         "gaps_count": 1
       }
     }

@@ -15,11 +15,13 @@ class RetrievalAgent:
         """
         idea_text = state.get("user_idea", "")
         features = state.get("extracted_features")
-        
-        # Build query enriched with extracted technical features if present
-        query = idea_text
+        idea_input = state.get("idea_input")
+        title = idea_input.title if (idea_input and hasattr(idea_input, "title")) else ""
+
+        # Build query enriched with title and extracted technical features if present
+        query = f"{title}. {idea_text}" if title else idea_text
         if features and features.technical_features:
-            query = f"{idea_text} {' '.join(features.technical_features[:3])}"
+            query = f"{query} {' '.join(features.technical_features[:3])}"
 
         logger.info(f"RetrievalAgent querying vector stores with: '{query[:80]}...'")
         result: RetrievalResult = self.retriever.retrieve(query)

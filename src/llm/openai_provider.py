@@ -17,13 +17,18 @@ class OpenAIProvider(BaseLLMProvider):
     ):
         self.api_key = api_key or settings.openai_api_key
         self.model = model or settings.llm_model
-        self.base_url = base_url or settings.openai_base_url
+        # Treat empty string as None so the default OpenAI endpoint is used
+        raw_url = base_url or settings.openai_base_url
+        self.base_url = raw_url.strip() if raw_url and raw_url.strip() else None
 
         if not self.api_key:
             logger.warning("OPENAI_API_KEY is not set. OpenAIProvider will fail if invoked.")
             self.client = None
         else:
-            self.client = OpenAI(api_key=self.api_key, base_url=self.base_url)
+            client_kwargs = {"api_key": self.api_key}
+            if self.base_url:
+                client_kwargs["base_url"] = self.base_url
+            self.client = OpenAI(**client_kwargs)
 
     def generate(
         self,

@@ -27,7 +27,7 @@ class MockProvider(BaseLLMProvider):
 
         # 1. Patent Analysis Prompt (checked first to avoid matching embedded 'feature' words)
         if "retrieved patent:" in prompt_lower or "analyze the retrieved patent" in prompt_lower:
-            pat_match = re.search(r'\[(PAT-\d+)\]', prompt)
+            pat_match = re.search(r'\[?\s*(PAT-\d+)', prompt)
             pat_id = pat_match.group(1) if pat_match else "PAT-001"
             sim_match = re.search(r'Similarity:\s*([0-9.]+)', prompt)
             sim = float(sim_match.group(1)) if sim_match else 0.75
@@ -47,7 +47,7 @@ class MockProvider(BaseLLMProvider):
 
         # 2. Research Analysis Prompt
         if "retrieved research paper:" in prompt_lower or "analyze the retrieved scientific research" in prompt_lower or "retrieved paper excerpt:" in prompt_lower:
-            pap_match = re.search(r'\[(PAP-\d+)\]', prompt)
+            pap_match = re.search(r'\[?\s*(PAP-\d+)', prompt)
             pap_id = pap_match.group(1) if pap_match else "PAP-001"
             sim_match = re.search(r'Similarity:\s*([0-9.]+)', prompt)
             sim = float(sim_match.group(1)) if sim_match else 0.70
@@ -96,8 +96,36 @@ class MockProvider(BaseLLMProvider):
                 "key_components": ["Ingestion Subsystem", "Embedding Engine", "Decision Agent"]
             })
 
-        # 5. Novelty Assessment Prompt
-        if "novelty" in prompt_lower:
+        # 5. Report Synthesis Prompt (Multi-Agent RAG final executive report)
+        if "synthesize the final explainable report" in prompt_lower or "write a comprehensive executive summary" in prompt_lower:
+            found_citations = re.findall(r'\[\s*(PAT-\d+|PAP-\d+)[^\]]*\]', prompt)
+            cit_str = " ".join([f"[{c}]" for c in found_citations[:3]]) if found_citations else "[PAT-003] [PAP-019]"
+            title_match = re.search(r'Idea:\s*([^\n]+)', prompt)
+            idea_title = title_match.group(1).strip() if title_match else "The proposed invention"
+
+            return (
+                f"Preliminary analysis for {idea_title} demonstrates established baseline prior art in the retrieved local corpus {cit_str}. "
+                f"Specifically, convolutional neural architectures and sensor telemetry processing are extensively disclosed in {cit_str}. "
+                f"However, the autonomous integration of edge-level variable-rate prescription maps with real-time feedback loops remains unaddressed in the examined patents. "
+                f"This combination represents a potential research white space between agricultural hardware specifications and empirical academic models. "
+                f"Note that this analysis is a research prototype screening and does NOT constitute a legal patentability opinion."
+            )
+
+        # 6. Standard RAG Generation Prompt (Single-prompt RAG baseline)
+        if "evaluate the proposed invention idea using the retrieved patent and research paper evidence" in prompt_lower:
+            found_citations = re.findall(r'\[\s*(PAT-\d+|PAP-\d+)[^\]]*\]', prompt)
+            cit_str = " ".join([f"[{c}]" for c in found_citations[:3]]) if found_citations else "[PAT-016] [PAP-001]"
+
+            return (
+                f"The proposed invention relies on core machine learning techniques well represented in retrieved prior art {cit_str}. "
+                f"Both patent claims and academic publications describe feature extraction pipelines for sensor classification {cit_str}. "
+                f"While individual components exhibit high textual overlap, the specific end-to-end autonomous decision mechanism is only partially documented. "
+                f"Additional verification against external patent databases is required to determine whether this system is anticipated by existing prior art. "
+                f"This preliminary assessment does NOT constitute a formal legal opinion."
+            )
+
+        # 7. Novelty Assessment Prompt (if directly requested)
+        if "novelty assessment" in prompt_lower or "novelty_score" in prompt_lower:
             return json.dumps({
                 "novelty_level": "Moderate",
                 "novelty_score": 0.62,
@@ -115,7 +143,7 @@ class MockProvider(BaseLLMProvider):
                 "legal_disclaimer": "PRELIMINARY AI RESEARCH ASSESSMENT ONLY: Not a legal patentability opinion."
             })
 
-        # 5. Generic Summary
+        # 8. Generic Summary
         return (
             "The proposed invention demonstrates moderate preliminary novelty. "
             "While core embedding and retrieval elements are well established in prior art (e.g. PAT-001, PAT-002), "
