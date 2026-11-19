@@ -5,13 +5,13 @@
     "human_validated": false,
     "diagnostic_label": "Provisional retrieval diagnostics against developer-curated targets",
     "llm_provider": "mock",
-    "model_name": "gpt-4o-mini",
+    "model_name": "gemini-2.5-flash",
     "temperature": 0.2,
-    "execution_timestamp": "2026-10-21T15:49:42.371827+00:00",
+    "execution_timestamp": "2026-11-18T21:07:25.899405+00:00",
     "test_cases_file": "test_cases.json",
     "ground_truth_qualification": "Retrieval metrics are provisional retrieval diagnostics evaluated against developer-curated targets (N=20). They represent software integration diagnostics, NOT validated performance or proof of model superiority. Agreement against human labels reports N/A until independent human annotation is completed."
   },
-  "num_cases_evaluated": 2,
+  "num_cases_evaluated": 9,
   "single_llm": {
     "avg_latency_seconds": 0.0001,
     "avg_precision@3": null,
@@ -24,31 +24,31 @@
     "provisional_agreement_developer": 0.0
   },
   "rag": {
-    "avg_latency_seconds": 0.0355,
-    "avg_precision@3_provisional": 0.3333,
-    "avg_recall@3_provisional": 0.2,
-    "avg_f1@3_provisional": 0.25,
-    "avg_precision@5_provisional": 0.3,
-    "avg_recall@5_provisional": 0.3,
-    "avg_f1@5_provisional": 0.3,
-    "mean_reciprocal_rank_provisional": 0.5834,
+    "avg_latency_seconds": 0.0396,
+    "avg_precision@3_provisional": 0.5556,
+    "avg_recall@3_provisional": 0.4037,
+    "avg_f1@3_provisional": 0.4656,
+    "avg_precision@5_provisional": 0.4,
+    "avg_recall@5_provisional": 0.4852,
+    "avg_f1@5_provisional": 0.4358,
+    "mean_reciprocal_rank_provisional": 0.8519,
     "avg_grounding_ratio": 1.0,
     "novelty_agreement_human": null,
-    "provisional_agreement_developer": 0.5,
+    "provisional_agreement_developer": 0.3333,
     "avg_gaps_discovered": 0.0
   },
   "multi_agent_rag": {
-    "avg_latency_seconds": 0.1377,
-    "avg_precision@3_provisional": 0.3333,
-    "avg_recall@3_provisional": 0.2,
-    "avg_f1@3_provisional": 0.25,
-    "avg_precision@5_provisional": 0.3,
-    "avg_recall@5_provisional": 0.3,
-    "avg_f1@5_provisional": 0.3,
-    "mean_reciprocal_rank_provisional": 0.5834,
+    "avg_latency_seconds": 0.1865,
+    "avg_precision@3_provisional": 0.5556,
+    "avg_recall@3_provisional": 0.4037,
+    "avg_f1@3_provisional": 0.4656,
+    "avg_precision@5_provisional": 0.4,
+    "avg_recall@5_provisional": 0.4852,
+    "avg_f1@5_provisional": 0.4358,
+    "mean_reciprocal_rank_provisional": 0.8519,
     "avg_grounding_ratio": 1.0,
     "novelty_agreement_human": null,
-    "provisional_agreement_developer": 1.0,
+    "provisional_agreement_developer": 0.6667,
     "avg_gaps_discovered": 1.0
   },
   "provisional_targets_disclaimer": "NOTE: Retrieval metrics are provisional retrieval diagnostics evaluated against developer-curated targets (N=20), which serve as a software integration diagnostic rather than an independently verified gold standard. These metrics must NOT be interpreted as validated accuracy, research performance, or proof of model superiority. Agreement against human novelty annotations is marked N/A until independent double-blind annotations are collected.",
@@ -60,7 +60,7 @@
       "annotation_status": "provisional_developer_curated",
       "human_verified": false,
       "single_llm": {
-        "latency_seconds": 0.0001,
+        "latency_seconds": 0.0003,
         "novelty_score": null,
         "novelty_level": "Unassessed (Parametric baseline)",
         "precision@3": null,
@@ -69,7 +69,7 @@
         "citation_note": "Parametric generation \u2014 no retrieved citations"
       },
       "rag": {
-        "latency_seconds": 0.0327,
+        "latency_seconds": 0.0604,
         "novelty_score": 0.6254,
         "novelty_level": "Moderate",
         "precision@3_provisional": 0.0,
@@ -79,7 +79,7 @@
         "citation_grounding": 1.0
       },
       "multi_agent_rag": {
-        "latency_seconds": 0.1371,
+        "latency_seconds": 0.207,
         "novelty_score": 0.6785,
         "novelty_level": "Moderate",
         "precision@3_provisional": 0.0,
@@ -106,7 +106,7 @@
         "citation_note": "Parametric generation \u2014 no retrieved citations"
       },
       "rag": {
-        "latency_seconds": 0.0384,
+        "latency_seconds": 0.038,
         "novelty_score": 0.2205,
         "novelty_level": "Low",
         "precision@3_provisional": 0.6667,
@@ -116,12 +116,271 @@
         "citation_grounding": 1.0
       },
       "multi_agent_rag": {
-        "latency_seconds": 0.1384,
+        "latency_seconds": 0.1614,
         "novelty_score": 0.5048,
         "novelty_level": "Moderate",
         "precision@3_provisional": 0.6667,
         "recall@3_provisional": 0.4,
         "f1@3_provisional": 0.5,
+        "mrr_provisional": 1.0,
+        "citation_grounding": 1.0,
+        "gaps_count": 1
+      }
+    },
+    {
+      "case_id": "TC-003",
+      "title": "Cross-Methodology Innovation Reasoning with Dynamic Knowledge Graphs",
+      "domain": "Agentic AI & Knowledge Representation",
+      "annotation_status": "provisional_developer_curated",
+      "human_verified": false,
+      "single_llm": {
+        "latency_seconds": 0.0001,
+        "novelty_score": null,
+        "novelty_level": "Unassessed (Parametric baseline)",
+        "precision@3": null,
+        "recall@3": null,
+        "citation_grounding": 0.0,
+        "citation_note": "Parametric generation \u2014 no retrieved citations"
+      },
+      "rag": {
+        "latency_seconds": 0.037,
+        "novelty_score": 0.2301,
+        "novelty_level": "Low",
+        "precision@3_provisional": 0.6667,
+        "recall@3_provisional": 0.5,
+        "f1@3_provisional": 0.5714,
+        "mrr_provisional": 1.0,
+        "citation_grounding": 1.0
+      },
+      "multi_agent_rag": {
+        "latency_seconds": 0.1873,
+        "novelty_score": 0.3696,
+        "novelty_level": "Low",
+        "precision@3_provisional": 0.6667,
+        "recall@3_provisional": 0.5,
+        "f1@3_provisional": 0.5714,
+        "mrr_provisional": 1.0,
+        "citation_grounding": 1.0,
+        "gaps_count": 1
+      }
+    },
+    {
+      "case_id": "TC-004",
+      "title": "Retrieval-Augmented Generation for Intellectual Property with Synthetic Query Fine-Tuning",
+      "domain": "Information Retrieval & NLP",
+      "annotation_status": "provisional_developer_curated",
+      "human_verified": false,
+      "single_llm": {
+        "latency_seconds": 0.0001,
+        "novelty_score": null,
+        "novelty_level": "Unassessed (Parametric baseline)",
+        "precision@3": null,
+        "recall@3": null,
+        "citation_grounding": 0.0,
+        "citation_note": "Parametric generation \u2014 no retrieved citations"
+      },
+      "rag": {
+        "latency_seconds": 0.0395,
+        "novelty_score": 0.2311,
+        "novelty_level": "Low",
+        "precision@3_provisional": 0.6667,
+        "recall@3_provisional": 0.4,
+        "f1@3_provisional": 0.5,
+        "mrr_provisional": 1.0,
+        "citation_grounding": 1.0
+      },
+      "multi_agent_rag": {
+        "latency_seconds": 0.1483,
+        "novelty_score": 0.336,
+        "novelty_level": "Low",
+        "precision@3_provisional": 0.6667,
+        "recall@3_provisional": 0.4,
+        "f1@3_provisional": 0.5,
+        "mrr_provisional": 1.0,
+        "citation_grounding": 1.0,
+        "gaps_count": 1
+      }
+    },
+    {
+      "case_id": "TC-005",
+      "title": "Contrastive Learning Multi-Agent System for Scientific Idea Novelty Evaluation",
+      "domain": "Machine Learning & Meta-Science",
+      "annotation_status": "provisional_developer_curated",
+      "human_verified": false,
+      "single_llm": {
+        "latency_seconds": 0.0001,
+        "novelty_score": null,
+        "novelty_level": "Unassessed (Parametric baseline)",
+        "precision@3": null,
+        "recall@3": null,
+        "citation_grounding": 0.0,
+        "citation_note": "Parametric generation \u2014 no retrieved citations"
+      },
+      "rag": {
+        "latency_seconds": 0.0341,
+        "novelty_score": 0.315,
+        "novelty_level": "Low",
+        "precision@3_provisional": 0.3333,
+        "recall@3_provisional": 0.3333,
+        "f1@3_provisional": 0.3333,
+        "mrr_provisional": 1.0,
+        "citation_grounding": 1.0
+      },
+      "multi_agent_rag": {
+        "latency_seconds": 0.2351,
+        "novelty_score": 0.4025,
+        "novelty_level": "Moderate",
+        "precision@3_provisional": 0.3333,
+        "recall@3_provisional": 0.3333,
+        "f1@3_provisional": 0.3333,
+        "mrr_provisional": 1.0,
+        "citation_grounding": 1.0,
+        "gaps_count": 1
+      }
+    },
+    {
+      "case_id": "TC-006",
+      "title": "Memory Graph Enhanced Patent Document Matching",
+      "domain": "Information Retrieval & Legal AI",
+      "annotation_status": "provisional_developer_curated",
+      "human_verified": false,
+      "single_llm": {
+        "latency_seconds": 0.0001,
+        "novelty_score": null,
+        "novelty_level": "Unassessed (Parametric baseline)",
+        "precision@3": null,
+        "recall@3": null,
+        "citation_grounding": 0.0,
+        "citation_note": "Parametric generation \u2014 no retrieved citations"
+      },
+      "rag": {
+        "latency_seconds": 0.0328,
+        "novelty_score": 0.1941,
+        "novelty_level": "Low",
+        "precision@3_provisional": 0.6667,
+        "recall@3_provisional": 0.5,
+        "f1@3_provisional": 0.5714,
+        "mrr_provisional": 1.0,
+        "citation_grounding": 1.0
+      },
+      "multi_agent_rag": {
+        "latency_seconds": 0.1941,
+        "novelty_score": 0.1746,
+        "novelty_level": "Low",
+        "precision@3_provisional": 0.6667,
+        "recall@3_provisional": 0.5,
+        "f1@3_provisional": 0.5714,
+        "mrr_provisional": 1.0,
+        "citation_grounding": 1.0,
+        "gaps_count": 1
+      }
+    },
+    {
+      "case_id": "TC-007",
+      "title": "Hierarchical Value-Guided Search for Optimal LLM Agent Team Design",
+      "domain": "Agentic AI & Meta-Optimization",
+      "annotation_status": "provisional_developer_curated",
+      "human_verified": false,
+      "single_llm": {
+        "latency_seconds": 0.0001,
+        "novelty_score": null,
+        "novelty_level": "Unassessed (Parametric baseline)",
+        "precision@3": null,
+        "recall@3": null,
+        "citation_grounding": 0.0,
+        "citation_note": "Parametric generation \u2014 no retrieved citations"
+      },
+      "rag": {
+        "latency_seconds": 0.0351,
+        "novelty_score": 0.3936,
+        "novelty_level": "Low",
+        "precision@3_provisional": 0.6667,
+        "recall@3_provisional": 0.5,
+        "f1@3_provisional": 0.5714,
+        "mrr_provisional": 0.5,
+        "citation_grounding": 1.0
+      },
+      "multi_agent_rag": {
+        "latency_seconds": 0.1968,
+        "novelty_score": 0.2809,
+        "novelty_level": "Low",
+        "precision@3_provisional": 0.6667,
+        "recall@3_provisional": 0.5,
+        "f1@3_provisional": 0.5714,
+        "mrr_provisional": 0.5,
+        "citation_grounding": 1.0,
+        "gaps_count": 1
+      }
+    },
+    {
+      "case_id": "TC-008",
+      "title": "Automated Patent White Space Discovery via Multidimensional Technological Clustering",
+      "domain": "Patent Intelligence & Unsupervised Learning",
+      "annotation_status": "provisional_developer_curated",
+      "human_verified": false,
+      "single_llm": {
+        "latency_seconds": 0.0001,
+        "novelty_score": null,
+        "novelty_level": "Unassessed (Parametric baseline)",
+        "precision@3": null,
+        "recall@3": null,
+        "citation_grounding": 0.0,
+        "citation_note": "Parametric generation \u2014 no retrieved citations"
+      },
+      "rag": {
+        "latency_seconds": 0.0374,
+        "novelty_score": 0.4088,
+        "novelty_level": "Moderate",
+        "precision@3_provisional": 1.0,
+        "recall@3_provisional": 0.75,
+        "f1@3_provisional": 0.8571,
+        "mrr_provisional": 1.0,
+        "citation_grounding": 1.0
+      },
+      "multi_agent_rag": {
+        "latency_seconds": 0.1996,
+        "novelty_score": 0.404,
+        "novelty_level": "Moderate",
+        "precision@3_provisional": 1.0,
+        "recall@3_provisional": 0.75,
+        "f1@3_provisional": 0.8571,
+        "mrr_provisional": 1.0,
+        "citation_grounding": 1.0,
+        "gaps_count": 1
+      }
+    },
+    {
+      "case_id": "TC-009",
+      "title": "Segment-Level Claim-Aware Prior Art Retrieval System",
+      "domain": "NLP & Patent Informatics",
+      "annotation_status": "provisional_developer_curated",
+      "human_verified": false,
+      "single_llm": {
+        "latency_seconds": 0.0001,
+        "novelty_score": null,
+        "novelty_level": "Unassessed (Parametric baseline)",
+        "precision@3": null,
+        "recall@3": null,
+        "citation_grounding": 0.0,
+        "citation_note": "Parametric generation \u2014 no retrieved citations"
+      },
+      "rag": {
+        "latency_seconds": 0.0422,
+        "novelty_score": 0.2426,
+        "novelty_level": "Low",
+        "precision@3_provisional": 0.3333,
+        "recall@3_provisional": 0.25,
+        "f1@3_provisional": 0.2857,
+        "mrr_provisional": 1.0,
+        "citation_grounding": 1.0
+      },
+      "multi_agent_rag": {
+        "latency_seconds": 0.1485,
+        "novelty_score": 0.437,
+        "novelty_level": "Moderate",
+        "precision@3_provisional": 0.3333,
+        "recall@3_provisional": 0.25,
+        "f1@3_provisional": 0.2857,
         "mrr_provisional": 1.0,
         "citation_grounding": 1.0,
         "gaps_count": 1

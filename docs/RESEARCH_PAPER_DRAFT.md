@@ -178,3 +178,4 @@ The synthesis prompt enforces that any statement of prior art must cite the expl
 
 #### 3. Implementation
 The final report binds cited tags directly to an interactive Citation & Source Passage Inspector in Streamlit. Users can expand any cited reference to view its parent metadata, exact similarity score, and verbatim text, allowing immediate human auditing.
+

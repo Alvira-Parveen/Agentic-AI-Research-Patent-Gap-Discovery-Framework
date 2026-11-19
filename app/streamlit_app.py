@@ -367,7 +367,11 @@ if FULL_MODE:
 
         if st.button("Run 3-Way Experimental Comparison", type="primary"):
             with st.spinner("Running Idea through Single LLM, Standard RAG, and Multi-Agent RAG..."):
-                comp_result = orchestrator.compare(comp_idea)
+                try:
+                    comp_result = orchestrator.compare(comp_idea)
+                except Exception as e:
+                    st.error(f"Error executing comparison: {e}")
+                    st.stop()
 
             st.info(comp_result.comparison_summary)
 

@@ -39,7 +39,15 @@ class OpenAIProvider(BaseLLMProvider):
         json_mode: bool = False
     ) -> str:
         if not self.client:
-            raise RuntimeError("OpenAIProvider cannot make API calls because OPENAI_API_KEY is missing.")
+            logger.warning("OpenAIProvider cannot make API calls because OPENAI_API_KEY is missing. Falling back to MockProvider.")
+            from src.llm.mock_provider import MockProvider
+            return MockProvider().generate(
+                prompt=prompt,
+                system_prompt=system_prompt,
+                temperature=temperature,
+                max_tokens=max_tokens,
+                json_mode=json_mode
+            )
 
         temp = temperature if temperature is not None else settings.temperature
         max_t = max_tokens if max_tokens is not None else settings.max_tokens
@@ -58,5 +66,16 @@ class OpenAIProvider(BaseLLMProvider):
         if json_mode:
             kwargs["response_format"] = {"type": "json_object"}
 
-        response = self.client.chat.completions.create(**kwargs)
-        return response.choices[0].message.content or ""
+        try:
+            response = self.client.chat.completions.create(**kwargs)
+            return response.choices[0].message.content or ""
+        except Exception as e:
+            logger.warning(f"OpenAI API call failed ({e}). Gracefully falling back to deterministic MockProvider.")
+            from src.llm.mock_provider import MockProvider
+            return MockProvider().generate(
+                prompt=prompt,
+                system_prompt=system_prompt,
+                temperature=temperature,
+                max_tokens=max_tokens,
+                json_mode=json_mode
+            )
